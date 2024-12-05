@@ -1,0 +1,3555 @@
+% Changing book to article will make the footers match on each page,
+% rather than alternate every other.
+%
+% Note that the article class does not have chapters.
+\documentclass[a4paper,10pt,twoside,twocolumn,openany]{book}
+
+% Use babel or polyglossia to automatically redefine macros for terms
+% Armor Class, Level, etc...
+% Default output is in English; captions are located in lib/dndstring-captions.sty.
+% If no captions exist for a language, English will be used.
+%1. To load a language with babel:
+%	\usepackage[<lang>]{babel}
+%2. To load a language with polyglossia:
+%	\usepackage{polyglossia}
+%	\setdefaultlanguage{<lang>}
+\usepackage[french]{babel}
+%usepackage[italian]{babel}
+% For further options (multilanguage documents, hypenations, language environments...)
+% please refer to babel/polyglossia's documentation.
+
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{swe}
+\usepackage{pdfpages}
+
+\lstset{%
+  basicstyle=\ttfamily,
+  language=[LaTeX]{TeX},
+}
+
+\justifying
+
+% Start document
+\begin{document}
+
+
+\chapter{ACTE I - LA DURE ROUTE DES MINES DE RYLL}
+
+Au cours de cet acte, les PJ se rendent sur Ryloth,
+croisent la route d’un groupe de chasseurs de primes
+et libèrent une mine d’épices des soi-disant promoteurs
+de Teemo.
+Lisez ce qui suit à voix haute :
+
+\begin{quotebox}
+Le passage en vitesse-lumière vous a permis de
+rejoindre l’orée du système de Tatooine sans problème. Mais vous devez maintenant programmer
+un cap dans l’hyperespace pour atteindre une
+nouvelle destination. Malgré son mauvais état
+général, le vaisseau tient le choc et répond correctement. La galaxie s’offre maintenant à vous !
+Libres de l’emprise de Teemo le Hutt, vous pouvez
+lever le pied, souffler un peu et vous faire à votre
+nouvel environnement. Vous n’avez pas encore
+eu le temps de visiter cet appareil, qui mériterait sans doute quelques modifications pour que
+vous vous y sentiez comme chez vous. Une odeur
+rance imprègne le vaisseau et plusieurs voyants
+d’alerte clignotent sur le moniteur de l’ordinateur
+de navigation.
+
+Soudain, avant même que vous ayez pu songer
+à enclencher l’hyperdrive et à quitter le système,
+une sirène bruyante retentit, et une bonne dizaine
+de voix se mettent à grogner sur le système audio
+de l’appareil. Le Croc de Krayt se met à vibrer et à
+trembler. Apparemment, quelque chose ne tourne
+pas rond sur le cargo volé.
+\end{quotebox}
+
+Les PJ vont devoir régler plusieurs problèmes avant de
+prendre totalement le contrôle de leur appareil. Leur
+liste apparaît page suivante. Gardez-les à l’esprit lorsque
+vous menez cette partie de l’aventure. Si les PJ ne les
+traitent pas intégralement, ces incidents continueront
+de leur créer des ennuis et auront peut-être des conséquences graves.
+
+\textbf{Problème n 1 : les voyants d’alarme} Ce sont des
+voyants rouges clignotants de l’interface utilisateur de
+l’ordinateur de navigation. Il y en a quatre. Les voici, dans
+l’ordre de priorité :
+
+\begin{itemize}
+\item Une grosse mention rouge clignotante au centre de l’écran : « Réserve de carburant faible ».
+\item Une petite icône clignotante en forme de croissant de lune ou de croc.
+\item Une fenêtre intermittente, intempestive et agaçante en trandosien.
+\item Une icône rouge clignotante en forme de cage stylisée.
+\end{itemize}
+
+\textbf{Problème n 2 : l’odeur –} Dans la précipitation, les PJ
+n’ont pas tout de suite remarqué l’odeur rance de pourri-
+ture qui imprègne le Croc de Krayt, mais elle est mainte-
+nant omniprésente. Certains des PJ la trouveront pénible,
+voire écœurante.
+\begin{itemize}
+\item Mathus, Oskara, Pash et Sasha trouvent l’odeur forte et désagréable. Ajoutez un dé d’infortune \boost à toutes leurs actions tant que le problème n’est pas réglé. 
+\item Lowhhrick, lui, est très affecté par l’odeur, qui le rend malade. Ajoutez deux dés d’infortune \boost à toutes ses actions tant que le problème n’est pas réglé. Ajoutez aussi deux dés d’infortune \boost aux tests de compétence des autres personnages cherchant à soigner ou à aider Lowhhrick tant que le problème n’est pas réglé.
+\item 41-Vex n’est évidemment pas perturbé par l’odeur. Ses senseurs lui permettent de la détecter et lui font comprendre qu’il y a quelque chose qui pourrit à bord, mais il n’a pas de haut-le-cœur. Néanmoins, s’il tente de soigner Lowhhrick ou de l’aider avant que le problème ne soit réglé, il subit lui aussi deux dés d’infortune \boost.
+\end{itemize}
+
+Seule exception à la règle : les tests de Perception vi-
+sant à localiser la source de l’odeur ne subissent pas les
+malus précités.
+
+\textbf{Problème n 3 : le bruit –} Une sirène bruyante retentit
+et la sono crache des grognements gutturaux dans tout
+le vaisseau. L’alarme signale que le niveau de carburant
+du vaisseau est dangereusement bas, ce dont témoigne
+le message d’alerte sur le naviordinateur. Les grogne-
+ments sont en fait un opéra gamorréen que Trex aimait
+écouter lors de ses voyages. La cacophonie s’avère pour
+le moins déconcertante.
+Tant que le problème n’aura pas été résolu, les tâches
+nécessitant un minimum de concentration seront compli-
+quées. Améliorez la difficulté des actions, comme tenter
+d’utiliser l’ordinateur de navigation ou soigner un PJ bles-
+sé, en remplaçant un dé violet de difficulté \difficulty par un dé
+rouge de défi o.
+Si l’un des bruits disparaît, le malus n’est plus appli-
+cable, mais le boucan restant n’en demeure pas moins
+agaçant. Les MJ les plus audacieux pourront passer une bande-son mixant alarmes et couinements de porcs pour
+aider les joueurs à comprendre combien le vacarme peut
+taper sur les nerfs.
+
+\textbf{Problème n 4 : un vaisseau à découvrir} Le Croc de
+Krayt renferme des compartiments de contrebande que
+les PJ découvriront en visitant le vaisseau :
+
+\begin{itemize}
+\item Un tas de peaux fraîches de Wookie cachées dans le compartiment situé sous le plancher de la soute
+principale.
+\item B’ura B’an, un prisonnier twi’lek âgé, enfermé dans une cage, dans la soute 3.
+\end{itemize}
+
+\section{RÉSOLUTION DES PROBLÈMES}
+
+Tant que les PJ n’auront pas réglé les problèmes décrits
+ci-dessus, ils ne pourront pas profiter pleinement de leur
+nouveau cargo. À eux de prendre l’initiative en la matière, mais le MJ doit bien leur faire comprendre que tant
+qu’ils ne programmeront pas un cap, le vaisseau n’ira
+nulle part. Le MJ devra aussi leur signaler la présence de
+B’ura B’an à un moment ou un autre du voyage.
+Voici ce qui doit se dérouler avant que les PJ n’atteignent Ryloth :
+
+\begin{itemize}
+\item  Programmer le naviordinateur pour fixer le cap vers une planète voisine (Ryloth constituera la seule destination pratique).
+\item Trouver B’ura B’an dans la soute 3.
+\end{itemize}
+
+Voici d’autres actions que les PJ pourront entreprendre et qui leur seront d’un grand secours :
+
+\begin{itemize}
+
+\item Trouver des bouts de chitine dans la soute 3.
+\item Trouver la source de l’odeur, les peaux de Wookie, dans la soute principale.
+\item Comprendre qu’il y a un transpondeur fixé à la coque de l’appareil.
+\item Arrêter l’alarme.
+\item Arrêter la musique (ou baisser le son).
+\end{itemize}
+
+\subtitle{UTILISATION DU NAVIORDINATEUR}
+
+Les PJ réaliseront que les programmes de base de l’ordinateur de navigation sont assez simples d’utilisation, et
+que nombre des problèmes que pose le cargo peuvent
+être réglés ou atténués à partir de l’ordinateur.
+Toutefois, Trex a installé un logiciel trandosien dans
+le système informatique, ce qui peut leur compliquer
+la tâche.
+
+\subsection{PROGRAMMER UN CAP OU RÉGLER LE
+PROBLÈME DE CARBURANT}
+Les PJ n’auront aucun mal à accéder à l’interface principale (pas de test de compétence nécessaire), qui permet de lancer un diagnostic système ou de programmer
+le cap.
+
+Lisez ce qui suit à tout PJ qui tente de se servir de l’ordinateur dans ce sens :
+
+\begin{quotebox}
+    
+De toute évidence, l’ancien propriétaire de ce vaisseau n’a pas procédé à la mise à jour du naviordinateur, capable d’emprunter une poignée seulement d’itinéraires stables dans l’hyperespace, et
+dans lequel ne sont programmées que six destinations : Tatooine, Christophsis, Géonosis, Ryloth,
+Trandosha et Kashyyyk.
+
+De toutes ces destinations, seule Ryloth constitue
+un refuge viable. Chacun sait que les oligarques
+de Christophsis et les Géonosiens n’apprécient
+pas les visites impromptues, si bien qu’il serait
+coûteux et risqué d’aller chercher du carburant
+sur une de ces planètes. Trandosha et Kashyyyk
+sont aussi des destinations dangereuses en ce
+moment, sans compter qu’avec des réserves de
+carburant aussi faibles, les PJ pourraient bien finir
+coincés dans l’hyperespace.
+
+Comparée aux Mondes du Noyau, Ryloth est
+une planète pauvre, où la loi n’est pas toujours
+respectée. Mais par rapport à Tatooine, c’est un
+havre de civilisation. Le vaisseau pourrait facilement s’y rendre avec le peu de carburant dont
+il dispose, et la planète abrite différents spatioports miteux où il devrait être possible de ravitailler à moindre prix.
+\end{quotebox}
+
+Lorsque les PJ auront compris qu’ils ont tout intérêt
+à mettre le cap sur Ryloth, l’un d’eux devra effectuer un
+\textbf{test d’Astrogation Facile} (\difficulty). En cas de succès, leur
+voyage vers Ryloth sera rapide et se déroulera sans le
+moindre incident. En cas d’échec, le voyage prendra
+plus de temps que prévu. Ils auront affaire au chasseur
+Thwheek à leur arrivée sur Ryloth, même s’ils neutralisent le transpondeur de Teemo (cf. ci-dessous).
+
+\subsection{COUPER L’ALARME}
+L’alarme est reliée à la jauge de carburant de l’ordinateur, et un test d’Informatique Facile (\difficulty) est nécessaire
+pour la réduire au silence. Rappelez-vous que la puanteur de charogne et l’assourdissante cacophonie porcine
+peuvent rendre les tests plus difficiles.
+
+\subsection{ARRÊTER LA MUSIQUE}
+Les couinements de l’opéra gamorréen que crache la sono sont aussi contrôlés par l’ordinateur. Un test d’Informatique Moyen (\difficulty \difficulty) est nécessaire pour localiser
+le lecteur et baisser le son ou le couper.
+
+\subsection{TOUCHER L’ICÔNE EN CROISSANT DE LUNE/CROC}
+
+Si quelqu’un touche l’icône clignotante en forme de croissant de lune, une fenêtre en trandosien apparaît. Aucun des PJ ne lit cette langue, mais si l’un d’eux décide de voir si l’ordinateur peut leur en donner une traduction en basique, il devra effectuer un test d’Informatique Facile (\difficulty).
+
+En cas de réussite, lisez ce qui suit à voix haute :
+\begin{quotebox}
+Le texte en trandosien dit : « Transpondeur opérationnel. Signal récepteur : Teemo, Mos Shuuta,
+Tatooine. Émission réponse codée. » Une série de
+chiffres s’ensuit, signifiant que le signal de réponse
+est mis à jour et émis toutes les cinq secondes.
+\end{quotebox}
+
+Aux PJ de voir ce qu’ils veulent faire. Trex a autorisé Teemo à le suivre de loin en le laissant fixer un transpondeur hyperespace à la coque du Croc de Krayt. Le Hutt est donc en mesure de localiser approximativement le vaisseau.
+
+Si les PJ comprennent qu’ils sont pistés et interrogent l’ordinateur de navigation pour découvrir d’où est émis le signal, ils trouveront le transpondeur en réussissant un test d’Informatique Difficile (\difficulty \difficulty \difficulty). Il se situe sur la coque du vaisseau, à l’arrière de la tourelle à canon laser,
+un emplacement inaccessible quand le vaisseau est en vol. Si les PJ tentent de se débarrasser du transpondeur une fois posés sur Ryloth, ils pourront le localiser et le retirer grâce à un test de Mécanique Moyen (\difficulty \difficulty). 
+Les échecs \failure signifient qu’ils ne trouvent pas, et les menaces \threat qu’ils endommagent la coque du Croc de Krayt en le retirant.
+
+Tout laisse penser que les PJ ne peuvent pas faire
+grand-chose pour le signal avant de s’être posés. Curieusement, ils peuvent tout de même modifier la cadence
+d’émission du signal. Bien qu'il ne puisse pas être coupé depuis l’ordinateur, sa fréquence peut être ralentie, jusqu’à ce qu’il n’émette plus que toutes les heures, par
+un test d’Informatique Facile (\difficulty).
+
+Si les PJ arrivent à réduire sa fréquence avant d’entrer dans l’hyperespace, alors les chasseurs de primes
+que Teemo a lancés à leurs trousses ne pourront pas les
+rattraper avant qu’ils n’arrivent à Ryloth. Le MJ devra
+sauter la section « Une interception brutale », plus loin
+dans l’aventure.
+
+\subsection{LA FENÊTRE INTERMITTENTE}
+
+Elle est aussi écrite en trandosien, si bien que les PJ
+ne pourront pas la lire, sauf s’ils utilisent le logiciel de
+traduction informatique décrit plus haut. Lowhhrick est
+capable d’identifier le mot « Wookie » sans l’aide du traducteur pour des raisons personnelles douloureuses.
+
+Si la traduction est possible, lisez ce qui suit :
+\begin{quotebox}
+« Instructions de livraison : marchandise destinée
+au client TEEMO encore à bord. Type de marchandise : PEAUX DE WOOKIE. Emplacement de la
+marchandise : SOUTE PRINCIPALE. »
+\end{quotebox}
+
+ Là encore, aux PJ de voir ce qu’ils comptent faire. En
+vérité, Teemo s’est mis à écouler des peaux de Wookies
+au marché noir. Les peaux de Wookie de qualité peuvent
+atteindre des sommes très élevées parmi les éléments
+les plus pervers de la galaxie. Si Lowhhrick comprend
+que Teemo participe à la persécution de son peuple, il en
+sera courroucé et affligé. Le MJ peut lui infliger 2 points
+de stress pour bien souligner cette colère.
+
+Le message peut aussi éclairer les PJ sur l’origine de
+l’odeur.
+
+\subsection{APPUYER SUR L’ICÔNE EN FORME DE CAGE}
+
+Cette icône correspond à un programme simple utilisé par les chasseurs de primes de la galaxie pour leur
+rappeler les besoins de leurs prisonniers. Il propose une
+note en plusieurs langues (dont le rodien, le trandosien
+et le gand). Pas besoin de traduction puisqu’une version
+en basic apparaît aussi.
+
+\begin{quotebox}
+« ATTENTION ! ATTENTION ! Activiste prisonnier
+B’URA B’AN toujours à bord. MARCHE À SUIVRE
+RECOMMANDÉE : rentrer à Mos Shuuta et toucher la prime sur-le-champ. DERNIER REPAS : il y
+a 6 heures. RECYCLEUR : il y a 8 heures. »
+\end{quotebox}
+
+Si Oskara est parmi les PJ, elle reconnaît le nom de B’ura
+B’an. Dans ce cas, lisez ce qui suit à voix haute :
+
+\begin{quotebox}
+Le nom de B’ura B’an ne t’est pas inconnu. Lorsque
+des brutes aquales ont débarqué sur Ryloth et tenté de mettre un pied dans la production de ryll, des
+Twi’leks ont regroupé un ensemble de mines censées être gérées « par et pour les Twi’leks ». Selon
+certains de ses détracteurs, cette organisation ne
+valait pas mieux que les malabars qu’elle remplaçait, d’autant qu’elle vendait du ryll brut au marché
+noir. Néanmoins, de nombreux Twi’leks virent en
+elle une lueur d’espoir, car elle déjouait les efforts
+de ceux qui souhaitaient exploiter Ryloth sans se
+soucier le moins du monde de ses habitants. B’ura
+B’an comptait parmi les activistes qui soutenaient
+les mines tenues et gérées par des Twi’leks.
+\end{quotebox}
+
+B’ura B’an est actuellement détenu dans une petite cellule amovible de la soute 3.
+
+\subsection{CHERCHER LA SOURCE DE L’ODEUR}
+
+Une odeur rance imprègne le Croc de Krayt. Si les PJ
+explorent le vaisseau dans l’espoir d’en trouver la
+source, ils comprendront qu’elle vient de quelque part
+dans la soute principale (aucun test de compétence n’est
+nécessaire).
+
+Cette odeur est en partie due aux habitudes alimen-
+taires de Trex. Son régime est principalement constitué
+de viande crue, et autant dire qu’il ne mange pas très
+proprement. Les sièges disposés autour du jeu d’échecs
+holographiques sont couverts de gros restes de viande
+pourrie et de graisse rance. Mais si les PJ réussissent
+un test de Perception Moyen (\difficulty \difficulty) (ajoutez un dé de
+fortune \boost s’ils annoncent qu’ils cherchent des peaux de
+Wookie ou des compartiments secrets), ils trouveront
+l’origine de la pire puanteur sous le plancher de la soute :
+un compartiment de contrebande caché sous une sec-
+tion escamotable du pont.
+Le compartiment cache six peaux de Wookie. Elles
+n’ont été que partiellement traitées et dégagent une
+odeur écœurante. Les PJ ne peuvent s’en débarrasser
+que s’ils trouvent le moyen de larguer les peaux: le na-
+viordinateur peut les y aider s’ils les déposent dans le
+compartiment de chargement et réussissent un test
+d’Informatique Facile (\difficulty).
+
+\subsection{TROUVER ET LIBÉRER B’URA B’AN}
+
+Si les PJ se rendent à la soute 3, ils y trouveront B’ura
+B’an sans avoir à effectuer de test de compétence. Li-
+sez-leur ce qui suit :
+\begin{quotebox}
+    
+Cette soute renferme de l’équipement dont les
+chasseurs de primes se servent pour entraver et
+transporter les prisonniers. Plusieurs jeux de me-
+nottes sont fixés aux murs, et six petites cellules
+cylindriques sont montées sur rails pour plus de
+commodité. Cinq sont vides, mais l’une d’elles ren-
+ferme un Twi’lek accroupi dans une position incon-
+fortable. Le prisonnier semble vieux et frêle. Il a
+la peau bleue pâle, et le long et mince lekku du
+côté droit de sa tête s’enroule autour de son cou.
+L’autre a laissé place à un vilain moignon cautérisé.
+En vous entendant arriver, il lève la tête d’un air
+inquiet, mais affiche finalement une mine curieuse
+en vous apercevant.
+\end{quotebox}
+
+Si les PJ examinent les autres cellules montées sur
+rails, ils découvriront que l’une d’elles renferme plusieurs
+morceaux d’une carapace de chitine brune, dont l’un est
+couvert de curieux motifs. Un test de Connaissance
+Difficile (\difficulty \difficulty \difficulty) est nécessaire pour en saisir l’origine.
+L’importance des renseignements glanés dépend du résultat du test :
+\successA Les morceaux de chitine appartiennent à une espèce insectoïde intelligente.
+
+\successA \successA Les espèces insectoïdes muent parfois pour
+grandir et se soigner. Ces morceaux de chitine ne signi-
+fient donc pas forcément que la créature a été tuée.
+
+\advantage Un examen minutieux de la chitine révélera dans
+les fissures une fine poussière rouge, probablement originaire de Géonosis.
+
+\triumph Les curieux motifs sont visiblement des symboles
+de clan ou de propriété. Si vous gardez le morceau de
+chitine sous la main, vous pourrez peut-être trouver
+quelqu’un qui pourra en identifier l’origine précise.
+
+Ces renseignements peuvent paraître sans importance
+pour le moment. Le fait est qu’il y a deux mois, Trex a
+livré à Teemo un prisonnier géonosien du nom de Sivor.
+Après en avoir tiré tout ce qu’il pouvait, le Hutt l’obligea
+à se battre dans une arène clandestine, pour son plus grand plaisir. Sivor s’était bien défendu, mais les combats répétés l’avaient affaibli. Teemo ordonna alors à l’un
+de ses hommes de mains, l’espion kubaz Thwheek, de
+monter sur le ring et de l’achever brutalement. Thwheek
+ayant une sainte horreur des espèces insectoïdes en général, et des Géonosiens en particulier, n’hésita pas une
+seconde.
+
+Une telle histoire mettrait sans doute les Géonosiens
+en rogne, des Géonosiens que les PJ doivent rencontrer
+au cours de l’acte II. Les preuves des mauvais traitements infligés à Sivor pourraient les aider par la suite.
+Il serait donc sage de conserver le bout de carapace identifiable, mais s’ils n’y pensent pas, cela n’aura pas de conséquences graves.
+
+B’ura B’an est heureux de voir les PJ et leur demande
+s’ils veulent bien le sortir de sa cage pour qu’il puisse
+s’étirer les jambes et utiliser le recycleur du vaisseau. Si
+on lui pose des questions sur le cargo, il ne pourra pas
+dire grand-chose, mais suggérera de se tourner vers le
+naviordinateur pour arrêter le bruit (s’il y en a encore).
+Il précisera aussi que Ryloth n’est pas loin, et qu’on y
+trouve du carburant à un prix abordable. Le Twi’lek
+ne sait rien au sujet des morceaux de carapace qui se
+trouvent dans l’autre unité de rétention. Si on lui parle
+de ses blessures, il affirmera avoir été attaqué par un
+chasseur de primes trandosien qui lui a tranché le lekku
+gauche pendant le combat avant de le jeter en cellule.
+
+Si on lui demande pourquoi un chasseur de primes lui
+en voulait, voici ce qu’il répondra :
+\begin{quotebox}
+    
+« Eh bien, c’est une longue histoire, alors je vais
+tenter de faire court. Depuis quelque temps, et ce
+n’est que mon avis, les dirigeants de Ryloth ne sont
+pas très regardants sur l’identité de ceux qu’ils
+laissent prendre des parts dans l’industrie minière
+du ryll, qui, vous le savez sans doute, est tout juste
+tolérée par l’Empire. Depuis peu, des bandes de
+truands aquales terrorisent les communautés minières, obligeant les Twi’leks à travailler pour rien,
+ou presque. Quand ils n’extorquent pas toutes
+sortes de faveurs et de ressources aux mines, qui,
+sans eux, se porteraient bien mieux. Je me suis
+ligué avec quelques associés pour protéger New
+Meen, notre mine la plus lucrative, de ces brutes.
+On les a tenues à l’écart pendant un temps.
+
+
+Et puis, ils ont disparu comme par enchantement.
+Au début, on a été soulagés, mais on a rapidement
+appris qu’ils s’étaient fait tuer par des criminels
+désireux de prendre leur place. Peu après, des
+groupes d’étrangers ont commencé à acheter des
+terres près des mines. Ils affirmaient vouloir les exploiter, mais on savait bien qu’ils voulaient nous
+espionner et nous mener la vie dure. Juste après,
+lors d’un voyage à Nabat, j’ai été attaqué par une
+bande de truands, au nombre desquels figurait le
+Trandosien qui m’a mutilé et cautérisé au fer rouge
+avant de m’enfermer dans cette cellule. »
+\end{quotebox}
+
+
+Si Oskara est avec le groupe, lisez ce qui suit à voix
+haute :
+
+\begin{quotebox}
+    
+Le Twi’lek agite nonchalamment son lekku restant
+tout en parlant. Il paraît sincère, mais semble également cacher quelque chose.
+\end{quotebox}
+
+
+B’ura B’an demande aux PJ de lui raconter leur histoire, et s’ils parlent de Teemo, il affichera une mine lugubre avant d’ajouter :
+\begin{quotebox}
+    
+« J’ai beaucoup pensé aux Hutts ces derniers
+temps. À ce que j’en sais, ils ne s’intéressent à la
+production de ryll que depuis peu. Certes, ils l’ont
+toujours distribué, mais ils n’avaient jusqu’alors
+aucun lien avec les opérations de production. Vu
+que le Trandosien qui m’a capturé travaille pour ce
+Hutt, je commence à me demander si les choses
+ne sont pas en train de changer.
+
+Je vous serais vraiment reconnaissant de bien
+vouloir me déposer à Nabat. J’y ai des amis qui
+pourraient nous offrir l’asile. La ville abrite aussi
+de bons mécaniciens qui pourraient réparer votre
+appareil et refaire le plein en dédommagement. »
+\end{quotebox}
+
+B’ura B’an ne connaît pas Oskara, mais se réjouit de
+rencontrer une compatriote. Il ne sait rien de sa sœur
+Makara. Mais si Oskara veut bien lui raconter son histoire, il reconnaîtra que les deux récits collent, et que les
+promoteurs présents près de sa mine font sans doute
+partie du réseau monté par Teemo pour s’emparer du
+commerce du ryll.
+
+B’ura B’an s’intéresse aussi à l’histoire des PJ et compatit avec tout le mal qu’a pu leur faire Teemo. Il les invite à venir faire la connaissance de ses amis sur Ryloth,
+en leur promettant que s’ils l’aident à sortir la mine des
+griffes des sbires de Teemo, il leur permettra de faire de
+gros profits grâce à la contrebande d’épice de ryll.
+
+Si Oskara rappelle à B’ura B’an que son organisation a
+été accusée de corruption, il agite son lekku d’un air triste
+et prend le temps de la réflexion avant de répondre :
+\begin{quotebox}
+    
+« Notre mouvement s’est organisé dans la précipitation, sans réelle préparation, et ses membres
+n’ont guère d’autres points communs que leur
+opposition au harcèlement et à l’exploitation de
+notre peuple. Y en a-t-il parmi nous qui ont cherché
+à profiter de la situation à des fins personnelles ?
+Oui, j’en ai peur. Je ne peux pas parler pour tous
+ceux qui marchent sous notre bannière, mais je
+crois néanmoins que notre cause est juste. »\end{quotebox}
+
+Si les PJ cherchent à lui soutirer d’autres informations, B’ura B’an leur parlera d’Angu Drombb. Pour plus de détails, reportez-vous à la section « L’histoire d’Angu
+Drombb et des promoteurs », page 18.
+
+\subsection{CAP SUR RYLOTH}
+
+L’itinéraire de Tatooine à Ryloth est assez direct, même
+si le travail que Trex effectuait pour Teemo ne lui avait
+pas laissé le temps de mettre à jour son ordinateur de
+navigation. En tout cas, le voyage en hyperespace ne
+prendra que six heures et se déroulera sans incident.
+Les PJ peuvent en profiter pour se reposer et récupérer,
+bavarder avec B’ura B’an et explorer le Croc de Krayt. Il
+n’y a pas grand-chose à bord, mais si les PJ font le tour
+du propriétaire durant le trajet en hyperespace, voici ce
+qu’ils découvriront :
+
+\subtitle{COCKPIT}
+C’est là que le pilote accède au naviordinateur et passe
+en contrôle manuel si nécessaire.
+
+\subtitle{SOUTE 2}
+On y trouve des pièces détachées cassées de droïde et
+des caisses vides, ainsi qu’un ensemble d’outils graisseux
+assez mal entretenus. Trex a fait de l’endroit son atelier.
+Si un PJ examine les pièces détachées de droïde et réussit un test de Mécanique Difficile (\difficulty \difficulty \difficulty), il comprendra qu’un bon mécanicien pourrait remonter une unité
+astromech avec tout ce bazar, même s’il ne s’agirait pas
+d’une mince affaire. Bien que les PJ n’en aient ni le temps,
+ni les connaissances, ni le matériel, cela peut s’ajouter à
+leurs projets futurs. Ils peuvent aussi revendre les pièces
+détachées pour 2000 crédits.
+
+Parmi les outils se trouvent un médipack, un détecteur universel, une paire d’électrojumelles, un respirateur pour Trandosien, deux bâtons luisants et une
+trousse à outils.
+
+\subtitle{SOUTE PRINCIPALE}
+Les caisses rangées ici sont de bonne taille, mais vides.
+Un compartiment de contrebande secret est caché sous
+le plancher et peut être découvert conformément à la
+section « Chercher la source de l’odeur ». Le jeu d’échecs
+holographique est de bonne qualité et l’IA réglée sur un
+niveau élevé pour les parties solo.
+
+\subtitle{CUISINE}
+
+La petite cuisine est bien fournie, mais dans un état
+déplorable. Des morceaux de viande crue y ont été
+conditionnés et stockés. Il reste de quoi faire deux repas
+si les PJ ont un régime exclusivement carnivore… Dans
+un des tiroirs, on trouve également six rations bonnes
+pour n’importe quel être organique, ou presque.
+
+\subtitle{QUARTIERS DE L’ÉQUIPAGE}
+Cette zone est étonnamment bien tenue, mais dégage
+une forte odeur de reptile. La douche et le recycleur sont
+propres et opérationnels. Les trois lits sont fonctionnels,
+mais pas très confortables. Le tapis en peau de wampa
+est en bon état et pourrait se revendre 250 crédits à un
+amateur. Il y a un bâton luisant et deux cellules énergétiques de pistolet blaster lourd sous un matelas. Si le MJ
+cherche un lieu précis où les PJ pourraient trouver les
+1000 crédits promis à la fin de \textit{Fuite de Mos Shuuta},
+c’est l’endroit idéal.
+
+\subtitle{SALLE DES MACHINES}
+C’est là que se trouvent les moteurs et les réservoirs du
+vaisseau. Tout va bien, si ce n’est que les réserves de
+carburant sont basses. Un détecteur de poche traîne
+dans un coin. En cas de vérification, l’injecteur à hypermatière installé lors de Fuite de \textit{Mos Shuuta} fonctionne à la perfection.
+
+\subtitle{SOUTE 3}
+Cette zone est décrite dans la section « Trouver et libérer
+B’ura B’an ». Sept jeux de menottes sont fixés aux murs.
+
+\section{UNE INTERCEPTION
+BRUTALE}
+Comme précisé auparavant, si les PJ réduisent la cadence d’émission du transpondeur, sautez cette partie
+de l’aventure et passez à la section « Arrivée à Nabat ».
+
+En revanche, si les PJ n’ont rien fait pour altérer le signal, les chasseurs de primes de Teemo seront sur leurs
+talons. Thwheek, l’espion kubaz, qui est aussi l’agent
+préféré du Hutt, a pris les commandes de son appareil
+et compte clouer au sol le vaisseau des PJ à coups de
+laser avant qu’il ne se pose à Nabat. Lisez ce qui suit à
+voix haute :
+
+\begin{quotebox}
+    
+Au moment où vous quittez l’hyperespace, vous
+distinguez une vive lueur blanche et les moteurs
+du vaisseau descendent de plusieurs octaves. En
+regardant par les hublots, vous apercevez la surface poussiéreuse et desséchée de Ryloth. Alors
+que vous cherchez le meilleur moyen de descendre vers le spatioport de Nabat, un chasseur
+fuselé sort à son tour de l’hyperespace à moins
+d’un kilomètre de votre position.
+
+Vous avez déjà vu cet appareil, qui accostait régulièrement à Mos Shuuta. Il appartient à un Kubaz
+qui part souvent en mission pour Teemo le Hutt. Le
+vaisseau vire sur l’aile et ralentit, se dirigeant vers
+vous en adoptant un cap d’interception.\end{quotebox}
+
+Les PJ sont attaqués ! Commencez une rencontre
+avec combat et déterminez l’initiative. Thwheek lance
+son Calme (\difficulty \difficulty). Il est probable que les PJ fassent
+de même (à moins qu’ils n’aient pas vu le chasseur
+sortir de l’hyperespace et entamer une manœuvre
+d’attaque).
+
+Le vaisseau de Thwheek est un G1-M4-C Dunelizard,
+un chasseur de taille moyenne maniable et rapide parfois
+utilisé par les pirates, les chasseurs de primes et les colons de la Bordure extérieure. Le Dunelizard de Thwheek
+débute la rencontre à portée courte des PJ.
+
+Thwheek est sûr de lui et commence par la manœuvre
+« coller à la cible » pour augmenter ses chances de toucher. S’il est touché par l’équipage du Croc de Krayt,
+il changera de tactique et entamera des « manœuvres
+d’évasion ». Si son appareil subit au moins 5 points
+de dégâts de coque, il plongera vers l’atmosphère de
+Ryloth pour échapper aux PJ, qui pourront le pourchasser et l’abattre ou reprendre leur route vers leur
+destination.
+
+\subsubsection{SI LES PJ SONT VICTORIEUX :}
+Le Dunelizard de Thwheek s’écrase quelque part sur Ryloth. Les PJ ne sauront pas vraiment si leur adversaire
+a survécu (il a bel et bien la vie sauve), mais il ne leur
+causera en tout cas pas de problèmes de sitôt.
+
+\subsubsection{SI LE CROC DE KRAYT EST ABATTU :}
+Si l’attaque de Thwheek est couronnée de succès, le
+Croc de Krayt s’écrase sur Ryloth, tout près de Nabat.
+Le pilote doit réussir un test de Pilotage Difficile
+(\difficulty \difficulty \difficulty) pour atterrir en douceur. Chaque membre
+d’équipage doit effectuer un \textbf{test de Résistance Difficile} (\difficulty \difficulty \difficulty) et peut améliorer sa réserve une fois
+(convertissant un dé d’aptitude \ability en dé de maîtrise \proficiency ;
+
+\begin{monsterbox}{THWHEEK}
+% Sous-titre
+  \begin{hangingpar}
+    \textit{ESPION KUBAZ}
+  \end{hangingpar}
+  \hline%
+
+  \stats[VIG=2,AGI=3,INT=3,RUS=4,VOL=2,PRE=2]
+  \hline%
+
+  \basics[encaissement=4,blessure=12]
+
+  \hline%
+
+\begin{monsteraction}[Compétences]
+ Coordination 1 (\ability \ability \proficiency), Dis-
+tance (armes légères) 1 (\ability \ability \proficiency), Perception 2
+(\ability \ability \proficiency \proficiency), Pilotage 1 (\ability \ability \proficiency), Pugilat 1 (\ability \proficiency),
+Survie 2 (\ability \ability \proficiency \proficiency), Vigilance 2 (\proficiency \proficiency)
+\end{monsteraction}
+
+  \begin{monsteraction}[Équipement]
+    pistolet blaster lourd (Distance [armes légères] ; dégâts 7 ; critique 3 ; portée
+moyenne ; réglage étourdissant), armure laminée
+(encaissement +2), électrojumelles.
+  \end{monsteraction}
+
+\end{monsterbox}
+
+
+cf. page 8 du livre de règles) si le pilote a atterri en douceur. En cas d’échec, le PJ subit 1 blessure critique lors
+du crash. Pour chaque menace \threat obtenue au test, le PJ
+subit aussi 1 blessure.
+Maintenant que leur vaisseau est salement endommagé, les PJ ont une très bonne raison de donner un
+coup de main à B’ura B’an et à ses amis – pourvu qu’ils
+puissent réparer leur appareil !
+
+\section{ARRIVÉE À NABAT}
+Comme de nombreuses communautés rylothiennes,
+Nabat est en grande partie construite sous terre pour
+protéger ses habitants de l’environnement rigoureux et
+des lyleks errants.
+
+Les niveaux supérieurs de la ville sont exposés aux
+éléments. Ils abritent plusieurs aires d’atterrissage, des
+taudis et une cantina.
+
+B’ura B’an se propose de veiller à ce que le Croc de
+Krayt soit correctement amarré, et que les réparations
+nécessaires soient effectuées et payées par ses contacts
+locaux. Si les PJ souhaitent se débarrasser du transpondeur, c’est maintenant ou jamais.
+
+\subsection{RENCONTRE AVEC LES ACTIVISTES}
+
+B’ura B’an est pressé de quitter la surface et d’emmener les PJ dans les tunnels souterrains. Selon lui, le Croc
+de Krayt est en sécurité, car il dispose de sympathisants
+parmi le personnel du spatioport. Si les PJ le prient de
+bien vouloir demander au personnel de les prévenir de
+toute arrivée depuis Tatooine, il accepte en précisant
+qu’il s’agit d’une bonne idée. En revanche, il n’y pensera
+pas de lui-même. Lisez ce qui suit à voix haute :
+
+\begin{quotebox}
+    
+B’ura B’an vous conduit sous terre, vers un quartier résidentiel de la ville où les demeures sont
+creusées dans les parois des cavernes. Les étroits
+couloirs sont encombrés de créatures vaquant à
+leurs occupations. Des centaines de Twi’leks empruntent les passages et allées, mais ce ne sont
+pas les seuls citoyens de Nabat. Des Aquales
+crâneurs fendent la foule à coups d’épaules tandis
+que des droïdes produisant un concert de bruits
+se glissent entre les échoppes. Des marchands
+humains, quant à eux, vendent leurs biens sur les
+étals enfoncés dans des niches.\end{quotebox}
+
+Les PJ peuvent s’arrêter pour acheter du matériel de
+première nécessité. Dans ce cas, B’ura B’an leur trouvera les marchands qu’il leur faut. Toutefois, Nabat n’est
+pas une ville riche, et on n’y trouve rien qui vaille plus de
+500 crédits. Les objets du chapitre 5 du livre de règles
+valant 500 crédits ou moins peuvent y être trouvés au
+prix indiqué.
+
+\begin{quotebox}
+    
+B’ura B’an vous emmène à l’écart des rues bondées et frappe à une grosse porte en métal. Plusieurs mots de passe sont échangés en twi’lek. Au
+bout de quelques instants, on vous fait entrer dans
+une grande pièce baignée d’une lueur bleue relaxante et pourvue de chaises confortables. B’ura
+B’an se tourne vers vous et chuchote : « Cette
+pièce est occupée par une cellule de l’organisation chargée de protéger les simples Twi’leks de
+Ryloth. Ici, nous serons en sécurité. »\end{quotebox}
+
+Le groupe d’activistes est constitué de trois Twi’leks
+et de deux humains qui effectuent des allées et venues.
+Le chef du groupe s’appelle Nyn Kablo. C’est une Twi’lek
+à la voix douce et à la peau jaune clair, possédant une
+grâce languide. Elle est toujours présente et vit dans une
+petite pièce attenante à la zone principale. Elle invite les
+PJ à se reposer dans la pièce pendant qu’elle s’entretient
+avec B’ura B’an au sujet de tout ce qu’il a subi. Les PJ
+reçoivent de quoi boire et manger, ainsi que des soins si
+nécessaire. Ils éliminent leurs blessures normales et leur
+stress. Un médecin twi’lek tente une fois, et une seule, de
+soigner chacune des blessures critiques des PJ (réserve
+de dés : \difficulty \difficulty \proficiency).
+
+Les deux Twi’leks ont une courte conversation, puis
+Nyn revient vers les PJ.
+
+\begin{quotebox}
+    
+« Nous vous sommes extrêmement reconnaissants
+d’avoir sauvé notre ami. Bien que nous n’ayons
+pas grand-chose à vous offrir, B’ura B’an m’a fait
+comprendre que vous pourriez vous investir dans
+nos opérations minières lorsque nous en aurons
+repris le contrôle. Son récit me laisse supposer que
+vous avez des ennuis avec le chef hutt que nous
+pensons être derrière la plupart de nos malheurs,
+c’est bien ça ? »\end{quotebox}
+
+Nyn écoute les PJ avec compassion s’ils souhaitent
+parler de Teemo, en promettant que son peuple les aidera à punir le Hutt lorsque les problèmes seront réglés sur
+Ryloth. Elle poursuit :
+
+\begin{quotebox}
+    
+« Je vais vous demander une nouvelle faveur.
+Voyez-y le prix à payer pour la surveillance et
+les réparations de votre vaisseau. Les mineurs
+qui travaillaient aux côtés de B’ura B’an à New
+Meen subissent les pressions croissantes des
+brigands qui ont acheté les terres voisines, sans
+qu’on sache s’ils sont payés par le Hutt. Il faudrait
+que B’ura les rejoigne le plus vite possible. Cela
+leur remonterait le moral et nous permettrait de
+prendre de nouvelles mesures. Nous pourrions
+vous fournir un speeder capable de tous vous
+emmener. Passez la nuit ici, mais vous nous rendriez un grand service en vous mettant en route
+au matin. »\end{quotebox}
+
+Si les PJ demandent une récompense à Nyn, elle les
+éconduit poliment, en affirmant que le mouvement a
+peu de ressources et ne pourra dédommager ses alliés
+qu’après avoir repris le contrôle des opérations minières.
+Si les PJ persistent à lui demander de l’argent ou du
+matériel, ils réussiront peut-être à l’avoir à l’usure. Selon
+la méthode employée, ils devront effectuer un test de
+Charme Moyen (\difficulty \difficulty) (elle aime être brossée dans le
+sens du poil) ou un test de Coercition Difficile (\difficulty \difficulty \difficulty)
+(elle n’apprécie guère les menaces).
+
+\successA Nyn accepte d’ouvrir les portes de l’arsenal de
+la cellule aux PJ, mais elle regrette de n’avoir qu’un assortiment de grenades à leur proposer. Chaque PJ peut prendre une grenade à fragmentation ou une grenade étourdissante.
+
+\successA \successA Nyn peut aussi leur fournir une armure matelassée usée, mais fonctionnelle.
+
+\triumph Nyn est prête à faire une faveur à ses nouveaux amis. Elle leur fournit un fusil blaster en plus de tout ce qu’elle leur a déjà remis.
+
+\threat \threat L’équipement fourni par Nyn est défectueux.
+Il sera bon à jeter à la fin de la première rencontre où il
+sera utilisé.
+
+\subtitle{UN MESSAGE DU SPATIOPORT}
+
+Une fois les négociations avec Nyn terminées, les PJ sont
+invités à rester pour la nuit. Néanmoins, s’ils ont demandé qu’on les prévienne de toute arrivée depuis Tatooine,
+on frappe à la porte quelques heures après le coucher du
+soleil. Nyn l’entrouvre simplement, mais si un PJ garde
+un œil sur elle, il la verra parler à mi-mot avec une unité
+astromech R2 qui, elle, s’exprime en binaire, à coups de
+bips et de sifflements. Elle referme la porte et s’approche
+des PJ.
+\begin{quotebox}
+    
+« Notre ami vient du spatioport. Il affirme qu’un
+appareil est arrivé de Tatooine il y a deux heures. Il
+a vu un humain et un Gand débarquer et négocier
+la surveillance de leur vaisseau avec le personnel
+de l’astroport, mais on lui a confié une mission de
+maintenance au même moment. J’ai bien peur
+qu’il n’en sache pas plus, mais vous devriez garder
+un œil ouvert. »
+\end{quotebox}
+
+\subtitle{AU MATIN}
+
+Une fois les PJ réveillés, frais et dispos, Nyn les emmène,
+eux et B’ura B’an, dans un étroit tunnel de service qui
+passe sous les remparts de la cité. Un landspeeder est
+garé un peu plus loin. Son ordinateur de bord a été programmé pour les conduire tout droit aux mines de ryll.
+
+\section{EMBUSCADE À L’ANTRE DU VIEUX LYLEK}
+
+Durant cette rencontre, les PJ se rendent du spatioport
+aux mines de ryll et tombent dans une embuscade tendue par les chasseurs de primes de Teemo le Hutt. Le
+guet-apens se déroule à l’antre d’un vieux lylek, détaillé
+en page 16.
+
+Le groupe ennemi est constitué d’un chasseur de
+primes par PJ. L’un d’eux est un Gand armé d’un fusil
+blaster. Un autre pourrait être Trex en personne, selon
+le sort que les PJ lui ont réservé lors de l’aventure Fuite
+de Mos Shuuta. S’ils lui ont échappé sans se battre, il
+est là. S’ils l’ont neutralisé et se sont assurés de sa mort,
+son corps est encore en train de refroidir sur Tatooine.
+S’ils l’ont neutralisé mais ne l’ont pas tué, Trex a profité
+des fameuses facultés de régénération des Trandosiens.
+Dans ce cas, il est présent, mais a déjà subi 10 blessures.
+Ses caractéristiques figurent à la page 24 du Livret
+d’aventure.
+
+Les autres chasseurs de primes sont des humains armés de pistolets blasters lourds.
+
+Ils se sont installés dans l’antre d’un vieux lylek, qu’ils
+croient abandonné. Ils comptent abattre le speeder des
+PJ avant de les tuer ou de les capturer. Ils ont aussi prévu
+de profiter du réseau de cavernes pour battre en retraite,
+si nécessaire.
+
+\begin{monsterbox}{CHASSEURS DE PRIMES}
+
+  \stats[VIG=3,AGI=3,INT=2,RUS=3,VOL=2,PRE=2]
+  \hline%
+
+  \basics[encaissement=5,blessure=13]
+
+  \hline%
+
+\begin{monsteraction}[Compétences]
+Coercition 1 (\ability \proficiency), Coordination
+1 (\ability \ability \proficiency), Distance (armes légères) 1 (\ability \ability \proficiency),
+Distance (armes lourdes) 1 (\ability \ability \proficiency), Pugilat 1
+(\ability \ability \proficiency), Survie 2 (\ability \ability \proficiency), Vigilance 1 (\ability \proficiency)
+\end{monsteraction}
+
+\begin{monsteraction}[Talents]
+Coup mortel 1 (la première blessure critique infligée chaque jour par le chasseur de primes
+compte double)
+\end{monsteraction}
+
+  \begin{monsteraction}[Équipement]
+pistolet blaster lourd (Distance
+[armes légères] [ \ability \ability \proficiency ] ; dégâts 7 ; critique 3 ;
+portée moyenne ; réglage étourdissant), armure laminée (encaissement +2).
+Le Gand est un spécialiste en armes lourdes. Il a
+le même profil et est équipé de la même façon,
+mais il porte aussi un fusil blaster (Distance [armes
+lourdes] [ \ability \ability \proficiency ] ; dégâts 9 ; critique 3 ; portée
+longue ; réglage étourdissant).
+  \end{monsteraction}
+
+\end{monsterbox}
+
+
+Lisez ce qui suit à voix haute :
+
+\begin{quotebox}
+    
+Vous survolez les badlands de Ryloth depuis
+quelques heures en direction de la mine de ryll.
+Plus vous vous éloignez du spatioport, plus le relief
+est dangereux, parsemé de rochers et d’éperons
+saillants. Pour continuer, vous allez devoir sérieusement ralentir sous peine de heurter un obstacle.
+\end{quotebox}
+
+Si le PJ qui conduit le speeder décide de ralentir, il pourra slalomer entre les rochers sans encombre. Dans le
+cas contraire, il devra réussir deux tests de Pilotage Moyens (\difficulty \difficulty) à la suite. Pour chaque échec, le speeder
+percute un obstacle et tous ceux qui se trouvent à bord
+subissent 1 point de stress.
+
+
+Une fois l’obstacle franchi, lisez ce qui suit à voix
+haute :
+\begin{quotebox}
+    
+Vous contournez les rochers et les éperons saillants,
+et apercevez des falaises qui s’élèvent non loin de
+là. Une paroi rocheuse de pierre rouge s’élève sur
+votre droite, entourée elle aussi de rocaille.
+\end{quotebox}
+
+\begin{commentbox}{QUE LES PJ SOIENT PRÉVENUS : DANGER DROIT DEVANT !}
+  
+
+Les chasseurs de primes de cette rencontre sont
+lourdement armés et tirent depuis des positions
+fortifiées. Cette escarmouche sera probablement le
+combat le plus difficile et périlleux de cet acte, plus
+particulièrement si Trex est présent. Si les héros ne
+sont pas encore très à l’aise avec les combats, un petit rappel peut être utile.
+Ceux qui ne s’abritent pas courent plus de risques
+d’être touchés et de subir de plus gros dégâts que les
+
+autres. Les PJ peuvent se réfugier derrière l’épave du
+speeder et les rochers.
+Les chasseurs de primes se servent de pistolets blasters lourds qui, s’ils sont dangereux, n’offrent pas une
+très bonne portée. Si les PJ se sont procuré des fusils
+blasters, ils pourront obliger leurs adversaires à sortir
+de leur abri pour se rapprocher.
+Certes, les chasseurs de primes se cachent parmi les
+rochers, mais des PJ astucieux pourront les prendre
+en tenaille pour les priver de leur bonus d’abri.
+\end{commentbox}
+
+Les PJ doivent contourner l’à-pic, car les falaises et la
+rocaille les empêchent de prendre une autre route. Ils
+peuvent se douter du piège, et si un PJ annonce qu’il
+reste vigilant et réussit un test de Perception Difficile
+(\difficulty \difficulty \difficulty), voici ce qu’il remarquera :
+
+\begin{quotebox}
+    
+Quelque chose attire ton regard au pied de l’àpic rocheux. Un tas de pierres cache en partie un
+passage obscur, sans doute l’entrée d’une caverne.
+Une grosse tête ronde et insectoïde apparaît pendant une fraction de seconde avant de se cacher.
+\end{quotebox}
+
+Les PJ voudront peut-être s’arrêter et s’approcher à
+pied, ce qui déclenchera le début du combat. Si les PJ ne
+remarquent pas le Gand, ou s’ils continuent malgré tout,
+lisez ce qui suit à voix haute :
+\begin{quotebox}
+
+Au moment où vous passez devant l’à-pic, vous entendez un bruit sec et apercevez un éclat lumineux
+aveuglant. Le speeder effectue plusieurs tête-àqueue et de la fumée s’échappe d’un trou dans le
+châssis. Vous devez faire appel à toute votre force
+et toute votre adresse pour empêcher l’appareil
+de se retourner. Pris de cahots, le speeder s’immobile brutalement et son nez s’enfonce d’un bon
+mètre dans le sable.\end{quotebox}
+
+Si les PJ n’ont pas pris la peine de ralentir plus tôt, ils
+doivent effectuer un test de Résistance Moyen (\difficulty \difficulty)
+ou un test de Coordination Moyen (\difficulty \difficulty) (à chacun
+de choisir son test). Ceux qui le ratent sont éjectés de
+l’appareil et subissent 6 points de dégâts. Alors qu’ils se
+relèvent, des cris et des ricanements retentissent à l’entrée d’une caverne sombre située au pied de la falaise, à
+portée moyenne du speeder.
+
+
+L’état du speeder laisse à désirer, mais il est moins abîmé
+qu’il n’y paraît. Il suffit d’un test de Mécanique Facile
+(\difficulty) et d’une demi-heure de travail (un \advantage obtenu au test
+permet de réduire le temps nécessaire) pour le dégager
+du sable et effectuer les réparations sommaires qui permettront de boucler le trajet.
+
+Que les PJ s’écrasent ou quittent le speeder de leur plein
+gré pour jeter un œil à la caverne, c’est à ce moment
+qu’ils seront accueillis par les chasseurs de primes. Un
+des humains lève la tête et les met en garde :
+\begin{quotebox}
+« Halte ! Restez où vous êtes et jetez vos armes !
+Nous sommes des représentants des autorités impériales locales et vous êtes soupçonnés de vous
+livrer à la contrebande de ryll. Je répète : restez où
+vous êtes et jetez vos armes ! »\end{quotebox}
+
+C’est une ruse des chasseurs de primes trouvée au
+pied levé. Si la violence ne rebute pas les représentants de l’Empire, ils abattent rarement les speeders
+
+non identifiés sur un coup de tête. Les PJ voient bien le
+Gand dans le groupe, sans oublier Trex s’il est présent.
+Aucun des chasseurs ne porte d’uniforme impérial. Si
+les PJ vous demandent s’ils reconnaissent un de leurs
+adversaires, il faudra leur dire que Trex est présent, le
+cas échéant. Oskara reconnaîtra aussi les autres : des
+chasseurs de primes inexpérimentés et bon marché, qui
+viennent souvent chercher des clients dans la cantina
+de Mos Shuuta.
+
+La ruse des chasseurs de primes ne fonctionnera sans
+doute pas et il faudra déterminer l’Initiative avec la compétence Calme. Si les PJ n’ont pas ralenti un peu plus
+tôt, chacun des chasseurs de primes subit un dé d’infortune \boost à son test de Calme.
+
+On trouve suffisamment de rochers derrière lesquels
+se cacher dans les parages, sans compter le speeder. De
+leur côté, les chasseurs font de leur mieux pour se cacher
+derrière les tas de pierres et à l’entrée de la caverne.
+Quiconque tente de tirer sur un individu abrité derrière
+des rochers subit deux dés d’infortune \boost \boost aux tests de
+combat à Distance.
+
+Les chasseurs préfèrent prendre les personnages vivants. Si leurs proies résistent, ils tenteront de les neutraliser à coups de rayons étourdissants. Toutefois, si l’un
+d’eux est abattu, ils se battront pour de bon.
+
+Si les PJ effectuent une mission de reconnaissance
+sur le flanc est de la falaise, ils trouveront le moyen d’inverser les rôles. La caverne a une seconde entrée. Un
+éboulement l’a en partie obstruée, mais il est facile de
+l’escalader et les PJ pourront ainsi attaquer les chasseurs
+par-derrière.
+
+Si les PJ préfèrent mener un assaut frontal, les chasseurs battront en retraite en suivant la ligne en pointillés
+sur le plan de la page 16. Les chasseurs peuvent en être
+pour leurs frais, car ils risquent de déranger un gros lylek
+mâle qui a fait son nid derrière un fouillis de rocher dans
+la partie sud de la caverne. C’est à l’entière discrétion du
+MJ, qui préférera peut-être que les chasseurs de primes
+combattent jusqu’au dernier plutôt que de mêler une
+bête dangereuse à toute cette histoire. Si le MJ veut une
+issue dramatique, il lira ce qui suit si les chasseurs sont
+repoussés jusque-là :
+\begin{quotebox}
+Vous progressez dans le tunnel et voyez les chasseurs de primes s’abriter derrière un mur de décombres. Cette caverne est pleine de pierres, pour
+beaucoup entassées près du mur de droite. Les
+chasseurs occupent là une bonne position. Ils sont
+abrités et prennent le temps de viser.
+Soudain, un rugissement assourdissant retentit et
+un tapis de cailloux se met à dévaler du haut du
+tas de pierres. Apparaît alors une créature véloce
+pourvue de six longues pattes armées de griffes
+aux allures de lances. Ses mandibules claquantes
+et couvertes d’écume sont flanquées de deux
+longs tentacules frétillants.
+\end{quotebox}
+
+
+Le lylek reste où il est pour le moment, mais si les PJ
+obtiennent un avantage \advantage durant le combat qui s’ensuit, il passe à l’action. Lisez ce qui suit à voix haute :
+\begin{quotebox}
+
+Le son des tirs de blaster excite le lylek. Des pierres
+tombent de la carapace du monstre, qui fond sur
+les malheureux chasseurs de primes situés plus bas.
+L’un d’eux a à peine le temps de hurler avant de se
+faire empaler par les griffes pointues de la créature,
+qui l’attire à sa gueule dégoulinant de bave. Le lylek
+commence à battre en retraite vers son nid en laissant une traînée de sang dans son sillage.
+\end{quotebox}
+
+
+
+Les PJ ont tout intérêt à laisser le lylek tranquille, mais
+s’ils décident de le suivre, mieux vaut que B’ura B’an
+fasse une apparition (il aura réussi à s’extraire de l’épave
+du speeder) et s’écrie : « Non ! Laissez-le ! Le lylek ne
+nous ennuiera pas tant qu’il a de la chair fraîche, mais si
+vous continuez de l’importuner, il n’hésitera pas à vous
+tuer aussi ! »
+
+
+Si les PJ s’obstinent malgré tout à s’attaquer au lylek, reportez-vous au profil du rancor en captivité de la page 47 du livre de règles du Kit d’Initiation pour avoir une idée du
+danger que représente cette créature. Comme l’a dit B’ura
+B’an, les chasseurs morts constituent un bon repas, aussi
+n’est-il pas très motivé pour tuer les PJ. S’ils l’attaquent,
+le lylek se contentera de les repousser avant de se replier
+derrière son tas de pierres pour dévorer son festin.
+
+Une fois les chasseurs de primes dévorés par le lylek
+ou abattus, les PJ pourront panser leurs plaies et songer
+à la suite. Si leur speeder est encore en état de marche,
+il est possible de le sortir du sable. Sinon, celui des chasseurs de primes n’est pas bien loin. Les PJ qui le fouillent
+y trouveront deux stimpacks, un médipack et une trousse
+de réparation d’urgence, dont ils auront peut-être envie
+de se servir.
+
+\section{ARRIVÉE AUX MINES DE
+NEW MEEN}
+
+Un kilomètre et demi environ après être tombés dans
+l’embuscade, les PJ apercevront enfin New Meen. Lisez
+ce qui suit à voix haute :
+\begin{quotebox}
+
+S’il y a bien un mot que New Meen vous inspire,
+c’est « misère ». L’endroit n’est rien de plus qu’un
+bidonville niché au pied d’une falaise. Des machines ont entassé une grande quantité de pierres
+et de terre au sud du village. Quelques bâtiments
+semblent construits en dur (même s’ils sont en
+mauvais état), mais la plupart des gens semblent
+vivre sous la tente. Votre speeder emprunte les rues
+poussiéreuses en évitant les tas de déchets et les
+condenseurs. Cet endroit n’abrite probablement
+pas de cantina. Nul ne semble vouloir vous accueillir, mais les visages effrayés de Twi’leks apparaissent
+derrière les rabats de toile de leurs abris sommaires.
+
+
+
+Les habitants sont prudents et semblent tout
+d’abord se méfier de vous. L’ambiance change
+toutefois rapidement lorsqu’ils reconnaissent
+B’ura B’an. « B’ura B’an ! B’ura B’an est rentré ! »,
+entend-on bientôt. Les habitants (une vingtaine
+d’adultes et une poignée d’enfants) se rassemblent
+autour du speeder. Ils saluent joyeusement le retour de leur chef (même si certains jettent des regards emplis de douleur et de désespoir vers son
+lekku estropié).
+\end{quotebox}
+
+B’ura B’an explique que les PJ l’ont aidé, et les habitants les accueillent aussitôt en héros. Les PJ sont invités
+à s’abriter dans l’un des plus grands bâtiments et reçoivent des rations de base en guise de rafraîchissement.
+
+\subtitle{L’HISTOIRE D’ANGU DROMBB
+ET DES PROMOTEURS}
+
+Une fois retombée l’agitation suscitée par son arrivée,
+B’ura B’an demande : « Alors, où en est-on du côté des
+promoteurs ? » Aussitôt, l’ambiance se dégrade. La réponse est : « C’est pas bon », mais si les PJ demandent
+plus de détails, voici ce qu’on leur dira.
+
+\begin{itemize}
+\item  Il y a quelques mois, un entrepreneur humain du nom d’Angu Drombb a acheté un bout de terrain à l’un des oligarques féodaux de la planète en affirmant qu’il allait construire une oasis dans le désert, un centre de détente pour être plus précis. Parmi la pègre locale, chacun a rapidement compris que Drombb ne comptait rien faire de la sorte, mais cherchait simplement à mettre un pied dans le commerce du ryll.
+\item  Personne ne semble savoir qui est Drombb. Il n’a apparemment pas de passé. Malgré tout, sa réserve de crédits semble inépuisable. Des gens le soupçonnent d’être l’intermédiaire d’un individu fortuné qui souhaite conserver l’anonymat.
+\item  Au début, la présence de Drombb a été considérée comme une aubaine par les Twi’leks de New Meen, car son arrivée a coïncidé avec la disparition d’un groupe de bandits aquales qui extorquaient crédits et faveurs aux mineurs de ryll de la région. 
+\item  Rapidement, les hommes de Drombb se sont mis à compliquer la vie des habitants de New Meen. Les tas de terre qui entourent la ville ont été placés là par les soi-disant promoteurs, et un certain nombre de générateurs ont été « accidentellement » endommagés durant l’apparition des tumulus. Plusieurs incendies et larcins seraient aussi à mettre sur le compte des nouveaux venus.
+\item  Les Twi’leks se sont plaints auprès des oligarques féodaux qui ont vendu les terres, mais ils ont visiblement été achetés par ceux qui soutiennent Drombb.
+\end{itemize}
+
+
+À ce point, les PJ sont probablement assez en colère
+pour vouloir se venger de Drombb et de ses bandits.
+Dans le cas contraire, c’est le combat qui viendra à eux.
+
+\subtitle{LE PLAN DE DROMBB}
+
+Drombb est à la tête d’un groupe de douze brutes (pour la
+plupart des humains, mais il y a aussi quelques Aquales).
+Son objectif est de mener la vie dure aux Twi’leks de New
+Meen jusqu’à ce qu’ils quittent ou vendent la colonie.
+Ensuite, Teemo achètera leur terre pour une bouchée de
+pain, et Drombb et ses brutes se chargeront de commercialiser le ryll.
+
+Les mineurs de New Meen résistent fièrement à la
+campagne d’intimidation de Drombb, mais ils commencent à en avoir assez. Ils craignent aussi que les
+brigands dérapent, car ils sont de plus en plus agressifs
+avec les mineurs et les ont déjà menacés. En privé, certains mineurs parlent de quitter New Meen, du moins de
+faire une offre aux acheteurs potentiels.
+
+De son côté, Drombb pousse ses sbires à se montrer
+de plus en plus agressifs à l’encontre des Twi’leks, promettant des bonus et une promotion à ceux qui feront
+preuve « d’initiative » pour se débarrasser de « l’obstacle » de New Meen.
+
+Drombb et ses brigands n’ont aucune raison de s’en
+prendre aux PJ et ne feront pas attention à eux s’ils
+restent en dehors de leur chemin. Mais tôt ou tard, ils
+apprendront que Teemo a mis leur tête à prix.
+
+\subtitle{ENSUITE…}
+
+Les PJ sont sur le point de croiser la route d’un groupe
+de brutes de Drombb venues harceler les habitants de
+New Meen. L’aventure part du principe que les PJ vont
+réagir avec héroïsme. Cela signifie qu’ils repousseront les
+brutes venues à New Meen dans la section « Ébriété et
+trouble de l’ordre public », puis affronteront Drombb et
+ses derniers gorilles dans la section « Sus à Drombb ! ».
+Toutefois, le MJ devra adapter le scénario pour les
+groupes cherchant une solution différente ou comptant
+moins de quatre PJ.
+
+
+Comme précisé plus haut, Drombb est à la tête de
+douze brigands : trois groupes de quatre sbires. Si les
+PJ sont moins de quatre, leurs
+adversaires seront moins nombreux, eux aussi.
+
+\begin{itemize}
+\item Si les PJ ne sont que trois, Drombb dirigera trois groupes de trois brutes.
+\item Si les PJ ne sont que deux, Drombb dirigera trois groupes de deux brutes.
+\end{itemize}
+
+Si les PJ ne se décident pas à aller tirer les oreilles à
+Drombb, comme expliqué ci-après, mais combattent les
+brutes qui se rendent à New Meen, l’entrepreneur réunira tous ses hommes et attaquera le village dans l’espoir
+d’écraser toute résistance une bonne fois pour toutes.
+
+Si les PJ ne font rien du tout pour les aider, les Twi’leks
+de New Meen décident de quitter les lieux. B’ura B’an
+sera très déçu par leur attitude, mais les invitera tout de
+même à escorter les Twi’leks jusqu’à Nabat. Cela pourrait
+d’ailleurs les mettre aux prises avec les brutes de Drombb,
+venues railler et harceler les Twi’leks sur le départ.
+
+Si les PJ refusent toujours de se conduire comme des
+héros, certains des gorilles comprendront qu’ils sont
+recherchés (peut-être ont-ils eu vent de la prime mise
+sur leur tête dans l’acte suivant). Ils cesseront de s’en
+prendre aux Twi’leks et s’intéresseront aux PJ, en tentant
+d’abord de les obliger à les suivre jusqu’à la cantina, puis
+en recourant à la violence si cela ne marche pas.
+
+\section{ÉBRIÉTÉ ET TROUBLE
+DE L’ORDRE PUBLIC}
+
+Si les PJ décident de rendre une petite visite à Drombb,
+sautez cet épisode. À l’inverse, s’ils évitent la confrontation avec les soi-disant promoteurs, ils seront invités
+à passer la nuit à New Meen avant de repartir à Nabat
+au matin. Toutefois, ils seront réveillés pendant la nuit
+par un bruit de moteur poussé à fond suivi d’un vacarme
+épouvantable.
+
+Plusieurs hommes de main de Drombb (un groupe
+de sbires tels qu’ils sont décrits à la page 19) se sont
+saoulés et ont décidé de s’emparer d’un engin à chenilles
+pour une petite virée.
+
+\begin{quotebox}
+    
+Lisez ce qui suit à voix haute :
+Vous vous précipitez dans la rue et êtes témoin
+d’une scène de destruction. Un gros véhicule à chenilles a percuté une des habitations des faubourgs
+du village. Heureusement, il ne semble pas y avoir
+de blessés, mais la maison est sur le point de s’effondrer et un gros condenseur a été détruit dans
+l’accident. Les Twi’leks qui y vivaient sont désespérés et hurlent qu’ils ne pourront pas survivre sans
+toit ni eau. Les conducteurs, eux, ne semblent pas
+franchement bouleversés. Ils sont quatre : trois humains et un Aquale. Ils portent un pistolet blaster à
+la taille et leur mine patibulaire en dit long sur leurs
+intentions. L’un d’eux aperçoit les PJ et crie : « Hé !
+Vous, là-bas ! On a un problème par ici ! C’est vous
+qu’avez un speeder ? On en a besoin, juste deux ou
+trois minutes. » Le mot « DROMBB » a été peint sur
+le flanc de l’épave en grosses lettres noires.
+\end{quotebox}
+
+Les brigands veulent rejoindre leur camp en speeder
+pour prendre un autre engin de chantier, et causer davantage de destruction en sortant le premier des ruines
+de l’habitation qu’ils ont percutée. Les hommes sont
+ivres et très agressifs, et cela ne s’arrangera pas si les
+PJ ne leur remettent pas leur speeder sur-le-champ :
+« Donnez-nous votre fichu speeder et partez retrouver
+ces leks que vous aimez tant ! » Autant dire qu’il sera
+impossible de les ramener à la raison. Si un des PJ a une
+parole ou un geste déplacé, les gorilles sortent leurs
+armes et tirent.
+
+Comme il fait nuit, tous les personnages ajoutent un dé
+d’infortune \setback à leurs actions.
+
+Les habitants de New Meen ne prendront part à l’escarmouche que si les PJ leur ont remis des armes. Toutefois, si un des Twi’leks a l’impression qu’un des gorilles
+ne le regarde pas, il pourra l’attaquer avec une arme
+improvisée, en lui lançant des pierres ou des gravats,
+par exemple.
+
+À cette fin, ajoutez le résultat suivant aux tests de
+Corps à corps, Distance et Pugilat des PJ :
+
+\advantage : un Twi’lek jette une pierre sur votre cible qui
+subit 1 blessure.
+
+Si les PJ ont remis des armes aux Twi’leks, ces derniers se joignent au combat. Utilisez le même profil que
+pour les gorilles humains et aquales.
+
+\subtitle{SUS À DROMBB !}
+
+La parcelle de Drombb va de New Meen (là où il a
+construit les talus) au camp où stationnent ses hommes
+et ses véhicules, à un kilomètre et demi au sud. Actuellement, neuf humains et trois Aquales travaillent pour lui
+(tiens ! il ne construit pas un complexe de détente, tout
+compte fait…).
+
+Si les PJ déclarent vouloir rencontrer Drombb, certains
+Twi’leks voudront peut-être se joindre à eux. Aucun des
+mineurs ne dispose d’arme sérieuse, aussi ne les accompagneront-ils que si on leur donne les moyens de se
+battre. Les Twi’leks armés forment un groupe de sbires
+au profil semblable à celui des hommes de main humains
+et aquales.
+
+Les Twi’leks armés se conduisent comme des sauvages et n’hésiteront pas à se venger des brutes qui leur
+ont tant empoisonné l’existence. Ils feront preuve d’une
+agressivité sans borne, à moins que les PJ ne prennent
+le temps de les calmer.
+
+Le camp de Drombb est un vaste parking accueillant
+une flotte de cinq gros véhicules de chantier à chenilles. Un très vilain préfabriqué gris a été construit
+tout près. C’est là que vivent Drombb et ses hommes
+de main. Il y a aussi une cantina plutôt bien fichue. Ce
+n’est que la façade de son organisation, mais les habitants du camp s’y détendent quand ils ne dorment et
+ne « travaillent » pas.
+
+
+
+
+
+
+
+\begin{commentbox}{ET SI LES PJ PERDENT ?}
+  De courageux Twi’leks viendront à leur rescousse,
+mais beaucoup se feront sérieusement rosser
+avant que les brutes ne se lassent et s’en aillent.
+Les anciens de New Meen discuteront sérieusement de vendre l’exploitation à Drombb et les
+Twi’leks abandonneront le site au lever du soleil.
+Très déçu que les PJ n’aient pas réussi à sauver
+New Meen des déprédations de Drombb et de
+ses hommes de main, B’ura B’an leur demandera l’immense faveur de bien vouloir escorter ses
+compatriotes à Nabat.
+\end{commentbox}
+
+\begin{commentbox}{GESTION DES PNJ}
+  Sans doute est-il possible d’utiliser les règles complètes pour chaque PNJ allié, en leur octroyant jets
+d’initiative et actions individuels comme pour les
+PJ. Toutefois, c’est rarement nécessaire, car cela
+nuit inutilement au rythme. Rien ne vous empêche
+d’être un peu plus souple avec les règles quand
+c’est au profit du récit. Voici quelques suggestions
+pour gérer les groupes de PNJ alliés aux PJ :
+
+Approche narrative – Attribuez à chaque
+PNJ ou groupe de PNJ un élément du récit, résolu de manière purement narrative (sans lancer de dés). Par exemple, si les PJ emmènent
+un petit groupe de miliciens twi’leks pour mener un raid, ces derniers pourraient lancer une
+attaque pour éloigner des gardes, éliminant
+ainsi un groupe de sbires et facilitant la progression des PJ. Les PJ peuvent aussi se faire
+accompagner d’un expert en informatique
+pour s’introduire dans un terminal de données
+précieuses, à condition de réussir à l’amener à
+l’ordinateur en question.
+
+Combat abstrait – À la fin de chaque round,
+assurez-vous que chaque PNJ a un effet, aussi
+modeste soit-il, sur le combat. Par exemple,
+chaque PNJ milicien pourrait infliger 1 blessure à un PNJ ennemi, après quoi l’un d’eux
+pourrait être éliminé par les tirs de riposte.
+Cela permet aux PNJ d’avoir un impact mécanique sur le combat sans que vous ayez à
+lancer des dés ou à passer trop de temps sur
+leurs actions.
+
+Combat délégué – Assignez chaque PNJ ou
+groupe de sbires PNJ à l’un des joueurs, qui
+prend les décisions et lance les dés pour eux,
+comme il le fait pour son PJ (cela fonctionne
+bien en combat, après quoi le MJ reprend
+les commandes). Certes, cette solution ne réduit pas le temps de gestion et la quantité de
+dés lancés, mais elle a le mérite de répartir la
+charge de travail.
+
+\end{commentbox}
+
+Autant dire que Drombb n’est pas un enfant de chœur lui non plus. C’est un solide gaillard dont le visage, perpétuellement rouge de colère, est surmonté d’un duvet rouquin. Il tente de se donner des airs raffinés et porte habituellement un costume coûteux, mais il est tout ce qu’il y a de plus vulgaire et a bien du mal à faire illusion.
+
+Si les PJ tentent d’approcher du camp sans prendre de précautions particulières, ils seront repérés et un groupe de gros bras sera chargé de leur faire peur. Ils viendront à la rencontre des PJ et les salueront ainsi : « À votre place, je ficherais le camp. Vous avez rien à faire ici ! » Les hommes de main sont grossiers et agressifs, et même si les PJ tentent de négocier poliment, un des Aquales présents dégainera son pistolet et tirera au jugé.
+
+Un coup de feu, et c’est tous les gros bras qui seront avertis du danger. Ils prendront leurs armes pour défendre le camp et tireront sur les personnages en restant aux portes de la cantina.
+
+En revanche, si les PJ prennent toutes leurs précautions, les hommes de main de Drombb seront trop absorbés par les plaisirs de leur cantina pour remarquer la venue de qui que ce soit. Les PJ y arriveront alors sans
+devoir effectuer de tests de compétence.
+
+\begin{monsterbox}
+  
+HOMMES DE MAIN HUMAINS
+ET AQUALES [SBIRES]
+Vigueur 3
+
+Ruse 2
+
+Présence 1
+
+Agilité 2
+
+Intelligence 2
+
+Volonté 1
+
+Compétences : en groupe uniquement : Coercition,
+Corps à corps, Distance (armes légères), Pugilat
+Encaissement : 3
+
+Défense : 0
+
+Seuil de blessure : 6
+Seuil de stress : – (subit des blessures à la place)
+Équipement : pistolet blaster (Distance [armes légères] ; dégâts 6 ; critique 3 ; portée moyenne ;
+réglage étourdissant), coup-de-poing (Pugilat ; dégâts 4 ; critique 4 ; portée au contact ; Désorientation 3).
+\end{monsterbox}
+
+
+\subtitle{COMBAT À LA CANTINA}
+
+Drombb et ses derniers hommes de main livrent leur baroud d’honneur dans leur très chère cantina. Ils sont éméchés, ne feront pas de quartier et ne s’imagineront pas être épargnés. Les gorilles de Drombb regroupent neuf humains et trois Aquales, répartis en trois groupes de quatre sbires. Notez qu’un de ces groupes a peut-être déjà été éliminé à New Meen.
+
+La cantina est semblable à celle de Mos Shuuta, sauf
+qu’on n’y trouve pas de scène. Vous pouvez donc vous
+servir du même plan si nécessaire. Les gros bras que les
+PJ n’ont pas encore tués s’y trouvent en compagnie de
+Drombb.
+
+\section{EN QUÊTE D’UNE SOLUTION PACIFIQUE}
+
+Drombb et ses gorilles n’entendront probablement pas la
+voix de la raison. Teemo les paie grassement et ils ont la
+violence dans la peau. Toutefois, si les PJ cherchent une
+issue pacifique à toute cette histoire, peut-être trouveront-ils une solution en fonction de la tactique employée.
+
+Brosser les brutes dans le sens du poil – Cela ne
+marchera pas. Les gros bras feront mine de réfléchir à
+une trêve, mais ils en profiteront simplement pour panser leurs plaies, renforcer leurs positions et reprendre le
+combat de plus belle.
+
+Les intimider après une démonstration de force
+– Si les PJ tentent de leur mettre la pression après en
+avoir tué quelques-uns, ils pourraient bien les convaincre
+que leur cause est perdue. Les PJ peuvent alors tenter
+un test de Coercition. En cas de réussite, les gorilles restants acceptent de se rendre. La difficulté du test dépend
+du nombre de brutes déjà tuées. 1-4 : Difficile (\difficulty \difficulty \difficulty) ;
+5-8 : Moyen (\difficulty \difficulty) ; 9+ : Facile (\difficulty).
+
+Soudoyer les brutes – Ces gros bras ne sont que
+des mercenaires, prêts à quitter Teemo si on leur fait une
+meilleure offre. Les PJ n’en savent bien évidemment rien,
+mais chaque homme de main est censé toucher 500
+crédits très bientôt. Après quoi rien ne garantit qu’ils continueront de travailler pour Teemo. Si les PJ leur offrent la même somme, ils pourraient bien enterrer la
+hache de guerre, et même travailler pour eux. En offrant
+entre 400 et 500 crédits et en réussissant un test de
+Négociation opposé à la Négociation (\difficulty) de la cible,
+ils pourront faire changer de camp une des brutes. Les
+hommes de main refuseront moins de 400 crédits quoi
+qu’il arrive, et autant dire que les PJ n’ont pas assez
+d’argent pour soudoyer Drombb.
+
+\begin{monsterbox}
+  
+ANGU DROMBB
+Vigueur 3
+
+Ruse 2
+
+Présence 3
+
+Agilité 2
+
+Intelligence 2
+
+Volonté 2
+
+Compétences : Coercition 1 (\difficulty \proficiency), Corps à corps 1
+(\difficulty \difficulty \proficiency), Distance (armes légères) 1 (\difficulty \proficiency), Pugilat 1
+(\difficulty \difficulty \proficiency)
+Encaissement : 3
+
+Défense : 0
+
+Seuil de blessure : 14
+Seuil de stress : – (subit des blessures à la place)
+Équipement : pistolet blaster (Distance [armes
+légères] [ \difficulty \proficiency ] ; dégâts 6 ; critique 3 ; portée
+moyenne ; réglage étourdissant), coup-de-poing
+(Pugilat [ \difficulty \difficulty \proficiency ] ; dégâts 4 ; critique 4 ; portée au
+contact ; Désorientation 3).
+\end{monsterbox}
+
+\begin{commentbox}{ET SI LES PJ PERDENT ?}
+  Si les PJ sont vaincus par Drombb, c’est toute l’aventure qui risque de dérailler. Les PJ sont pieds et
+poings liés, sur le point d’être expédiés sur Tatooine,
+où Drombb touchera leur prime et connaîtra une ascension fulgurante dans l’organisation de Teemo.
+Mais cela n’arrivera pas, car les PJ seront sauvés
+par B’ura B’an et Ota (cf. acte II), qui s’introduisent
+discrètement, crochètent la porte du placard où ils
+ont été enfermés, puis les font sortir en enjambant
+un garde endormi. Ota leur explique qu’il a une
+proposition et leur fait comprendre qu’ils auront
+l’occasion de se rattraper de leur échec de New
+Meen. Passez à l’acte II.
+\end{commentbox}
+
+
+
+\section{LIBÉRATION DE
+NEW MEEN}
+
+Une fois Drombb et ses hommes vaincus, les Twi’leks victorieux saccagent le camp. Si les PJ veulent leur part de
+butin ou chercher des indices dans le bureau de Drombb,
+ils vont devoir agir vite. Le placard de la cantina renferme
+d’importants stocks de boissons et de rations, ainsi qu’un
+coffre-fort verrouillé qu’on peut plastiquer ou ouvrir, soit
+avec la clé que Drombb porte autour du cou, soit par un
+test de Magouilles Difficile (\difficulty \difficulty \difficulty). Il renferme 2 000
+crédits.
+
+Le bureau de Drombb se situe dans le préfabriqué. On
+peut y trouver les archives informatiques et les papiers
+relatifs à l’achat et à la gestion de la parcelle.
+
+Ces renseignements ne seront pas franchement utiles
+aux PJ, mais s’ils cherchent à vérifier les communications
+de l’ordinateur de Drombb, ils trouveront ses messages
+grâce à un test d’Informatique Difficile (\difficulty \difficulty \difficulty).
+
+
+Drombb a fait le nécessaire pour se débarrasser de ses
+communications passées, mais deux messages envoyés
+à un certain « Thwheek » ces derniers jours sont restés
+sur le disque dur. Les voici :
+\begin{quotebox}
+« Oui, c’est une entreprise risquée. Je suis surpris que Trex ait réussi à filer avec ce technicien
+droïde Sivor sans que tout nous retombe sur la
+tête. On ne sait jamais avec ces fichus insectes,
+leurs différentes espèces, castes et tout le tralala. Fâche celui du haut, et tu perds tous les maillons de la chaîne. Après, t’as plus qu’à repartir
+de zéro. J’ai bien cru que toute cette affaire allait capoter quand on a perdu le soutien du duc
+Piddock, mais ce Dimmock… c’est peut-être la
+punaise dont on a besoin. »\end{quotebox}
+
+
+Et :
+\begin{quotebox}
+« Décapité ! Ha ! Eh bien, fais en sorte qu’il n’en
+entende jamais parler ! Enfin, comprends-moi
+bien, les insectes sont de fichus hypocrites en la
+matière, si tu veux mon avis. Ils se moquent bien
+de voir des dizaines de bourdons tués dans leurs
+jeux, mais s’il savait ce qui s’est passé avec Sivor,
+notre marché tomberait à l’eau. Ha ! Envoyer un
+vieux techno rachitique dans l’arène contre toi ?
+C’est ce que j’appelle une idée mortelle ! »
+\end{quotebox}
+
+Aux PJ de voir ce qu’ils vont faire de tout cela.
+Thwheek est un espion kubaz employé par Teemo pour
+superviser certains des aspects les plus louches de ses
+affaires. D’ailleurs, les PJ l’ont peut-être déjà rencontré sur Ryloth. Contre toute attente, Drombb a réussi
+à se lier d’amitié avec le Kubaz, qui s’est montré étonnamment candide en révélant à l’humain une partie des
+marchés qu’il avait négociés entre Teemo et les habitants insectoïdes de Géonosis, dont le rôle qu’il a joué
+dans la mort de Sivor.
+
+Si les PJ ne pensent pas à fouiller le bureau de Drombb
+ou à chercher des renseignements sur son ordinateur, ou
+encore s’ils trouvent les messages mais ne savent pas
+quoi en faire, ce n’est pas très grave.
+
+De toute façon, ils ont remporté une première victoire.
+Avec la défaite de Drombb, les plans de Teemo visant
+à faire main basse sur le commerce minier du ryll sont
+tombés à l’eau, et certains de ses meilleurs chasseurs de
+primes ont fini dans la panse d’un lylek. Pour l’instant, les
+PJ n’ont rien à craindre et les Twi’leks, d’humeur à faire
+la fête, espèrent bien qu’ils se joindront à eux pour vider
+les réserves de la cantina de Drombb.
+
+\chapter{NÉGOCIATIONS
+GÉONOSIENNES}
+Au cours de cet acte, les PJ découvrent que Teemo
+compte entreprendre des affaires louches avec une faction clandestine de Géonosiens, mais aussi qu’il a mis
+leur tête à prix. Ils auront l’occasion de se rendre sur
+Géonosis pour saper les efforts du Hutt et l’empêcher
+de signer avec le duc Dimmock. À la fin de l’épisode, ils
+apprendront l’existence d’un vaisseau cargo qui se rend
+au palais de Teemo. Ils pourront s’y glisser pour passer
+outre les gardes du baron du crime et se débarrasser
+enfin de ce pénible Hutt.
+
+Cet acte constitue un véritable défi, car le MJ et les
+joueurs vont avoir de multiples informations à gérer. Le
+gros de l’action se déroule lors d’une réception où les
+PJ vont avoir affaire à différents PNJ, qui ont tous des
+secrets et des objectifs inavouables. Il faut que le MJ
+comprenne bien ce que savent ces PNJ, et comment les
+interpréter avec brio.
+
+Les PJ, eux, vont apprendre beaucoup de choses et
+devoir décider comment utiliser tous ces renseignements. Bien qu’ils puissent s’en sortir à coups de blaster,
+ils se faciliteront considérablement la vie en négociant
+avec certains PNJ.
+
+\section{ABRÉGÉ DE CULTURE
+GÉONOSIENNE}
+Géonosis ne se situe qu’à un parsec de Tatooine, mais
+les deux planètes n’entretiennent aucune relation, ou
+presque, ce qu’il faut sans doute mettre sur le compte
+de l’isolationnisme de la première et de la pauvreté de
+la seconde. Teemo le Hutt compte cependant changer la
+donne. Avant l’avènement de l’Empire galactique, Géonosis concentrait une activité très importante. Les habitants
+insectoïdes de cette planète sont à l’origine de plusieurs
+innovations militaires. La plus connue, le droïde de combat B1 de Baktoid Combat Automata, fut très largement
+utilisée par les forces séparatistes lors de la Guerre des
+Clones. L’utilisation de ce genre de droïde est aujourd’hui
+très mal vue, ce qui explique le déclin financier des Géonosiens, qui n’en restent pas moins novateurs en matière
+de matériel militaire.
+
+Les étrangers trouvent souvent la société géonosienne
+incompréhensible, sinon impénétrable. La planète abrite
+près de quatre-vingt-dix-neuf milliards de Géonosiens
+entassés dans de grandes ruches qui s’élèvent haut dansle ciel et s’enfoncent profondément sous terre. Chacune
+est dirigée par un conseil, mais les Géonosiens reconnaissent aussi une caste aristocrate de ducs et d’archiducs. De nombreuses rumeurs parlent également de
+reines, mais on ne sait presque rien à leur sujet. La plupart des Géonosiens appartiennent à la caste des ouvriers, mais beaucoup trouvent une place dans celle des
+soldats, plus forts et agressifs.
+
+Depuis plusieurs années, les Géonosiens subissent le
+joug de l’Empire, mais depuis la bataille de Yavin, on y fait
+part d’activités rebelles et de plusieurs insurrections mineures contre les autorités impériales qui y sont postées.
+
+Les Géonosiens s’intéressent rarement au marché
+noir et aux organisations criminelles… pas par les
+temps qui courent en tout cas. Toutefois, deux ducs géonosiens, des rivaux appelés Piddock et Dimmock, ont
+prudemment contacté certains représentants des plus
+importantes organisations criminelles de la galaxie pour
+vendre et faire sortir clandestinement de la technologie
+géonosienne sous le nez des
+forces impériales.
+
+\section{TEEMO
+ET LES
+GÉONOSIENS}
+
+Teemo a tiré parti de l’offre des
+Géonosiens, mais s’est montré
+assez audacieux pour persuader
+un des ducs de lui dévoiler des renseignements concernant la production
+de droïdes de combat. Il a d’abord abordé le
+duc Piddock, mais leurs relations ont tourné
+au vinaigre. Dans un accès de colère, le Hutt
+a provoqué la mort de l’intermédiaire du
+duc, un technicien géonosien du nom de
+Sivor, lors d’un combat clandestin dans
+l’arène de son palais. Comme précisé plus
+haut, c’est le Kubaz Thwheek qui a porté le
+coup de grâce.
+
+Depuis, Teemo regrette cette décision et a
+fait de timides efforts pour se réconcilier avec
+les Géonosiens. Il a compris qu’il ne pouvait
+plus compter sur Piddock, mais depuis peu, le
+duc Dimmock semble prêt à traiter avec lui.
+
+\subtitle{GAGNER LA CONFIANCE DU
+DUC DIMMOCK}
+
+Le duc Dimmock se méfie énormément de
+Teemo, mais il veut bien collaborer avec lui
+pour l’heure. La situation pourrait néanmoins changer s’il
+apprenait certaines informations.
+
+Durant cette aventure, lorsque les PJ auront l’occasion de s’entretenir avec le duc, ils disposeront peutêtre déjà de renseignements susceptibles de le dissuader de travailler avec le Hutt.
+
+Voici cinq informations pertinentes :
+
+\paragraph{Teemo dispose d’un espion kubaz.} Insectivores, 
+les Kubaz sont bien connus des Géonosiens pour
+leurs préjugés vis-à-vis des espèces insectoïdes. En
+règle générale, les Kubaz reconnaissent à peine les
+droits des espèces qu’ils voient comme de la nourriture, ce qui explique que beaucoup d’espèces insectoïdes les considèrent avec hostilité.
+
+\paragraph{Un morceau de carapace de Géonosien a été découvert dans le vaisseau de Trex}. Les Géonosiens
+ne savent rien de ce qui est arrivé à Sivor, même si
+quelques rumeurs évoquent le sort que Teemo lui a
+réservé. Si les PJ expliquent qu’un bout de carapace
+a été découvert à bord du Croc de Krayt, cela corroborera ces bruits.
+
+\paragraph{Le Kubaz qui travaille pour Teemo a tué Sivor.}
+C’est un atout de taille pour les PJ, s’ils ont découvert
+cette information dans l’ordinateur de Drombb. Bien
+qu’ils n’aient aucune preuve tangible, cette nouvelle
+est pour le moins déconcertante. Les Géonosiens auraient encore plus de mal à digérer la mort de Sivor
+s’ils savaient qu’il a été tué par un Kubaz.
+
+\paragraph{Teemo collabore avec l’Empire. Les Géonosiens}
+ne sont pas très heureux de compter parmi les sujets de l’Empire. Si le duc Dimmock découvre que
+Teemo est en quelque sorte à la solde de l’Empire, il n’en
+sera
+pas
+content du
+tout. Les PJ
+peuvent déduire
+tout cela au regard
+de ce qui leur est arrivé lors
+de Fuite de Mos Shuuta.
+
+\paragraph{Teemo compte désosser et étudier
+un droïde de combat B1 pour produire
+les siens.} Si le duc Dimmock veut bien
+vendre de vieux droïdes, il ne sera pas content
+d’apprendre que ses clients comptent produire
+les leurs.
+
+Selon les actions entreprises au cours du premier acte, les PJ sont peut-être déjà au courant
+des points 1, 2 et 3. Ils auront l’occasion d’en apprendre un peu plus sur les autres durant l’acte II.
+
+\section{LA RÉCEPTION PRIVÉE
+DU DUC PIDDOCK}
+Après la disparition de Sivor, son intermédiaire, le
+duc Piddock a renoncé à rendre service aux criminels
+de la galaxie, mais l’idée lui trotte à nouveau en tête.
+Il organise une réception à laquelle ont été conviés les
+représentants d’organisations avec qui il pense pouvoir
+faire affaire.
+
+De tous ces représentants, seuls une poignée auraient le cran de venir en personne. Ce sont des gens
+qui disposent de multiples sous-fifres pour s’occuper de ce genre de tâche. Parmi eux, il y a Ota, un espion
+bothan renommé. En ce moment, il est à la recherche
+des PJ, car son désir d’en apprendre un peu plus sur les
+événements de cette réception est, selon lui, compatible avec leur envie d’en découvrir davantage au sujet
+de Teemo le Hutt.
+
+\section{UN NOUVEAU JOUR
+À NEW MEEN}
+Les Twi’leks de New Meen fêtent encore la mort ou la
+fuite des soi-disant promoteurs qui les persécutaient.
+Ils comptent poursuivre les réjouissances pendant au
+moins une semaine et proposent aux PJ de rester aussi
+longtemps qu’ils le voudront. Ils n’ont pas grand-chose à
+leur offrir pour les récompenser, mais leur permettront
+d’utiliser librement leurs installations. Le camp abrite
+probablement des stimpacks et des rations, entre autres
+choses, dont les PJ pourront faire bon usage. B’ura B’an
+leur est extrêmement reconnaissant de leur aide et envoie un message à Nyn, restée à Nabat, pour lui faire
+part de leur héroïsme.
+
+Le retour à Nabat se fera sans encombre. B’ura B’an
+les accompagnera et leur conseillera de rendre visite à
+Nyn pour lui faire un compte rendu détaillé avant de reprendre leur route.
+
+Si les PJ s’arrêtent à l’antre du vieux lylek, ils le trouveront tel qu’ils l’ont laissé.
+
+\subtitle{RETOUR À NABAT}
+
+Une fois les PJ rentrés à Nabat, lisez ce qui suit à voix
+haute :
+
+\begin{quotebox}
+    
+Le spatioport de Nabat semble particulièrement
+agité aujourd’hui. Au moment où votre speeder
+franchit les portes de la ville, vous apercevez une
+foule réunie près de l’aire d’atterrissage. On dirait
+qu’un certain nombre d’appareils, des cargos de
+toutes tailles, sont arrivés aujourd’hui. Des chariots et des droïdes portant des marchandises
+venues de différents mondes de la Bordure extérieure se fraient un chemin parmi la foule. Entre
+la myriade d’espèces qui négocient avec les acheteurs et le personnel du spatioport, on trouve des
+humains, des Twi’leks, des Bothans, des Trandosiens et des Aquales.\end{quotebox}
+
+Thwheek est arrivé sur Ryloth ou s’est remis de son
+crash pendant que les PJ étaient à New Meen. Si les
+PJ affirment ouvrir l’œil, demandez-leur d’effectuer un
+test de Perception Difficile (\difficulty \difficulty \difficulty).
+
+
+En cas de succès, lisez ce qui suit à voix haute :
+\begin{quotebox}
+    
+Votre regard est attiré par une grande silhouette
+encapuchonnée qui se tient près de l’une des entrées menant aux niveaux souterrains de la ville.
+La créature semble vous surveiller au moyen d’une
+paire d’électrojumelles. Au moment où vous l’apercevez, elle baisse les mains. Il s’agit d’un extraterrestre qui dispose d’un long museau vert-noir en
+guise de bouche. Ses yeux sont dissimulés derrière
+de grosses lunettes opaques. De toute évidence, il
+s’agit d’un Kubaz.\end{quotebox}
+
+Si les PJ font mine de se diriger vers lui, Thwheek disparaît dans les tunnels du spatioport. S’ils se rendent à
+l’endroit d’où il les observait, ils trouveront par terre des
+morceaux d’insectes. Le Kubaz grignotait tout en surveillant leur retour, si bien qu’il a laissé des pattes, des carapaces et des ailes derrière lui.
+
+Si l’un des PJ demande s’ils savent quelque chose
+au sujet des Kubaz, invitez-les à effectuer un test de
+Connaissance Moyen (\difficulty \difficulty). Ceux qui le réussissent
+sauront qu’il s’agit d’une espèce de mammifères claniques originaire de la planète Kubindi. Leur monde a
+été intégré à l’Espace hutt lors des dernières décennies
+de la République et leur présence sur les mondes comme
+Ryloth est relativement récente. Si les PJ obtiennent
+un \advantage au test, informez-les que les Kubaz se nourrissent
+d’insectes et entretiennent de mauvaises relations avec
+les espèces insectoïdes comme les Géonosiens.
+
+\subtitle{RETROUVAILLES AVEC NYN}
+
+Une fois les PJ rentrés à Nabat, lisez ce qui suit à voix haute :
+\begin{quotebox}
+
+B’ura B’an s’occupe de faire garer le speeder, puis
+vous ramène à la pièce, dans la zone souterraine
+de la ville. Là encore, quelques mots de passe sont
+échangés à voix basse, et la porte finit par s’ouvrir.
+Nyn est visiblement contente de vous revoir. Elle
+vous sourit chaleureusement et vous tend les bras.
+« Merci beaucoup, dit-elle. Nos amis de New Meen
+ont de bonnes raisons de vous être reconnaissants.
+Nous devons parler de ce qui s’est passé, mais j’aimerais d’abord vous présenter quelqu’un. » Elle
+désigne un des divans de la pièce, sur lequel est
+assis un Bothan petit et corpulent. Il vous observe
+de ses grands yeux pétillant d’intelligence et vous
+adresse un bref salut. « Voici Ota, reprend Nyn.
+Il a des nouvelles qui pourraient vous intéresser. »
+\end{quotebox}
+
+Une fois les présentations faites, Nyn et B’ura B’an
+s’excusent avant de se retirer dans une autre pièce, laissant les PJ seuls avec Ota.
+
+\begin{quotebox}
+Le Bothan s’éclaircit la voix. « Nyn m’a beaucoup
+parlé de vous et j’ai un projet en tête dont vous
+pourriez devenir les acteurs. Néanmoins, avant d’aller plus avant, je dois vous montrer ceci. » Le Bothan
+sort un petit projecteur holographique et l’allume.
+« Cette communication est réglée sur une fréquence
+codée utilisée par certains chasseurs de primes de
+la Bordure extérieure. » Il allume donc son appareil,
+et s’ensuit une série d’images. Vous reconnaissez les
+rues de Mos Shuuta, le Croc de Krayt, vos visages…
+
+Un texte déroulant apparaît lui aussi. Il transmet
+le message suivant en gand, en rodien, en trandosien et en basique : « Recherchés. Récompense
+de 50 000 crédits. Si vous avez des informations,
+contactez Teemo à Mos Shuuta, sur Tatooine. »
+\end{quotebox}
+
+Ota laisse aux PJ le temps de digérer la nouvelle et
+d’en discuter entre eux avant de reprendre.
+
+\begin{quotebox}
+« Si rien n’est fait, vous risquez de vous retrouver
+avec des gens très dangereux aux trousses… des
+gens comme Bossk, ou même le Mandalorien.
+J’ai une proposition à vous faire. Le travail auquel
+je pense vous mettra en contact avec ceux qui
+sont en cheville avec Teemo. Si vos négociations
+avec eux se déroulent bien, ils vous offriront l’occasion de frapper le Hutt au cœur de son palais. Je
+ne vais pas vous mentir : ce n’est pas sans risque,
+mais vos chances seront plus élevées si vous suivez mon plan que lorsque ces chasseurs de primes
+vous auront rattrapés.
+
+Bien évidemment, je veillerai à ce que vous soyez
+récompensés si Teemo le Hutt est tué ou simplement compromis. Il a les crédits nécessaires pour
+payer ses chasseurs, et je ferai en sorte que cet
+argent finisse entre vos mains. »
+\end{quotebox}
+
+Ota attend que les PJ fassent part de leur intérêt avant
+de poursuivre.
+
+\begin{quotebox}
+« J’ai été invité à une cérémonie privée organisée
+par un aristocrate géonosien, le duc Piddock. Il ne
+s’attend pas à ce que je m’y rendre en personne,
+bien sûr, mais quelques invités devront y représenter mes intérêts. Ce duc pensait encore récemment traiter avec Teemo, mais il s’est ravisé. Il se
+trouve qu’il a un rival, le duc Dimmock, censé livrer
+des marchandises au Hutt dans quelques jours. Si
+Dimmock apprenait ce qui a fait changer d’avis
+Piddock, il pourrait nous aider.
+
+C’est compris ? Je me rends bien compte que
+tout cela est compliqué. Nous allons devoir trouver ce qui a poussé un Géonosien à se détourner
+de Teemo pour en convaincre un autre, qui collabore actuellement avec le Hutt, de nous aider à
+la place. »
+\end{quotebox}
+
+
+\subsection{CE QUE LES PJ SAVENT DES GÉONOSIENS}
+Géonosis n’est qu’à un parsec de Tatooine. Les PJ ont
+entendu de nombreuses histoires sur les curieux extraterrestres insulaires qui étaient encore leurs voisins il n’y a pas si longtemps. Résumez les informations contenues dans la section « Abrégé de culture géonosienne ». Si le MJ ou les joueurs connaissent Star Wars sur le
+bout des doigts, et donc le rôle que les Géonosiens ont
+joué lors de la Guerre des Clones, c’est le moment de
+le prouver.
+
+Ota dispose aussi de renseignements qu’il dévoilera
+aux PJ s’ils l’interrogent.
+
+\subsection{C’EST QUOI CETTE RÉCEPTION ?}
+« Certains Géonosiens en ont assez de voir l’Empire brider
+le commerce. Les gens comme Piddock se tournent vers
+le marché noir, le cartel hutt et d’autres. Cette réception
+a pour but de prendre tous les contacts nécessaires. »
+
+\subsection{QUELS ÉTAIENT LES ACCORDS ENTRE TEEMO ET
+LE DUC PIDDOCK ?}
+« Je n’en connais pas les détails. Il serait intéressant de
+le découvrir. »
+
+\subsection{POURQUOI PIDDOCK N’AIME-T-IL PAS TEEMO ?}
+« Tout ce que je sais, c’est que Teemo a récemment décidé de faire la part belle aux talents d’un espion kubaz
+de son entourage. Ce n’est sans doute pas au goût des
+Géonosiens. »
+
+\subsection{POURQUOI LES GÉONOSIENS N’AIMENT PAS
+LES KUBAZ ?}
+« Les Kubaz sont une espèce insectivore. Ils mangent
+des insectes. Leurs relations sont tendues avec tous les
+espèces insectoïdes, c’est bien connu. C’est comparable
+aux relations qu’entretiennent les Trandosiens et les
+Wookies. Ils ne s’entendent pas, un point c’est tout. »
+
+\subsection{QUI D’AUTRE EST INVITÉ À LA RÉCEPTION ?}
+« Je ne sais pas. Les individus présents seront certainement comme vous : des représentants désireux de dissimuler l’identité de leur employeur, ou la leur. À votre
+place, je ne chercherais pas à en savoir plus. »
+
+\subsection{FAITES-VOUS PARTIE DE L’ALLIANCE REBELLE ?}
+« Bien sûr que non. »
+
+Ota tentera de répondre à toutes les autres questions
+des PJ. Il attend d’eux qu’ils fassent preuve de curiosité et les encourage dans ce sens. Il peut leur dévoiler
+des hypothèses circonstanciées sur beaucoup de sujets.
+Néanmoins, en dehors de cette histoire d’espion kubaz, il
+ne sait rien au sujet du duc Dimmock, alors assurez-vous
+de ne dévoiler aucune information importante de la section « Gagner la confiance du duc Dimmock ».
+
+Si les PJ font allusion à la chitine insectoïde retrouvée à bord du Croc de Krayt, ou aux communications
+suspectes envoyées par l’ordinateur de Drombb, Ota se
+montrera intéressé. « Oui, c’est le genre de chose qui
+pourrait inquiéter les Géonosiens. Bravo ! »
+
+\subtitle{FIN DE LA RENCONTRE}
+
+Quand les PJ n’auront plus de questions à poser à Ota, le
+Bothan prendra congé après ces quelques mots :
+\begin{quotebox}
+« Je dois achever mes préparatifs, mais je reviendrai demain matin pour vous conduire à Géonosis.
+Je vous invite à discuter de tout cela entre vous.
+Trouvez une couverture, une histoire plausible qui
+pourrait expliquer que vous soyez invités chez un
+duc géonosien. Il me prend pour un trafiquant
+d’armes, alors il va s’imaginer que vous voulez lui
+en acheter. Ça suffira pour le duc, mais vous devrez vous inventer une autre couverture pour le
+reste des invités. »
+\end{quotebox}
+
+Le MJ doit maintenant encourager les PJ à parler de
+tout cela entre eux, car ils ont beaucoup d’informations
+à digérer. Nyn et B’ura B’an sont surpris par la proposition d’Ota, mais ils y voient l’occasion parfaite de frapper le Hutt.
+
+Servez-vous de Nyn et de B’ura B’an pour aider les PJ à
+comprendre ce qu’ils sont censés faire. C’est une situation
+complexe. À des fins de clarté, il est important pour le MJ
+et les joueurs de se faire une bonne idée de ce qui suit :
+
+\begin{itemize}
+\item Les personnages vont assister à une réception donnée par le duc Piddock, qui s’imagine les voir là pour lui acheter des armes.
+\item S’ils se rendent à cette réception, c’est en réalité pour comprendre pourquoi Piddock a mis un terme à ses tractations avec Teemo. Ils espèrent qu’en le découvrant, ils pourront le rapporter au nouveau partenaire de Teemo, le duc Dimmock, qui cessera ses affaires avec le Hutt et les aidera à la place.
+
+\item S’ils ne comprennent finalement pas pourquoi
+Piddock a rompu ses liens avec Teemo, toutes les
+informations qui feront passer Teemo pour une crapule aux yeux d’un Géonosien seront les bienvenues.
+
+\item À la réception, il y aura d’autres gens à qui ils pour-
+ront demander plus de détails concernant Piddock
+et Teemo, mais mieux vaut qu’ils n’en apprennent
+pas trop sur les PJ. Ils auront donc besoin d’une
+bonne couverture.
+\end{itemize}
+
+Si les héros ne savent pas bien comment procéder,
+Nyn leur suggérera de se faire passer pour des marchands désireux d’ouvrir un commerce de ragoût de rycrit pour aider à nourrir les milliards de Géonosiens. Elle
+se proposera même de leur confier quelques tonneaux
+du plat en question pour accroître leur crédibilité.
+
+Mais les PJ se mettront peut-être plus facilement dans
+la peau de trafiquants d’armes s’ils ont de quoi payer
+cash. S’ils n’ont pas envie de dépenser leur argent de
+cette façon, Nyn peut aussi tousser poliment et leur
+suggérer d’acheter quelques armes géonosiennes pour
+sa cellule d’activistes. Elle leur remet alors 3000 crédits
+dans l’espoir qu’ils puissent lui ramener deux ou trois
+nouveaux fusils.
+
+Au matin, Ota revient. Il s’assoit en compagnie des PJ
+et s’assure qu’ils sont bien conscients de ce qu’ils font. Il
+les félicite pour leur plan et les encourage à peaufiner les
+points encore confus ou manquant de réalisme.
+
+\begin{quotebox}
+« Je me suis chargé des derniers arrangements. La
+réception débute dans douze heures, ce qui vous
+laisse largement le temps de sauter dans l’hyperespace et de couvrir la distance qui sépare Ryloth
+de Géonosis. Ce communicateur, poursuit le Bothan en vous tendant un petit boîtier électronique,
+contient le signal codé qui vous permettra de franchir le cordon de sécurité géonosien. Rendez-vous
+à l’aire d’atterrissage de la ruche de Gogum, une
+petite ville du nord de la planète. Les Géonosiens
+s’occuperont de votre vaisseau et vous escorteront jusqu’au lieu de la réception.
+
+Le lendemain matin, vous prendrez la direction de la ruche de Trellik, à l’ouest de la ruche
+de Gogum. C’est là que vit le duc Dimmock.
+Lorsque vous y serez, utilisez ce communicateur
+pour me contacter afin que nous puissions préparer la suite. »
+\end{quotebox}
+
+
+En revenant au spatioport de Nabat, les PJ s’apercevront que le Croc de Krayt a été réparé, et que le plein a
+été fait. Le voyage de Ryloth à Géonosis se déroule sans
+encombre, exactement comme Ota l’avait décrit. Les
+Géonosiens s’attendent à voir arriver des gens comme
+les PJ pour la réception et sont heureux de les y escorter.
+La seule condition, c’est de laisser les armes offensives
+à bord du Croc de Krayt. Les PJ peuvent prendre leurs
+armes de poing, mais tout ce qui est plus gros devra rester à bord.
+
+\section{LA RÉCEPTION
+DU DUC PIDDOCK}
+La réception du duc est privée. De toute évidence, le
+noble exhibe sa nouvelle cantina, une salle somptueuse,
+mais quelque peu exiguë, taillée dans la roche géonosienne ; un endroit censé attirer les voyageurs horsmonde à la ruche pour qu’ils y mènent leurs affaires.
+
+Les portes du bar sont surveillées par deux drones
+soldats armés de fusils blasters géonosiens (cf. la section « Traiter avec le duc » pour plus de détails sur les
+armes locales).
+
+\begin{quotebox}
+Vous entrez dans la cantina, dont les portessaloon sont flanquées par deux des plus imposants soldats géonosiens qu’il vous ait jamais été
+donné de voir. Ils portent des fusils blasters, eux
+aussi les plus gros que vous ayez jamais vus. De
+toute évidence, ces armes sont de conception géonosienne. Le duc Piddock les emploie sans doute
+pour prévenir tout problème, mais aussi comme
+argument de vente (leurs armes sont vraiment impressionnantes). À l’intérieur, le décor contraste
+avec les parois rocheuses de la ruche. Visiblement,
+cette cantina a été construite pour attirer une
+clientèle cosmopolite. Un joyeux groupe de jatz
+engagé pour divertir les invités se produit sur la
+scène. Le groupe est constitué d’un Bith dégingandé au basson kloo, d’un Rodien survolté à la boîte
+mozz et d’un Twi’lek à la peau bleue qui souffle
+dans un long sifflet de sirène. Une Twi’lek pâle vêtue avec exotisme et aux lekku particulièrement
+longs accompagne la mélodie endiablée d’une
+voix sensuelle.
+
+Deux ouvriers géonosiens tiennent le bar et un
+droïde de protocole Roche J9 se tient tout près.
+Près du bar, un vieux géonosien portant de nombreux bracelets et des éléments d’armure dorés
+s’entretient avec une humaine élégamment vêtue.
+Non loin se trouve une table occupée par deux
+jeunes humains, un homme et une femme, qui
+trinquent et rient. Un Gand vêtu d’une robe poussiéreuse en lambeaux est assis seul dans un coin
+et un jeune Sullustéen sirote un verre en regardant
+le groupe, jetant de temps à autre un œil par-dessus son épaule en direction du dernier invité, un
+Toydarian qui volette non loin. Trois petits salons
+privés percent le mur sur votre droite ; ils sont vraisemblablement réservés aux clients qui souhaitent
+parler à l’abri des oreilles indiscrètes.
+\end{quotebox}
+
+\subtitle{LES COUVERTURES DES UNS
+ET DES AUTRES}
+
+Nombre des invités sont des représentants d’organisations hors la loi ou criminelles, ce qui explique qu’ils ne
+souhaitent pas parler franchement des raisons de leur présence. Chacun a inventé une couverture qu’il dévoilera si on lui demande ce qu’il fait là. Il serait particulièrement déplacé d’affirmer que l’un d’eux ment à ce sujet
+et de tenter d’en apprendre davantage sur les raisons de
+sa venue.
+
+\begin{commentbox}{AU SECOURS !
+JE NE CONNAIS PAS SON PROFIL !}
+  De temps en temps, les PJ font des choses qui
+prennent au le MJ dépourvu. Et parfois, ce dernier
+doit improviser le profil d’un personnage qui n’est
+pas détaillé. Aucun problème !
+
+Les MJ expérimentés adapteront un profil existant
+ou en produiront un très vite, sans réel souci. Les
+autres peuvent se tourner vers la règle suivante :
+tout personnage aléatoire dont le profil n’est pas
+fourni a 2 (une valeur moyenne) dans toutes ses caractéristiques, un seuil de blessure de 8, et 1 rang
+dans les compétences appropriées, celles qu’il est
+susceptible d’avoir apprises.
+\end{commentbox}
+
+
+
+Le MJ, lui, sait ce que chacun fabrique ici réellement,
+puisqu’il doit comprendre les motivations et la personnalité des différents invités. Cependant, la plupart préféreraient mourir (ou tuer) plutôt que de révéler leur véritable identité. Les seules exceptions sont Anatta, qui
+ne cherche pas spécialement à dissimuler le fait qu’il
+travaille régulièrement pour Teemo le Hutt, et les Vio, qui
+n’ont rien à cacher.
+
+\subtitle{BRISER LA GLACE}
+
+Certains invités sont timides ou distants, et ne dévoileront d’informations qu’à certaines conditions. Les PJ
+devront trouver les mots justes ou réussir des tests de
+compétence avant que les personnages en question ne
+se livrent.
+
+Par exemple, Mu Nanb pourra dire aux PJ que Teemo
+est heureux de s’associer avec l’Empire, une information
+très importante. Mais il est trop prudent pour se livrer.
+Pour lui tirer les vers du nez, les PJ devront le convaincre
+qu’ils sont hostiles à l’Empire (ou favorables à l’Alliance)
+et réussir un test de Charme Moyen (\difficulty \difficulty).
+
+\subtitle{UN COMPORTEMENT DÉPLACÉ}
+
+Les invités sont censés se tenir. Les notions d’étiquette
+de la société géonosienne ne sont pas aussi raffinées
+qu’en d’autres endroits de la galaxie, si bien qu’une discussion passionnée et une certaine impolitesse ne feront
+sans doute sourciller personne.
+
+Cependant, si les PJ se mettent à lancer des accusations à la légère, font sauter leur couverture ou celle
+d’autres invités, usent de menaces, etc., le duc Piddock
+leur demandera de partir.
+
+Les PJ pourront éviter de se faire sortir en présentant des excuses et en réussissant un test de Charme
+Moyen (\difficulty \difficulty). S’ils font une seconde scène, ils devront réussir un test de Charme Difficile (\difficulty \difficulty \difficulty) pour
+rester dans la cantina. Ils n’auront pas de troisième
+chance.
+
+Les PJ qui refusent de partir alors qu’on le leur a demandé seront escortés de force à leurs quartiers par un
+groupe de soldats géonosiens.
+
+\subtitle{LE DUC PIDDOCK}
+\emph{« Ah ! Vous êtes les marchands de Ryloth, n’est-ce
+pas ? Parfait. J’espère que cette soirée sera profitable
+pour vous et moi. »}
+
+\paragraph{Apparence :} un vieux et imposant Géonosien. Il porte
+une cuirasse étincelante et plusieurs bracelets dorés aux
+poignets et aux chevilles.
+
+\paragraph{Place :} Piddock reste généralement près du bar, mais
+il lui arrive de faire le tour de la pièce d’une démarche
+majestueuse pour bavarder avec ses invités. Durant la
+soirée, il passera une dizaine de minutes dans l’un des
+salons privés avec Mu Nanb, puis, un peu plus tard, avec
+Vrixx’tt et, par la suite, avec Maru Jakkar. Il serait fort
+déplacé d’interrompre ces entretiens.
+
+\paragraph{Comportement :} royal et poli, mais guindé.
+
+\paragraph{Briser la glace :} il est inutile de briser la glace avec
+Piddock, qui s’attend à faire affaire avec les PJ. Toutefois, s’ils bavardent un peu trop longtemps sans lui faire
+d’offre, il sera contrarié. Les discussions menées par
+Piddock sont abordées dans la section « Traiter avec le
+duc », ci-dessous.
+
+\subtitle{BG-222}
+\emph{« Bienvenue, maître. En quoi le drone BG-222 peut-il
+être utile à la colonie ? Vous zouhaitez être présenté
+au larvaire Zuluztéen ? Mu Nanb, qui désire visiter les
+colonies de la galaczie. Mieux vaut le laizer – il aime
+les vibrazions zoniques. »}
+\paragraph{Apparence :} drone ouvrier Roche J9, BG-222 est un
+droïde utilitaire avec une carapace grisâtre et une grosse
+tête surmontée d’un dispositif optique multifacettes.
+\paragraph{Place :} le droïde reste près du bar tant qu’il ne reçoit pas
+d’ordre. Vrixx’tt l’utilise souvent pour communiquer avec
+les autres invités.
+
+\begin{commentbox}{LA CARAPACE DE SIVOR}
+  Les PJ sont peut-être en possession de la carapace de Sivor, découverte lors de l’acte I. Si oui,
+ils pourront la montrer à quelqu’un durant la réception. Le duc Piddock et BG-222 verront tout
+de suite qu’elle appartient à Sivor. Piddock sera
+curieux d’apprendre où les PJ l’ont trouvée, et
+peut les soupçonner de l’avoir assassiné (s’ils lui
+disent la vérité, il les croira cependant sur parole).
+Anatta peut lui aussi l’identifier et leur raconter
+l’histoire de cet objet, mais il leur demandera
+alors 60 crédits.
+\end{commentbox}
+
+
+
+\paragraph{Comportement :} droïde de protocole jovial et excessivement enthousiaste.
+\paragraph{Briser la glace :} le droïde se montre tout de suite amical. Malheureusement, il souffre des célèbres travers de
+son modèle. BG-222 parle d’une voix monocorde bourdonnante et traduit du point de vue d’un insecte (par
+exemple, « le Toydarian à la peau bleue » deviendra « le
+Toydarian à la carapace bleue », « l’humaine » deviendra
+« la reine humaine », etc.).
+
+\paragraph{Connaît-il Teemo ?} Non.
+
+\paragraph{Connaît-il les autres invités ?} Il est programmé pour
+faciliter et accélérer les présentations. Si on le lui demande, c’est avec joie qu’il détaillera la couverture des
+différents invités.
+
+\subtitle{MU NANB}
+\emph{« Je suis heureux de faire votre connaissance, mais
+j’aimerais écouter la musique si cela ne vous dérange
+pas. Nous pourrons peut-être bavarder lorsque le
+groupe aura terminé. »}
+\paragraph{Apparence :} un jeune Sullustéen sacrément bien habillé,
+mais humble.
+\paragraph{Place :} Mu Nanb reste dans son coin. Il est assis devant
+la scène, où il regarde le groupe et sirote un verre.
+\paragraph{Comportement :} timide, nerveux, et pas franchement à
+sa place. Il ne parle que si on lui adresse la parole et fuit
+la compagnie.
+
+\paragraph{Couverture :} Mu Nanb affirme être un touriste de Sullust
+qui a toujours voulu voir les anneaux de Géonosis. Arrivé
+depuis une semaine, il en a assez vu et souhaite rentrer
+chez lui. L’ami d’un ami l’a présenté au duc Piddock et ils
+se sont bien entendus, car ils partagent l’amour du jatz,
+d’où sa présence à la réception.
+
+\paragraph{La raison réelle de sa présence :} il compte demander
+à Piddock de lui vendre des armes pour le compte de
+l’Alliance rebelle.
+
+\paragraph{Briser la glace :} c’est compliqué. Mu Nanb reste sur la
+défensive et ne parle que si on lui adresse la parole. Il est
+déterminé à rester sobre et n’acceptera pas le moindre
+verre des PJ. Il répond aux questions qui lui sont posées
+poliment et sans s’étendre, mais ne dévoile aucune information qui puisse être sujette à polémique. Il déteste
+l’Empire de tout son cœur, et si des sujets comme la persécution des Wookies ou la destruction d’Aldérande sont
+mis sur le tapis, il semblera soudain très en colère. Si les
+PJ affirment s’opposer à l’Empire ou soutenir l’Alliance
+et réussissent un test de Charme Moyen (\difficulty \difficulty), il se
+détendra un peu.
+
+\paragraph{Connaît-il Teemo ?} Si on lui en parle, il affirme ne
+rien savoir de lui, mais en réussissant un test de Perception Moyen (\difficulty \difficulty), les PJ verront les traits de son
+visage déformés par la colère. Si les PJ ont réussi à
+briser la glace, il leur proposera de discuter dans un
+des salons privés. Il leur dira alors qu’il connaît le Hutt
+de réputation. Apparemment, Mu Nanb avait sur Tatooine des amis qui faisaient de la contrebande, un
+trafic qui « contrevenait aux intérêts de l’Empire ». Ils
+ont été pris la main dans le sac et envoyés sur Kessel.
+Il est certain que Teemo a vendu ses amis et qu’il est
+de mèche avec l’Empire.
+
+\paragraph{Connaît-il d’autres invités ?} Non.
+
+\subtitle{VRIXX’TT}
+
+\emph{« Alors, qu’est-ce qui amène des mammifères comme
+vous aux ruches de Géonosis ? »}
+
+\paragraph{Apparence :} un Gand de forte stature portant
+une tenue traditionnelle.
+\paragraph{Place :} Vrixx’tt reste dans son coin,
+mais parle volontiers aux gens (avec
+l’aide de BG-222, si nécessaire).
+\paragraph{Comportement :} Vrixx’tt offre un visage
+impassible et ne parle pas un mot de basique, si
+bien qu’il semble distant, ce qui ne l’empêche
+pas d’observer attentivement et de se montrer
+chaleureux si on l’aborde.
+\paragraph{Couverture :} Vrixx’tt affirme représenter une organisation officieuse chargée de défendre les intérêts des espèces insectoïdes conscientes de la galaxie. Son histoire
+n’est pas très convaincante et il ne fait pas de gros efforts
+pour la défendre.
+\paragraph{La raison réelle de sa présence :} il souhaite acheter
+des armes à Piddock pour le compte de chasseurs de
+primes gands.
+
+\paragraph{Briser la glace :}Vrixx’tt ne s’intéresse pas tout de suite
+aux PJ. Il est courtois s’ils l’abordent, mais n’ira pas spontanément vers eux. Néanmoins, au bout d’une heure environ, il commence à s’interroger sur leur identité. Si les
+PJ sont attentifs, ils remarqueront grâce à un test de
+Perception Moyen (\difficulty \difficulty) que le Gand consulte un communicateur fixé à son poignet. Ce faisant, il apprend que
+leur tête est mise à prix. Dès lors, il s’intéresse beaucoup plus à eux. Il s’approche et se met à écouter leurs
+conversations, la raison de leur présence, etc.
+
+\paragraph{Connaît-il Teemo ?} Vrixx’tt affirme connaître Teemo de
+nom, c’est tout. Néanmoins, il aimerait bien savoir en
+quoi cela intéresse les PJ.
+
+\paragraph{Aimerait-il savoir que Teemo emploie un Kubaz insectivore ?} Vrixx’tt semble s’en moquer.
+
+\paragraph{Connaît-il les autres invités ?} Non.
+
+
+\subtitle{MARU JAKKAR}
+\emph{« La société des Géonosiens est fascinante. Avez-vous
+assisté à leurs combats rituels lors de votre séjour ? »}
+
+\paragraph{Apparence :} une humaine mince très froide sous ses
+airs sophistiqués. Elle porte une combinaison moulante
+de cuir noir, accompagnée d’un large foulard coloré à la
+mode des nantis des Mondes du Noyau.
+
+\paragraph{Place :} Maru passe le plus clair de son temps à bavarder avec le duc, mais il lui arrive de se mêler aux autres
+invités.
+
+\paragraph{Comportement :} elle est cordiale et avenante, mais pas
+particulièrement amicale.
+
+\paragraph{Couverture :} elle prétend s’intéresser à la culture et à
+l’histoire des Géonosiens, et être venue acheter des antiquités au duc Piddock.
+
+\paragraph{La raison réelle de sa présence :} elle est le porte-parole d’une branche du Soleil Noir, une organisation
+criminelle.
+\paragraph{Briser la glace :} Maru n’a aucune envie de se montrer
+chaleureuse avec les PJ et il sera difficile de briser la glace.
+En revanche, elle s’intéresse réellement aux cultures, arts
+et autres mondes extraterrestres. Si les PJ parviennent
+à l’amener sur ce genre de terrain et réussissent un test
+de Charme Moyen (\difficulty \difficulty), elle se détendra. Oskara et
+Lowhhrick bénéficient d’un dé de fortune \boost au test car
+elle est fascinée par les extraterrestres. Malheureusement, c’est aussi une extrémiste, qui déteste les droïdes :
+améliorez un dé de difficulté des tests de 41-VEX quand
+il souhaite interagir avec elle.
+\paragraph{Connaît-elle Teemo ?} Si la glace n’a pas été brisée, elle
+sourcille et marmonne : « Je ne suis pas du genre à parler de simples rumeurs traitant des Hutts. » Dans le cas
+contraire, elle avoue avoir entendu parler de Teemo.
+
+
+
+Lisez ce qui suit à voix haute :
+\begin{quotebox}
+Maru ne cache pas son inquiétude : « Oui, je le
+connais et je crains qu’il ne suscite maintes déconvenues avant longtemps si on le laisse faire. Je
+ne peux rien prouver, vous le comprendrez, mais
+des membres de mon réseau savent des choses.
+Une série de vols étranges ont été perpétrés, et
+des objets apparemment sans valeur ont été
+payés hors de prix lors de ventes aux enchères.
+Tous viendraient de Tatooine. Les objets volés ou
+achetés ont tous un lien avec les vieux droïdes de
+combat B1 de Baktoid Combat Automata. Celui
+qui est derrière tout cela compte apparemment
+produire les siens. »
+\end{quotebox}
+
+\paragraph{Connaît-elle les autres invités ?} Si la glace est brisée
+et qu’on lui pose des questions au sujet de Vrixx’tt, elle
+affirmera qu’il s’agit d’un chasseur de primes de renom.
+
+\subtitle{ANATTA}
+\emph{« Super soirée, hein ? Ces insectes sont forts pour
+amuser les mammifères comme nous depuis la Guerre
+des Clones. Du bon vin. Du bon jatz. Je me croirais
+presque dans ma cantina préférée à Mos Eisley ! »}
+
+\paragraph{Apparence :} un Toydarian louche typique de son espèce, à la peau bleu clair.
+
+\paragraph{Place :} Anatta n’a de cesse de voleter et ne reste jamais
+bien longtemps au même endroit.
+
+\paragraph{Comportement :} amical, mais un peu vulgaire et trop
+familier.
+
+\paragraph{Couverture :} « J’aime juste faire la fête ! »
+\paragraph{La raison réelle de sa présence :} Anatta vend des renseignements. Il espère impressionner Jabba le Hutt, son
+client le plus régulier, en lui dévoilant les ragots appris
+lors de la réception.
+\paragraph{Briser la glace :} pas besoin. Anatta est le plus ouvert
+et sociable des invités, et de loin. Néanmoins, il ne révèle rien d’important gratuitement. Reportez-vous à
+la section « L’informateur » pour plus de détails sur ce
+Toydarian.
+
+\subtitle{ORPA ET WEX VIO}
+\emph{« C’est pas vous qu’on a vus arriver à bord de ce
+cargo ? C’est un bon appareil que vous avez là… un
+peu cabossé et miteux, mais un bon appareil. Nous, on
+a un Courrier Nova, le Coup de Chance. »}
+
+\paragraph{Apparence :} deux jeunes humains de Corellia. Orpa a
+des cheveux bruns hirsutes coupés au carré et porte une
+combinaison de vol râpée. Wex a une épaisse chevelure
+brune et porte une tunique couleur chamois. Ils ont un
+sérieux air de famille (ils sont frère et sœur).
+\paragraph{Place :} ils partagent une table située près du comptoir.
+\paragraph{Comportement :} ils sont amicaux et espèrent faire des
+affaires. Wex est éméché et de bonne humeur.
+\paragraph{Couverture :} aucune. Ils n’ont rien à cacher.
+
+\paragraph{La raison réelle de leur présence :} Orpa et Wex
+sont des « libres marchands » – des contrebandiers. Ils
+espèrent que si des invités et Piddock parviennent à
+un accord, on leur confiera le transport des marchandises. Ils ont déjà un contrat avec le duc Dimmock, et
+doivent se rendre sur Tatooine dès le lendemain. En
+fait, les PJ subtiliseront peut-être leur vaisseau à la fin
+de l’acte II.
+\paragraph{Briser la glace :} pas de réel besoin de briser la glace,
+car Orpa et Wex bavardent volontiers avec tous ceux
+qui les abordent. Néanmoins, ils sont venus faire du business, alors s’ils comprennent que les PJ n’ont rien d’employeurs potentiels, ils les laisseront pour s’adresser à
+d’autres clients possibles.
+
+\paragraph{Connaissent-ils Teemo ?} Oui, et plutôt bien. « On a
+déjà travaillé pour lui », affirment-ils. Malgré tout, ils ne
+savent pas grand-chose à son sujet. Ils ont transporté
+des caisses de Tatooine à Corellia pour lui il y a un an,
+mais ne savent même pas ce qu’elles contenaient. Ils
+sont censés lui faire une livraison demain, mais sont assez prudents pour ne pas l’évoquer.
+Connaissent-ils d’autres invités ? Si on leur pose
+des questions sur les autres invités, Orpa affirme qu’ils
+viennent de faire leur connaissance. Wex rit et ajoute :
+« On connait Anatta, le Toydarian. » Ensuite, il poursuit à
+voix basse : « Devinez pour qui il bosse ? » Orpa semble
+contrariée et demande à son frère de se taire, mais il sourit et les PJ n’ont aucun mal à lire « Jabba le Hutt » sur ses
+lèvres. Toutefois, ils n’en sauront pas plus. Si les PJ insistent
+auprès de Wex, celui-ci comprendra que sa langue un peu
+trop bien pendue risque de lui attirer des problèmes. Il
+ajoute alors : « Oh, laissez tomber, d’accord ? »
+
+\paragraph{Peut-on louer leurs services ?} « Pas de problèmes,
+parlons gros sous. » Si les PJ le souhaitent, ils peuvent
+engager les Vio pour les ramener discrètement à Mos
+Shuuta le lendemain, ce qui leur permettra de sauter
+le reste de l’acte II (ils n’auront pas besoin de discuter
+avec le duc Dimmock ou de se battre pour monter à
+bord du vaisseau). Orpa leur demande 1000 crédits par
+tête. Wex éclate de rire et demande 500 crédits pour
+chacun d’eux. Un test de Négociation Moyen (\difficulty \difficulty)
+permettra de faire baisser le prix à 250 crédits par tête
+de pipe.
+
+\section{TRAITER AVEC LE DUC}
+
+Apparemment affable et chaleureux, le duc Piddock a
+organisé cette réception pour trouver de nouveaux partenaires commerciaux. Il semblera d’abord heureux de
+bavarder avec les PJ au sujet d’histoires sans intérêt,
+mais cela risque de le contrarier rapidement. C’est ce qui
+arrivera s’ils discutent sans chercher à se renseigner sur
+ses armes ou à lui acheter quelque chose.
+
+Gardez le compte des questions que les PJ posent à
+Piddock. Il répondra aux quatre premières avant de demander avec affectation : « Bien, que puis-je faire pour
+VOUS ? »
+
+Ensuite, si les PJ ne font pas mine de vouloir lui acheter
+des armes ou des services, il répondra à une dernière
+question avant de déclarer : « Pardonnez-moi, mais je
+dois m’occuper de mes autres invités. » C’est ainsi qu’il
+met fin à la conversation.
+
+Si les PJ suscitent l’intérêt de Piddock en lui faisant
+miroiter la possibilité de se fournir en armes auprès de
+lui, il poursuit la conversation. S’ils lui parlent clairement
+d’acheter des armes, il leur fait signe de l’accompagner
+dans l’un des salons privés afin de discuter sérieusement.
+
+
+\subtitle{LA PROPOSITION DE PIDDOCK}
+
+Voici les armes que les PJ peuvent acheter à Piddock :
+
+\begin{itemize}
+\item Pistolet blaster lourd géonosien – 1 000 crédits
+\item Carabine blaster géonosienne – 1 300 crédits
+\item Fusil blaster géonosien – 1 500 crédits
+\end{itemize}
+
+Si les PJ tentent de marchander, ils devront effectuer
+un test de Négociation Moyen (\difficulty \despair) opposé. En cas
+de réussite, il leur accordera un rabais de 10\%, car il
+s’agit de leur premier achat.
+
+Les armes géonosiennes s’accompagnent d’un facteur
+de critique inférieur de 1 à la normale (il est donc de
+2 pour une carabine blaster locale). Le reste ne change
+pas.
+
+Piddock ne reçoit pas d’argent et ne remet pas
+d’armes dans son bar. Il se contente d’un accord verbal
+en affirmant qu’un de ses agents les retrouvera à leur
+cargo un peu plus tard pour empocher les crédits et leur
+livrer les armes.
+
+\subtitle{CE QUE PIDDOCK A À DIRE
+AU SUJET DE TEEMO}
+
+Malheureusement pour les PJ, Piddock ne sait pas grandchose au sujet de Teemo. Voici ce qu’il peut leur dire s’ils
+lui posent des questions :
+
+
+\begin{itemize}
+\item Piddock a mis un terme aux transactions en apprenant que Teemo employait un espion kubaz. C’est la goutte d’eau qui a fait déborder le vase.
+\item Piddock se doutait, sans pouvoir le prouver, que Sivor, un de ses techniciens, avait été enlevé ou tué par Teemo. Le duc y voit une simple contrariété, et certainement pas un crime ; il n’éprouve pas d’attachement sentimental envers les Géonosiens de la caste des ouvriers.
+\item Si les PJ insistent – test de Charme Difficile (\difficulty \difficulty \difficulty) – Piddock révèle que Teemo était intéressé par des plans, pièces détachées et unités complètes de droïdes de combat. Il suspecte le Hutt de chercher à produire ses propres unités.
+\end{itemize}
+
+\subtitle{L’INFORMATEUR}
+
+Comme précisé plus haut, Anatta est l’invité le plus enclin à discuter avec les PJ. Toutefois, s’il aime tailler une
+bavette, il adoptera un ton beaucoup plus sérieux au moment même où les PJ aborderont un sujet controversé.
+« Pourquoi on irait pas dans un des salons privés pendant
+quelques instants ? »
+
+À l’abri des oreilles indiscrètes, Anatta se montre
+beaucoup plus direct et professionnel. Quand on lui
+pose une question, il avoue franchement ne rien savoir
+ou fait une proposition. S’il ne reçoit pas le prix demandé, il n’ajoutera rien, et si les PJ insistent sans lui
+verser le moindre sou, il finira par se fâcher et mettre
+fin à l’entretien.
+
+\subsubsection{CONNAISSEZ-VOUS TEEMO ?}
+« Forcément, je suis de Tatooine. Tout le monde connaît
+Teemo. »
+
+\subsubsection{TEEMO EMPLOIE-T-IL UN KUBAZ ?}
+
+« Possible que je me rappelle quelque chose pour 40
+crédits. »
+
+« Oui, Teemo loue les services d’un espion kubaz. Il
+s’appelle Thwheek. »
+
+\subsubsection{QUELLES SONT LES RELATIONS ENTRE TEEMO
+ET JABBA ?}
+« C’est un renseignement confidentiel, et c’est pas gratuit. 60 crédits, et je ne vous ai rien dit. »
+
+« Teemo est issu d’une branche mineure du clan de
+Jabba. C’est censé être un jeune Hutt, qui fait ce qu’on
+lui demande et prend un pourcentage au passage. Mais
+on le dit ambitieux. Peut-être trop, si vous voyez ce que
+je veux dire. Si Jabba apprenait que Teemo compte le
+doubler, il lui donnerait une bonne correction. Pour le
+bien du clan. »
+
+\subsubsection{ON A TROUVÉ DES MORCEAUX DE CARAPACE
+SUR LE CROC DE KRAYT. ÇA VOUS DIT QUELQUE
+CHOSE ?}
+« 60 crédits me rafraîchiront peut-être la mémoire. »
+
+« C’est la carapace d’un des derniers prisonniers de
+Trex, un Géonosien du nom de Sivor. »
+
+\subsubsection{QUI EST SIVOR ?}
+
+« 20 crédits, mes cocos. »
+
+« C’était un ouvrier de la ruche, un technicien qui s’y
+connaissait bien en droïdes et à qui le duc Piddock donnait régulièrement des missions. »
+
+\subsubsection{QUE LUI EST-IL ARRIVÉ ? EST-CE QUE THWHEEK
+L’A TUÉ ?}
+
+« Je vous répondrai si vous me lâchez 100 crédits. »
+
+« Oui, Teemo a veillé à ce que Sivor se fasse tuer dans
+une arène de gladiateurs très select. Lui et quelques-uns
+de ses amis étaient les seuls à y assister. Lors du dernier
+combat, Teemo a laissé son espion kubaz Thwheek entrer dans l’arène et porter le coup fatal. Thwheek rêvait
+depuis longtemps de tuer un Géonosien. »
+
+Hormis cela, Anatta ne sait rien de bien intéressant
+au sujet du duc Dimmock. Il peut cependant renseigner
+les PJ sur d’autres rumeurs. Il est bien informé sur les
+environs de Tatooine et demande entre 20 et 100 crédits
+selon l’intérêt du renseignement demandé.
+
+\begin{commentbox}{UNE SOLUTION ALTERNATIVE}
+  Au cours de l’acte III, les PJ devront trouver le moyen
+de se débarrasser de Teemo le Hutt. Ils peuvent tenter de l’assassiner ou chercher une solution moins
+violente (voire pacifique). Anatta peut les aider.
+
+Il leur explique que s’ils mettent la main sur des
+renseignements compromettants, il pourra les
+communiquer à Jabba, qui se « chargera du problème ». Dès lors, les PJ penseront peut-être à certaines choses auxquelles Teemo est mêlé et que
+Jabba pourrait ne pas aimer. Anatta a quelques
+idées en la matière. En gros, les preuves des activités suivantes pourraient sérieusement fâcher
+Jabba le Hutt.
+
+\begin{itemize}
+\item Teemo compte produire ses propres droïdes de combat.
+\item Teemo espionne Jabba.
+\item Teemo distribue du ryll sans reverser à Jabba sa part des bénéfices.
+\end{itemize}
+
+Anatta prend très au sérieux sa réputation d’informateur. Il demandera donc des preuves solides avant
+de transmettre le moindre renseignement à Jabba.
+Et ces preuves, on ne peut les trouver que dans le
+palais de Teemo. Tout cela est détaillé dans l’acte III.
+
+\end{commentbox}
+
+Quand il ne sait pas, il le dit. Il a une bonne réputation, qu’il ne souhaite pas entacher en racontant n’importe quoi ou en se perdant en spéculations. Il ne sait
+pas grand-chose au sujet des autres invités, mais si on lui
+pose les bonnes questions, voici ce qu’il dira :
+
+\begin{itemize}
+\item Oui, il travaille bien pour Jabba (40 crédits).
+\item Il a entendu Mu Nanb parler d’un énorme contrat en armement avec Piddock (100 crédits).
+\item Les deux Corelliens sont des contrebandiers rapides et fiables (40 crédits).
+\item Vrixx’tt est un chasseur de primes (80 crédits).
+\item Maru Jakkar est une fanatique, même si elle n’aime pas en parler. Elle a versé une grosse somme d’argent à une organisation qui cherche à saper les droits des droïdes (60 crédits).
+\item Les ducs Dimmock et Piddock sont rarement d’accord, mais tous deux s’insurgent contre la domination impériale sur Géonosis. Cela les rapprocherait certainement si leur concurrence n’était pas aussi acharnée (80 crédits).
+\end{itemize}
+
+
+
+
+
+Les PJ auront beau le brosser dans le sens du poil ou
+chercher à l’intimider, Anatta refusera de négocier les
+prix de ses renseignements.
+
+\section{LA FÊTE EST FINIE}
+
+Deux heures après l’arrivée des PJ le duc Piddock met
+fin à la réception. Le groupe remballe ses instruments
+et les invités regagnent leurs quartiers. Il leur reste une
+dernière chance de s’entretenir avec lui, s’ils ne l’ont pas
+déjà fait, avant d’être raccompagnés à leur vaisseau.
+
+Si les PJ ne pensent pas à contacter Ota tout de suite,
+il s’écoule une heure de plus avant que le communicateur
+qu’il leur a remis se mette à biper, indiquant un appel du
+Bothan.
+
+Ota leur demande de tout lui dire au sujet de la réception et des invités, sans oublier les potins. Une fois
+de plus, il les invite à réfléchir à ce qu’ils diront au duc
+Dimmock lorsqu’ils lui rendront visite le lendemain. Il les
+incite à aborder les sujets de conversation qui auront un
+réel effet, et les met en garde contre tout impair. Une fois
+la conversation terminée, il leur dévoile les informations
+suivantes :
+
+\begin{quotebox}
+« Il y a un cargo, le Coup de Chance, en ce moment même amarré à l’aire de lancement AA7, à
+la ruche de Trellik. Il est censé décoller pour Mos
+Shuuta demain, au coucher du soleil, chargé de
+marchandises destinées au palais de Teemo. Si
+vos négociations avec le duc Dimmock se déroulent bien, il consentira probablement à y ajouter un chargement inattendu : vous-même. Attendez-vous néanmoins à devoir faire usage de vos
+armes. Car même si Dimmock vous laisse embarquer, il vous mettra sans doute quelques gardes
+dans les pattes, histoire de sauver les apparences.
+
+Vous arriverez vraisemblablement à Mos Shuuta
+en fin de matinée. Vous irez trouver le Hutt et réglerez toute cette affaire avec lui comme vous l’entendrez. Vu les risques que vous encourez, nous
+veillerons à ce que la prime mise sur votre tête
+vous soit reversée en échange de sa mort. »
+\end{quotebox}
+
+Si les PJ lui révèlent qu’Anatta leur a parlé d’un possible conflit entre Teemo et Jabba, Ota ne tiendra plus
+en place.
+
+\begin{quotebox}
+ 
+« Ce sont d’excellentes nouvelles. Je pensais que
+le seul moyen de se débarrasser de Teemo était
+de l’assassiner, et autant vous dire qu’il n’est pas
+facile de tuer un Hutt. Maintenant, si vous êtes en
+mesure de prouver qu’il projette de faire du tort
+au puissant Jabba, je suis sûr que nous saurons
+faire passer l’information à l’intéressé. Il doit bien y
+avoir quelqu’un qui acceptera de parler au palais,
+ou des traces relatives à ses plans. Si vous mettez la main dessus, vous pourrez les faire passer à
+Jabba, qui se chargera de Teemo à notre place ! »
+   
+\end{quotebox}
+
+\section{UNE AUDIENCE AVEC LE
+DUC DIMMOCK}
+Le trajet jusqu’à la ruche de Trellik se déroule sans incident. Le Croc de Krayt est amarré à l’aire de lancement
+AB14, non loin de l’AA7. Un soldat géonosien de faction conduit les PJ auprès du duc Dimmock dès qu’ils
+débarquent.
+
+   
+\begin{quotebox}
+Le garde vous emmène dans un long et large corridor bordé d’une centaine de soldats géonosiens,
+raides comme des piquets, qui se tiennent au
+garde-à-vous. Il traverse une alcôve et se présente
+à un majestueux Géonosien assis sur un trône.
+
+Pour vous, le duc Dimmock est le sosie parfait du
+duc Piddock. Sa carapace est peut-être un peu plus
+usée et piquée, ses bracelets dorés peut-être un
+peu plus nombreux aussi. Il vous examine de la tête
+aux pieds avec dédain avant de prendre la parole.
+
+« Je n’ai aucune envie de nuire à mes affaires, mais
+je dois beaucoup à Ota, notre ami commun. J’accepte donc de vous écouter, d’autant que vous
+semblez vouloir vous plaindre d’un de mes associés. Faites vite, cependant. J’ai horreur de perdre
+mon temps. »
+   
+\end{quotebox}
+
+Aux PJ de saisir leur chance. Notez bien les preuves
+qu’ils produisent et les arguments qu’ils emploient devant le duc Dimmock. Reste maintenant à voir dans
+quelle mesure ils vont réussir à ébranler la confiance qu’il
+a en Teemo.
+
+\subtitle{POINTS POSITIFS}
+
+\begin{itemize}
+\item Les PJ se montrent courtois avec Dimmock et réussissent un test de Charme Moyen (\difficulty \difficulty) – 1 point.
+\item Les PJ ne cachent pas leur inimitié envers l’Empire – 1 point.
+\item Les PJ révèlent les informations suivantes (1 point chacune) :
+  \begin{enumerate}
+  \item Teemo a engagé un espion kubaz.
+  \item Le Kubaz en question a tué Sivor.
+  \item Teemo collabore avec l’Empire.
+  \item Teemo compte désosser et étudier un droïde de combat Baktoid pour produire sa propre série.
+  \end{enumerate}
+\item Les PJ montrent à Dimmock le morceau de carapace de Sivor et expliquent où ils l’ont trouvé – 1 point.
+\item Les PJ montrent à Dimmock les messages échangés entre Drombb et Thwheek – 1 point.
+\end{itemize}
+
+\subtitle{POINTS NÉGATIFS}
+
+\begin{itemize}
+\item Les PJ sont mal élevés – moins 1 point.
+\item Les PJ sont menaçants et ratent un test de Coercition Intimidant (\difficulty \difficulty \difficulty \difficulty) – moins 2 points.
+\item Les PJ ne cachent pas leur loyauté envers l’Empire – moins 1 point.
+\end{itemize}
+
+
+Lorsque les PJ en auront terminé, faites la somme
+des points accumulés et reportez-vous au résultat
+correspondant :
+
+\subsubsection{0 – 2 POINTS}
+Incertain, Dimmock reste loyal envers le Hutt et n’offre
+aucune aide aux PJ. Lisez ce qui suit à voix haute :
+
+\begin{quotebox}
+« Par respect pour notre ami commun, je vais fermer
+les yeux sur votre ingérence, mais vous n’obtiendrez rien de moi. Je ne vous mettrai pas de bâtons
+dans les roues, pas plus que je ne vous aiderai, et
+si je dois subir les conséquences de votre témérité,
+croyez bien que vous aurez à subir mon courroux. »
+\end{quotebox}
+
+Lors du combat sur l’aire de lancement AA7, les PJ
+auront affaire à cinq Géonosiens.
+
+\subsection{3 – 5 POINTS}
+L’intérêt que Dimmock porte à Teemo diminue, et il se
+tourne vers d’autres priorités. Lisez ce qui suit à voix haute :
+
+\begin{quotebox}
+    
+« Bien, vous avez de solides arguments. Je ne suis
+pas certain de vouloir être associé à vos machinations, mais je vais vous aider dans la mesure du
+possible. Vous savez qu’un cargo doit partir pour
+Mos Shuuta. Attendez une vingtaine de minutes
+avant de lancer votre attaque. Il serait suspect que
+j’éloigne tous mes gardes de cet appareil, aussi attendez-vous à un minimum de résistance, mais je
+vais demander aux pilotes de vous aider une fois
+que vous serez à bord. »\end{quotebox}
+
+Lors du combat sur l’aire de lancement AA7, les PJ
+auront affaire à trois Géonosiens.
+
+\subsection{6 POINTS OU PLUS}
+Dimmock est convaincu de se retourner contre Teemo.
+Lisez ce qui suit à voix haute :
+\begin{quotebox}
+« Foutue limace ! Très bien. Rendez-vous au cargo.
+Je ne ferai rien pour vous en empêcher. »
+\end{quotebox}
+Lors du combat sur l’aire de lancement AA7, les PJ
+n’auront affaire à aucun Géonosien.
+
+\section{ÇA BARDE SUR L’AIRE DE
+LANCEMENT AA7}
+Les PJ peuvent maintenant rejoindre le Croc de Krayt pour
+y prendre le matériel et l’armement dont ils auront besoin.
+
+L’aire de lancement AA7 est bourrée de marchandises,
+et un petit cargo (Le Coup de Chance) y stationne. On y
+trouve aussi les soldats géonosiens que les PJ doivent
+vaincre pour rejoindre l’appareil, leur nombre dépendant
+des négociations menées avec Dimmock un peu plus tôt.
+
+La rencontre débute au moment où les PJ arrivent par
+l’un des deux accès de l’aire de lancement. Les gardes
+géonosiens se situent sur la plate-forme de chargement
+et de déchargement. Ils ne s’attendent pas à rencontrer
+de problème, si bien que les PJ pourront s’approcher de
+l’aire de lancement sans encombre.
+
+\begin{monsterbox}
+  
+SOLDAT GÉONOSIEN
+Vigueur 3
+
+Ruse 2
+
+Présence 2
+
+Agilité 3
+
+Intelligence 2
+
+Volonté 2
+
+Compétences : Distance (armes légères) 1
+(\difficulty \difficulty \proficiency), Pugilat 1 (\difficulty \difficulty \proficiency)
+Encaissement : 5		Défense : 0
+Seuil de blessure : 8
+Seuil de stress : – (subit des blessures à la place)
+Équipement : pistolet blaster lourd géonosien (Distance [armes légères] ; dégâts 7 ; critique 2 ; portée
+moyenne ; réglage étourdissant), carapace équivalente à une armure laminée (encaissement +2).
+\end{monsterbox}
+
+\begin{monsterbox}
+VRIXX’TT – HOMME DE MAIN GAND
+Vigueur 3
+
+Ruse 3
+
+Présence 2
+
+Agilité 4
+
+Intelligence 2
+
+Volonté 2
+
+Compétences : Coercition 1 (\difficulty \proficiency), Coordination 1
+(\difficulty \difficulty \difficulty \proficiency), Distance (armes légères) 1 (\difficulty \difficulty \difficulty \proficiency),
+Distance (armes lourdes) 1 (\difficulty \difficulty \difficulty \proficiency), Pugilat 1
+(\difficulty \difficulty \proficiency), Survie 2 (\difficulty \proficiency \proficiency), Vigilance 1 (\difficulty \proficiency)
+Talents : Coup mortel 1 (la première blessure
+critique infligée chaque jour par Vrixx’tt compte
+double)
+
+Encaissement : 5		Défense : 0
+Seuil de blessure : 13
+Seuil de stress : – (subit des blessures à la place)
+Équipement : fusil blaster géonosien (Distance
+[armes lourdes] [ \difficulty \difficulty \difficulty \proficiency ] ; dégâts 9 ; critique 2 ;
+portée longue ; réglage étourdissant), menottes.
+
+\end{monsterbox}
+
+S’ils quittent la plate-forme ou tirent sur les gardes,
+ces derniers passent à l’attaque. Si les PJ ont gagné les
+faveurs du duc Dimmock, les Géonosiens prendront la
+fuite au bout de quelques rounds, même s’ils ont l’avantage. Dans tous les cas, ils règlent leurs blasters en mode
+étourdissant.
+
+Les caisses situées sur l’aire d’atterrissage offrent un
+abri. Quiconque tire sur une cible située derrière l’une
+d’entre elles subit un dé d’infortune \boost à ses tests à
+Distance.
+
+Les choses se compliquent au moment où les PJ traversent la plate-forme. Le chasseur de primes Vrixx’tt
+arrive par la gauche de la passerelle. Il suit les PJ depuis
+qu’ils ont quitté la réception de Piddock et compte bien
+les abattre pour empocher la récompense.
+
+\begin{commentbox}{ET SI LES PJ PERDENT ?}
+  Si les PJ perdent, les Vio leur donnent un coup de
+main et les hissent à bord du Coup de Chance. Pour
+le reste de l’aventure, ils lâcheront des blagues bien
+grasses au sujet de l’événement et leur feront bien
+comprendre qu’ils leur doivent une fière chandelle.
+\end{commentbox}
+
+Il est impossible d’user de Charme ou de Coercition
+sur Vrixx’tt, mais les PJ peuvent gagner du temps en lui
+offrant de l’argent. Il accepte de leur laisser une semaine
+d’avance s’ils lui proposent au moins 500 crédits. Pour
+1000 crédits, il abattra en plus les Géonosiens encore
+présents sur l’aire de lancement.
+
+Lorsque les PJ atteindront enfin le Coup de Chance,
+ils pourront tout simplement monter à bord (la rampe
+est ouverte). Les Vio se trouvent dans le cockpit et procèdent aux dernières vérifications avant de décoller. Si
+le duc Dimmock leur a dit que les PJ arrivaient, ils leur
+indiquent leurs sièges et mettent les gaz en direction de
+Tatooine. Dans le cas contraire, les Vio tentent de négocier le prix du billet (cf. page 33). Si les PJ leur rappellent
+qu’ils sont armés et capables de prendre les commandes
+de l’appareil eux-mêmes, les Vio n’offrent aucune résistance. Tout ce qu’ils veulent, c’est garder leur vaisseau
+une fois leur mission accomplie.
+
+Une fois les PJ à bord du Coup de Chance et prêts à
+partir, passez à l’acte III.
+
+\begin{monsterbox}
+
+
+LE COUP DE CHANCE –
+COURRIER NOVA PERSONNALISÉ
+Gabarit : 4
+
+Vitesse : 3
+
+Défense : 1
+
+Blindage : 3
+
+Maniabilité : -1
+
+Seuil de dégâts de coque : 22
+Seuil de stress mécanique : 14
+Armes : 2 canons laser moyens montés sur tourelle (1 dorsal et 1 ventral) (compétence : Artillerie ; portée proche ; dégâts 6).
+\end{monsterbox}
+\begin{monsterbox}
+
+ORPA ET WEX VIO – CONTREBANDIERS
+Vigueur 2
+
+Ruse 3
+
+Présence 2
+
+Agilité 3
+
+Intelligence 2
+
+Volonté 3
+
+Compétences : Artillerie 1 (\difficulty \difficulty \proficiency), Pilotage 2
+(\difficulty \proficiency \proficiency)
+Encaissement : 3
+
+Défense : 0
+
+Seuil de blessure : 5
+Seuil de stress : – (subit des blessures à la place)
+\end{monsterbox}
+
+
+\chapter{RETOUR À MOS SHUUTA}
+
+Au cours de cet acte, les PJ rentrent à Mos Shuuta et se
+glissent dans le palais de Teemo.
+
+\section{SYNOPSIS}
+
+Avant toute chose, le MJ doit produire le plan du palais de Teemo. Chacun des PJ y a passé du temps et
+connaît plus ou moins les lieux. Le groupe doit donc
+pouvoir l’étudier à loisir afin de préparer son arrivée,
+que les joueurs souhaitent l’attaquer de front ou s’y
+introduire discrètement. Voici ce qu’il faut également
+leur dire :
+
+\begin{itemize}
+    \item L’entrée est généralement surveillée par deux Gamorréens. On trouve aussi deux à quatre hommes
+de main lourdement armés dans la première zone
+fortifiée.
+    \item Le vestibule accueille parfois des invités. Ces gens
+ne sont pas tous loyaux envers Teemo.
+    \item Teemo détient jusqu’à six gladiateurs dans les
+cachots. Pour la plupart, il s’agit d’humains et
+d’Aquales. Ils ne sont pas tous loyaux envers le
+Hutt (cela dépend des raisons qui les ont amenés
+au palais). Si le personnage prétiré Lowhhrick fait
+partie du groupe, il en saura peut-être plus sur ces
+gladiateurs, aura une vague idée de leur nombre et
+connaîtra leur état d’esprit vis-à-vis de Teemo.
+    \item Près de l’aire d’atterrissage du palais, il y a une batterie de canons laser confiée aux bons soins d’un
+homme de main. L’endroit abrite habituellement la
+barge à voiles de Teemo et parfois un autre appareil.
+    \item La cuisine est occupée par un cuistot droïde inoffensif.
+    \item Teemo vit dans la salle du trône, qui renferme
+presque assurément deux gardes gamorréens et
+jusqu’à six hommes de main. D’autres employés
+s’y trouvent également, parmi lesquels un droïde
+de protocole, ses musiciens et ses domestiques. On
+peut aussi y croiser des visiteurs de passage, dangereux pour certains.
+\end{itemize}
+
+\subtitle{LE CORDON IMPÉRIAL}
+
+Si l’Empire s’intéresse moins aux événements qui agitent
+Tatooine depuis la dernière aventure, il n’en maintient
+pas moins une présence importante sur cette planète.
+Cela explique que des chasseurs TIE patrouillent en
+quête de rebelles et de fugitifs.
+
+Si les PJ sont à bord du \emph{Coup de Chance}, cela ne pose
+aucun problème. Il est prévu que le vaisseau se pose à
+Mos Shuuta et les patrouilles impériales n’ont aucune
+raison de se méfier.
+
+En revanche, si les PJ n’ont pas souhaité laisser le Croc de Krayt sur Géonosis, ils vont avoir de sérieux problèmes. Les Impériaux sont à la recherche de cet appareil, qui a attaqué ou fui une patrouille de chasseurs TIE
+au cours de Fuite de Mos Shuuta. La scène peut être
+gérée de la même façon que dans l’aventure précédente.
+
+\subtitle{MOS SHUUTA}
+
+Dans l’ensemble, Mos Shuuta est tel que les PJ l’ont laissé lors de l’aventure précédente, mais l’endroit a tout de
+même connu quelques changements. Pour commencer,
+la présence impériale s’est amoindrie. Ensuite, certains
+des lieux précédemment visités par les PJ ne sont plus
+tout à fait les mêmes, ce qui peut avoir son importance.
+Pour plus de détails sur ces endroits, reportez-vous à la
+page 28 du Livret d’aventure.
+
+\subsubsection{LES AIRES D’ATTERRISSAGE}
+
+Les aires d’atterrissage Aurek et Besh sont inoccupées.
+Si les PJ sont arrivés à bord du Coup de Chance, ils se
+poseront sur l’une ou l’autre sans difficulté.
+
+\subsubsection{LA CASERNE}
+Les malabars gamorréens présents à la caserne pourront
+prêter main-forte au palais si les PJ se mettent à canarder Teemo.
+
+\subsubsection{L’ÉLECTROPORTE}
+La porte n’est pas surveillée, mais elle est fermée. On
+peut la désactiver en réussissant un test d’Informatique Difficile (\difficulty \difficulty \difficulty). Si les PJ y parviennent, quatre
+Gamorréens de la caserne prévenus par une alarme automatique s’y précipitent. Si les PJ s’en débarrassent,
+ces brutes n’interviendront bien évidemment plus si, par
+la suite, une nouvelle alarme sonne dans la caserne (ce
+sera probablement le cas lorsque les PJ entreront dans
+la salle du trône du Hutt).
+
+\subsubsection{DE VIEUX AMIS DE MOS SHUUTA}
+Les PJ voudront peut-être rendre visite à de vieilles
+connaissances, qui seront plus ou moins telles qu’elles
+étaient dans Fuite de Mos Shuuta, et se souviendront
+certainement des PJ. Rappelez-vous comment les PJ
+les ont traitées, car cela influera sur leurs réactions. Par
+exemple, si Vorn a fait une bonne affaire en leur cédant la
+pièce détachée, il sera heureux de les revoir.
+
+Ces personnages peuvent aussi leur fournir des informations sur Teemo ou l’occasion dont ils ont besoin pour
+se glisser dans le palais.
+
+Les individus tués lors de l’aventure précédente auront
+été remplacés par d’autres personnages aux noms et visages différents, mais aux profils similaires.
+
+
+
+\subtitle{VORN TEL-OVIS}
+
+Vorn est l’expert local en matière de droïdes. Le Hutt l’a
+fait venir plusieurs fois au palais pour qu’il travaille sur
+des droïdes de combat B1 en piteux état. Il pourra dire
+aux PJ où les trouver, ce qui leur permettra de prouver à
+Jabba que Teemo tente de produire ses propres unités
+de combat.
+
+\subtitle{LA CONTRÔLEUSE BRYNN}
+
+Grâce à la place qu’elle occupe au contrôle du spatioport, Brynn connaît parfaitement les allées et venues
+des vaisseaux, marchandises et personnels. Elle sait
+que le groupe de musique attitré de Teemo se produit
+fréquemment au palais de Jabba, et que ce sont les
+seuls membres du personnel de Teemo qui le font régulièrement. (Elle peut affirmer que Thwheek, l’espion
+kubaz, n’espionne pas Jabba pour le compte de Teemo.) Elle dispose aussi des relevés de marchandises
+montrant tout ce qui a transité par Mos Shuuta durant
+l’année standard écoulée, ce qui inclut de nombreuses
+pièces détachées de droïdes. Accompagnées du témoignage de Vorn, ces listes suffiraient probablement
+à convaincre Anatta que Teemo tente de produire ses
+propres droïdes de combat.
+
+Brynn pourrait également permettre aux PJ d’entrer
+dans le palais de Teemo en leur donnant les codes nécessaires pour ouvrir les portes. Toutefois, elle est loyale
+au Hutt. Elle ne leur dévoilera aucune information qu’elle
+estime compromettante et ne leur donnera pas délibérément accès au palais.
+
+\subtitle{VIK, LE BARMAN DE LA CANTINA}
+Vik n’est pas très content de voir les PJ et ne souhaite
+pas les aider. Néanmoins, il ne les balancera pas à Teemo
+et à ses brutes.
+
+\subsection{SPATIOPORT EN VUE}
+
+Le voyage de Géonosis à Tatooine prend plusieurs
+heures, si bien que les PJ disposeront de tout le temps
+nécessaire pour examiner des cartes, préparer un plan et
+comparer leurs notes. Une fois prêts à atterrir (en imaginant qu’ils arrivent à bord du Coup de Chance), lisez ce
+qui suit à voix haute :
+
+\begin{quotebox}
+    
+Vous finissez par sortir de l’hyperespace et apercevez une planète jaune-orange devant vous :
+Tatooine. Au moment où vous pénétrez dans
+l’atmosphère, les communications de l’appareil
+se mettent à crépiter et vous entendez les Vio
+qui parlent avec le contrôle du spatioport. La
+conversation semble se dérouler comme prévu,
+et vous vous posez peu de temps après sur l’aire
+d’atterrissage Aurek de Mos Shuuta. Le bourg ne
+semble pas avoir changé.
+\end{quotebox}
+
+Si les PJ souhaitent faire le tour de la ville avant d’atterrir, aucun problème. S’ils veulent se poser sur l’aire
+d’atterrissage du palais de Teemo, les Vio s’y opposent.
+« C’est déjà occupé », dit l’un. « Ouais, j’y aperçois un
+Dunelizard dans un sale état. On dirait qu’il a fait une
+vilaine rencontre. » Si les PJ jettent un œil, ils reconnaîtront l’appareil qu’ils ont combattu au-dessus de Ryloth
+(en imaginant qu’ils y ont bien affronté Thwheek), et qui
+occupe l’aire d’atterrissage du palais.
+
+Une fois au sol, les PJ pourront se balader dans les
+rues de Mos Shuuta s’ils prennent soin de ne pas se
+faire repérer par les malabars de Teemo. Les Vio, eux,
+affirment vouloir rester près de leur vaisseau pour débarquer la marchandise. Les PJ ont donc le temps de
+visiter la ville à leur gré avant de se rendre au palais
+du Hutt.
+
+\subsection{ENTRER DANS
+LE PALAIS DE TEEMO}
+
+Le palais de Teemo est bien gardé, si bien qu’un assaut
+frontal risque de tourner au carnage pour les PJ. Tout
+ce qu’ils ont à gagner, c’est de terminer entre les mains
+du Hutt, dont la vengeance s’avérera terrible dans ce
+cas. Voici cependant différents moyens d’accéder à
+l’édifice :
+
+\begin{itemize}
+    \item Les marchandises du Coup de Chance sont consti-
+tuées de plusieurs grandes caisses renfermant des
+droïdes de combat B1. Les PJ peuvent les vider, se
+cacher dedans et demander aux Vio de les livrer
+comme convenu à l’atelier du palais. Les droïdes
+ont été désactivés le temps de la livraison, si bien
+que les PJ ne peuvent pas s’en servir pour lancer
+l’assaut. C’est l’approche la plus simple, et sans
+doute la meilleure, ce que les Vio ne se gêneront
+pas de faire remarquer si les PJ réfléchissent à un
+autre plan.
+
+    \item  Des PJ effrontés voudront peut-être se présenter
+aux portes principales et demander à entrer. Les
+gardes perplexes seront convaincus sur un test de
+Tromperie Moyen (\difficulty \difficulty) si les PJ affirment vouloir
+« rembourser leur dette » et leur demandent de les
+mener au vestibule. Ce n’est pas la solution la plus
+subtile, car en cas de combat, ils auront affaire à
+un grand nombre d’hommes de main de Teemo à
+la fois.
+
+    \item  Se déguiser (test de Tromperie Difficile [ \difficulty \difficulty \difficulty ])
+en quelqu’un d’autre et demander une audience avec
+un test de Charme Moyen (\difficulty \difficulty). Une fois entrés,
+ils pourront jouer sur leur Discrétion pour s’éclipser
+et faire ce qu’ils ont à faire.
+
+    \item  Il est possible d’entrer en tirant dans le tas, mais ce
+n’est pas très malin. Bonne chance aux PJ !
+
+    \item  Il n’est pas possible de se glisser en douce dans le palais par les portes principales, tout simplement parce
+que les gardes ne peuvent pas manquer les intrus.
+
+\end{itemize}
+
+\begin{commentbox}{LES PJ « MIS DE CÔTÉ »}
+  Les PJ « écartés » (ceux dont les joueurs ne se sont
+pas servis) seront peut-être encore dans le palais,
+et prêts à se joindre au combat contre Teemo.
+Lowhhrick sera dans les cachots des gladiateurs, et
+41-VEX à l’atelier. Pash et Oskara pourraient être
+installés dans l’une des alcôves privées de la salle
+du trône de Teemo. Ces PJ pourront faire de bons
+alliés, ou venir remplacer les PJ neutralisés.
+\end{commentbox}
+
+
+\subsection{LES HOMMES DE
+MAIN DE TEEMO}
+En plus des malabars gamorréens qui patrouillent dans
+les rues de Mos Shuuta (cf. page 10 du Livret d’aventure),
+Teemo dispose d’une petite armée d’hommes de main.
+Comme les sbires et serviteurs de la plupart des Hutts
+ayant réussi, ces criminels sont principalement recrutés
+parmi les espèces vivant dans l’Espace hutt, comme les
+Niktos, les Klatooiniens et les Weequays, mais on trouve
+aussi des mercenaires humains et des brutes aquales.
+
+Utilisez le profil de la page 21 pour ce genre d’homme
+de main.
+
+Par ailleurs, Teemo dispose de quatre gardes d’élite gamorréens. Deux d’entre eux se trouvent aux portes principales, les deux autres restant de chaque côté du trône du
+Hutt. Notez que ces Gamorréens sont plus costauds que
+ceux que l’on trouve dans les rues de Mos Shuuta.
+
+Thwheek, l’espion kubaz, se trouve également au palais (son profil figure à la page 12). Le MJ doit s’en servir
+comme d’un joker. Il n’est associé à aucune partie précise
+du palais et peut se trouver n’importe où puisqu’il s’agit
+du meilleur espion du maître des lieux. Toutefois, autant
+qu’il apparaisse lors du combat dans le palais, en profitant
+si possible d’un abri pour importuner les PJ. Il pourrait
+par exemple se cacher derrière une table du vestibule, ou
+derrière le bar de la cantina de la salle du trône.
+
+\begin{monsterbox}
+  
+
+GARDES GAMORRÉENS
+Vigueur 4
+
+Ruse 1
+
+Présence 1
+
+Agilité 3
+
+Intelligence 1
+
+Volonté 1
+
+Compétences : Corps à corps 2 (\difficulty \difficulty \proficiency \proficiency)
+Encaissement : 4
+
+Défense : 0
+
+Seuil de blessure : 8
+Seuil de stress : – (subissent des blessures à la
+place)
+Équipement : vibrohache gamoréenne grossière
+(Corps à corps [ \difficulty \difficulty \proficiency \proficiency ] ; portée au contact ;
+dégâts 7 ; Perforant 2 : ignore 2 points d’encaissement de la cible ; \advantage \advantage : inflige 1 blessure critique).
+\end{monsterbox}
+
+Notez bien que les PJ pourraient croire que Teemo
+emploie Thwheek pour espionner Jabba le Hutt. C’est
+une erreur. Thwheek sait néanmoins qui est l’espion : le
+joueur de basson kloo bith du Hutt. Si les PJ capturent
+le Kubaz, il monnaiera cette information en échange de
+sa liberté.
+
+Le palais abrite aussi des artistes, un barman/cuisinier
+droïde et toutes sortes de domestiques. Pas un ne se
+battra ou ne risquera sa vie pour Teemo.
+
+\subsection{DANS LE PALAIS}
+Une fois entrés, les PJ pourront explorer le palais
+plus ou moins facilement. Chaque zone est décrite
+ci-dessous.
+
+\subtitle{PORTES FORTIFIÉES}
+
+Derrière la porte blindée par laquelle entrent les visiteurs, il y a deux étroites pièces mitoyennes. Deux imposants gardes gamorréens flanquent l’entrée principale et
+deux hommes de main attendent dans la première salle.
+Les murs sont épais et blindés, capables de résister à
+des tirs de blaster lourd. Des piliers massifs soutiennent
+le plafond voûté et offrent autant d’abris.
+
+En temps normal, les portes elles-mêmes sont gardées
+par deux Gamorréens et deux hommes de main armés
+de carabines blaster, mais Teemo peut en envoyer davantage (cf. plus haut).
+
+\subtitle{VESTIBULE}
+
+Cette zone permet aux invités de se mettre à
+l’aise en attendant d’être reçus dans la salle du
+trône. La pièce offre des tables et des chaises
+confortables. Elle donne aussi sur deux recycleurs bien aménagés. Les tables peuvent
+servir d’abris.
+
+\subtitle{GRAND CORRIDOR}
+
+Cette pièce est quelque peu incongrue quand on pense au reste du
+palais, très fonctionnel. Les murs
+sont couverts d’une somptueuse
+veloutine rouge et de plusieurs
+tableaux dépeignant des merveilles de l’univers, actuelles
+ou passées. Ce sont de belles
+œuvres d’art d’un style intemporel, mais leur bon
+goût est quelque peu
+gâché par leurs grands
+cadres dorés, d’un luxe
+ostentatoire. Le centre
+de la pièce est dominé par une grande
+holosculpture verte
+de Teemo, vautré
+en compagnie de
+danseuses twi’leks. Mais l’œuvre d’art la plus impressionnante de la pièce, c’est le sol, une mosaïque complexe et raffinée.
+
+Malgré leur beauté, les tableaux ne valent pas grandchose. Ce sont de bonnes copies et non des originaux.
+Les PJ peuvent les voler, mais ils sont encombrants. Ils se
+vendront 450 crédits environ.
+
+\subsection{CELLULES DES GLADIATEURS}
+
+Cette zone située en sous-sol est réservée aux quartiers
+des gladiateurs. Chacun dispose d’une petite salle équipée d’un recycleur, mais il y a aussi une pièce de vie commune où s’entraîner et se détendre.
+
+Teemo a une « consommation » de gladiateurs importante, et bien qu’il dispose de suffisamment de place
+pour en accueillir six, il en garde rarement plus de quatre
+en même temps.
+
+Les quatre gladiateurs ont le profil des gorilles de la
+page 21. Ils sont loyaux envers Teemo, mais les PJ pourront les rallier à leur cause en leur offrant 1000 crédits
+ou en les intimidant jusqu’à ce qu’ils coopèrent (test de
+Coercition opposé à la discipline de la cible). Les tests
+de Charme n’auront aucun effet sur eux, car ce sont des
+mercenaires avant tout.
+
+
+\subtitle{ATELIER ET ZONE DE DÉCHARGEMENT}
+Cet atelier est destiné à l’entretien des véhicules de Teemo et de ses associés. Une partie de la pièce a été débarrassée et nettoyée, utilisée pour retaper les malabars
+et gladiateurs blessés au service du Hutt.
+
+Si 41-VEX fait partie du groupe, l’atelier est vide. Teemo n’a pas encore remplacé son droïde déviant.
+
+La pièce contient une trousse à outils, deux tubes
+éclairants, deux trousses de réparation d’urgence et
+deux stimpacks.
+
+On y trouve aussi quelques armes : trois carabines
+blaster et trois vibrohaches.
+
+Si les PJ cherchent des pièces détachées de droïde,
+ils trouveront facilement trois unités de combat de Baktoid incomplètes rangées dans un compartiment contre
+le mur du fond. Elles en sont à divers stades de réparation, et bien qu’aucune d’elles ne soit opérationnelle,
+il est clair qu’elles sont en cours de remontage. Le datapad posé sur un établi tout proche renferme un journal
+prouvant que Teemo tente d’étudier et de désosser les
+droïdes pour produire les siens.
+
+\subtitle{CUISINE ET ZONE DE STOCKAGE}
+
+Cette zone du palais est réservée au stockage et à la
+préparation de la nourriture. La cuisine est bien équipée et on y trouve un assortiment de caisses contenant
+des spécialités importées des quatre coins de la galaxie.
+
+Un test de Perception Difficile (\difficulty \difficulty \difficulty) révèle deux
+caisses estampées « ragoût de rycrit », mais qui n’y ressemblent en rien. Si les PJ ouvrent les caisses, ils y découvriront du ryll, preuve que Teemo est impliqué dans
+le commerce de l’épice.
+
+\subtitle{BAR DE LA CANTINA}
+Des bouteilles et des fûts sont empilés sous le solide
+comptoir. Un chef droïde d'Industrial Automaton tient
+le bar.
+
+Ce droïde est inoffensif et ne participera pas aux combats. Par contre, il fait de super cocktails.
+
+D’un point de vue purement technique, cette zone se
+situe dans la salle du trône, mais elle en est séparée par
+le comptoir. Tout individu situé derrière le bar bénéficiera
+d’un excellent abri. Si un ennemi situé dans la salle du
+trône veut lui tirer dessus, il devra ajouter deux dés d’infortune \boost \boost à son test à Distance.
+
+Le comptoir abrite cependant toutes sortes de liquides
+volatiles, si bien que ce n’est pas le meilleur endroit où
+se cacher. Un test à Distance visant une cible située derrière le bar peut utiliser \advantage \advantage pour provoquer l’explosion de récipients, avec les même effets qu’une grenade
+étourdissante.
+
+\subtitle{SALLE DU TRÔNE DE TEEMO}
+La salle du trône est dominée par l’arène des gladiateurs
+située au centre de la pièce. Le haut plafond en forme
+de dôme et les gradins donnent une bonne sensation
+de volume, mais l’endroit n’est pas très bien éclairé. Le
+peu de lumière vient principalement d’un gigantesque
+lustre, très intimidant, suspendu au-dessus du trône du
+Hutt. Le groupe bith de Teemo, Cool Banjaxx Wab et
+les Mortifiés, se produit sur la scène. Ils jouent un blues
+glauque de Tatooine relevé par les solos virtuoses du
+basson kloo.
+
+Teemo est allongé sur son trône, flanqué par deux
+gardes gamorréens et autant d’hommes de main qu’il y a
+de joueurs. Un droïde de protocole Z-6 visiblement nerveux se tient à droite du trône.
+
+Par ailleurs, un autre groupe d’hommes de main est
+assis à une table et Teemo peut vouloir faire appel
+à d’autres malabars gamorréens de la caserne si sa
+salle du trône subit un assaut en règle. Derrière son
+trône, un bouton permet de sonner l’alarme dans la
+caserne. Il peut l’enfoncer au prix d’une manœuvre.
+Les Gamoréens arriveront alors à la fin du quatrième
+round suivant.
+
+Si les PJ entrent dans la pièce subrepticement, ils
+pourront trouver un endroit où se cacher et observer
+ce qui se passe. S’ils font preuve d’un peu de patience,
+les musiciens finiront par faire une pause et le joueur de
+basson kloo s’approchera alors de Teemo. Au même moment, le Hutt congédiera ses gardes, qui se rendront au
+bar pour commander à boire et se détendre quelques
+instants dans les petits salons privés que l’on trouve d’un
+côté de la pièce. Seuls le droïde de protocole et le joueur
+de kloo (un Bith adulte vêtu d’un haut à col roulé) resteront près du maître des lieux.
+
+Le Bith, Cool Banjaxx Wab, se produit souvent au palais de Jabba, et Teemo le paie pour lui rapporter tout ce
+qu’il entend là-bas. Pour l’instant, il n’a pas appris grandchose d’intéressant, mais il tient son employeur au courant des allées et venues. Si les PJ tendent l’oreille, ils
+n’entendront rien ou presque de la conversation, qui se
+déroule à voix basse. Un test de Connaissance Moyen
+(\difficulty \difficulty) leur permettra de comprendre que les deux interlocuteurs parlent en bith et en hutt.
+
+Si les PJ restent cachés et se montrent patients, la
+chance leur sourit : aussitôt la conversation terminée, le
+Bith se rend aux recycleurs du vestibule avant de revenir
+dans la salle du trône pour reprendre son concert. Les
+PJ auront alors l’occasion de lui parler seul à seul et de
+lui demander s’il espionne pour le compte de Teemo. Le
+Bith n’est pas un combattant et vend la mèche si les PJ
+se montrent menaçants.
+
+\subtitle{AIRE D’ATTERRISSAGE}
+
+Un canon laser léger est installé tout près de l’aire d’atterrissage. Il est tenu par un homme de main entraîné à
+cet effet, dont le profil est le même que celui des autres
+hommes de main, si ce n’est qu’il a la compétence Artillerie 1. Il se défendra avec le canon laser jusqu’à ce qu’il
+soit attaqué au corps à corps, auquel cas il dégainera
+sa vibrolame.
+
+Le canon laser est une arme montée qui suit les règles
+de combat des véhicules (dégâts 4 ; portée proche ;
+compétence Artillerie nécessaire pour tirer). Il compte
+comme un véhicule de gabarit 3 immobile (test d’Artillerie Difficile (\difficulty \difficulty \difficulty) pour tirer sur un PJ).
+
+\subtitle{CENTRE DES COMMUNICATIONS}
+
+Plusieurs terminaux de banques de données bourdonnent doucement au centre de la pièce, avec des
+chaises pour les opérateurs et des ports pour brancher
+les droïdes. C’est le centre névralgique des installations
+de Teemo. Il y surveille l’activité HoloNet et recueille les
+rapports de ses agents éloignés.
+
+Toutes les preuves des méfaits de Teemo figurent
+sur les ordinateurs de cette pièce. Pour y accéder, il
+faut réussir un test comme indiqué ci-dessous. Les
+protocoles de sécurité en place infligent un dé d’infortune \setback au test, qui s’ajoute à la difficulté ci-dessous. Si l’alerte a déjà été donnée, des mesures de sécurité
+supplémentaires sont en place et un second dé d’infortune \setback doit être ajouté.
+
+\begin{itemize}
+    \item Si les PJ se connectent au réseau de sécurité,
+ils pourront avoir un aperçu vidéo de n’importe
+quelle pièce du complexe – test d’Informatique
+Facile (\difficulty).
+
+    \item  Si les PJ neutralisent les alarmes et empêchent
+tout contact avec l’extérieur, ils déjoueront les
+tentatives d’appel à l’aide – test d’Informatique
+Moyen (\difficulty \difficulty).
+
+    \item  En accédant aux archives financières de Teemo, les
+PJ pourront prouver qu’il a caché son trafic de ryll et
+n’a pas payé sa part à Jabba – test d’Informatique
+Difficile (\difficulty \difficulty \difficulty).
+
+    \item  De nombreux plans et notes de droïdes de combat
+B1 occupent un espace sécurisé du serveur, preuve
+s’il en fallait que Teemo essaie de fabriquer les siens
+– test d’Informatique Difficile (\difficulty \difficulty \difficulty).
+
+    \item  Les ordinateurs renferment aussi l’enregistrement
+de conversations entre Teemo et son espion bith
+prouvant que le Hutt espionne Jabba – test d’Informatique Difficile (\difficulty \difficulty \difficulty).
+\end{itemize}
+
+Si les PJ obtiennent deux menaces \threat \threat sur un test,
+les ordinateurs se coupent et il n’est plus possible d’y
+accéder.
+
+\subsection{CONFRONTATION FINALE}
+
+Si les PJ décident de régler leurs problèmes en tuant
+Teemo le Hutt, ils vont devoir se rendre jusqu’à sa salle
+du trône et livrer bataille. Teemo a le profil du baron du
+crime hutt (cf. page 46 du livre de règles de Star Wars :
+Aux Confins de l’Empire, Kit d’Initiation) et peut donc
+opposer une solide résistance. Les PJ devront certainement tirer au fusil ou à la carabine blaster pour lui infliger
+de sérieuses blessures.
+
+Une fois les PJ devant Teemo, lisez ce qui suit à voix
+haute :
+
+\begin{quotebox}
+Le rire du Hutt résonne dans la pièce gigantesque
+et la grosse limace frappe le trône à l’aide de sa
+queue flasque. « Eh bien ! hurle-t-il. Les rats womp
+ingrats font leur retour. Je vous ai accueillis, je vous
+ai donné un foyer. Et voilà comment vous me remerciez ? » Teemo tire sur son cigare. La fumée
+monte jusqu’au lustre suspendu au-dessus de son
+trône. « Un Hutt de moindre importance pourrait
+vous faire un long discours sur la vie d’homme d’affaires, sur l’arrangement équitable que nous pourrions conclure. Il pourrait vous dorloter, vous brosser dans le sens du poil. Mais pas moi. Vous êtes
+des larves ingrates, et vous devez être punis en
+conséquence. » Soudain, Teemo secoue sa grosse
+carcasse et vous apercevez un énorme pistolet laser dans sa main ! Que faites-vous ?
+\end{quotebox}
+
+
+Les PJ vont probablement combattre ou tenter de lui
+rabattre le caquet. Le faire taire ne fonctionnera pas,
+sauf si les PJ arrivent à le faire chanter. S’ils lui rappellent ce qu’ils savent et prouvent qu’ils peuvent tout
+révéler à Jabba (par exemple, en appelant Anatta sur
+leur comlink), c’est un Teemo furieux qui acceptera de
+les laisser tranquilles. Toute autre tentative de Charme,
+Coercition ou Négociation est vouée à l’échec ; les Hutts
+ont tout simplement trop de volonté et de jugeotte pour
+se laisser duper de cette façon.
+
+Les manœuvres visant à lui arracher plus que la promesse de les laisser tranquilles sont imprudentes et se
+solderont sans doute par un combat. Aussi étonnant que
+cela puisse paraître, si les PJ ne se mêlent plus de ses
+affaires après avoir convenu un accord de ce genre, il les
+oubliera… probablement. À moins que le MJ n’en décide
+autrement, bien sûr !
+
+Vu la robustesse de Teemo, les PJ auront peut-être du
+mal à l’abattre avec une poignée de blasters.
+
+Des PJ malins chercheront un autre moyen de se débarrasser de lui. En réussissant un test de Perception
+Moyen (\difficulty \difficulty), ils se rendront compte que le lustre suspendu au-dessus de sa tête est hérissé de pointes sur
+sa moitié inférieure, et qu’il n’est fixé que par une seule
+chaîne. Une attaque la visant (difficulté augmentée deux
+fois en raison de sa petite taille) au moyen d’une arme
+blaster suffira à la briser. Le lustre s’écrasera alors sur le
+Hutt qui, empalé, sera tué sur le coup.
+
+\begin{commentbox}{ET SI LES PJ PERDENT ?}
+  Teemo est un sacré client, d’autant qu’il est entouré d’un paquet de gorilles. Si les PJ s’imaginent
+pouvoir remporter un assaut frontal, ils risquent
+bien de se réveiller dans les geôles réservées aux
+gladiateurs et d’être forcés de se battre pour son
+plus grand plaisir. S’échapper pourra bien évidemment constituer une aventure à part entière…
+\end{commentbox}
+
+\begin{commentbox}{UNE SOLUTION ALTERNATIVE}
+Si les PJ comptent collaborer avec Anatta pour faire
+chanter Teemo ou transmettre des informations à
+Jabba dans le but de le faire éliminer, ils devront
+s’arranger pour contacter le Toydarian après avoir
+mis la main sur les preuves. Anatta s’est confortablement installé à la cantina de Mos Shuuta pour
+attendre l’appel des PJ et apprendre précisément
+ce qu’ils ont déniché. Si leur découverte est intéressante, il leur demandera de venir le retrouver
+pour lui transmettre les données. Il remettra même
+500 crédits à chacun d’eux.
+
+Si les PJ optent pour cette solution, ils peuvent
+faire chanter Teemo, comme décrit ci-dessus, ou
+simplement ressortir discrètement du palais et attendre que Jabba lui tombe dessus. Dans ce cas,
+un groupe de chasseurs de primes finira par se
+présenter au palais. Ils en ressortiront peu après
+à bord de la barge à voiles d’un Teemo fermement
+tenu en joue, avant de décoller dans le soleil couchant. Nul n’entendra plus jamais parler de lui.
+\end{commentbox}
+
+\subtitle{BONNE NOUVELLE,
+LE HUTT EST MORT}
+
+Une fois Teemo éliminé, ses sbires filent sans demander
+leur reste. Tous ceux qui combattaient les PJ battent
+aussitôt en retraite. La nouvelle se répand comme
+une traînée de poudre et les derniers sbires
+se mettent à piller le palais avant de
+prendre la fuite.
+
+Sous le trône se trouve un
+coffre-fort contenant 10 000
+crédits en cash (en monnaie
+du cartel hutt). Le coffre n’est
+pas verrouillé, car il aurait
+été impossible de l’ouvrir du
+vivant de Teemo sans que celui-ci ne s’en aperçoive. C’est
+sans doute le seul bien de valeur que les PJ pourront sortir
+du palais avant qu’un de ses
+serviteurs file avec (Thwheek,
+l’espion Kubaz, connaît l’existence du coffre et tentera de
+le voler aux PJ si l’occasion
+se présente).
+
+\section{ÉPILOGUE}
+
+Si Teemo est mort ou neutralisé, la tête des PJ n’est
+plus mise à prix et ils peuvent parcourir la galaxie librement. S’ils ont laissé le Croc de Krayt sur Géonosis,
+il n’est pas bien compliqué d’y retourner avec le cargo
+des Vio. Si Teemo est mort, peut-être que certains de
+ses anciens associés voudront châtier les PJ pour leur
+impudence. S’il est vivant, le chasseur de primes Vrixx’tt
+leur en voudra de l’avoir privé d’une source de revenus.
+Thwheek et d’autres membres de l’entourage du Hutt se
+sentiront eux aussi spoliés.
+
+Ironie du sort, si les PJ ont tué Teemo sans faire savoir
+à Jabba qu’il cherchait à nuire à ses intérêts, ils risquent
+de s’attirer la colère du puissant baron du crime. Après
+tout, Teemo avait beau n’être qu’un arriviste, il faisait
+quand même partie de la famille. C’est ainsi que leur tête
+risque d’être mise à prix pour une somme encore plus
+élevée. Autant dire que des chasseurs bien plus dangereux se lanceront à leurs trousses. Ils devront peut-être
+revenir à Mos Shuuta pour réunir les preuves que Teemo
+représentait bien une menace.
+
+Si les PJ ont remis à Anatta des informations sur Teemo, le Hutt disparaît comme expliqué dans l’encadré cicontre. Étant donné que les Hutts ont de gros scrupules
+à s’entretuer, Teemo n’est sans doute qu’emprisonné.
+Dans ce cas, il ne leur posera de problème que si Jabba
+se fait tuer, mais les chances pour que cela arrive sont
+minces, n’est-ce pas ?
+
+Nyn et les mineurs twi’leks de Ryloth garderont les PJ
+dans leur cœur, sauf s’ils ont tout raté à New Meen et
+n’ont pas réussi à tuer le Hutt. Dans ce cas, ils s’imagineront que les PJ sont du côté de cette grosse limace et
+ne manqueront pas de leur prouver leur hostilité s’ils en
+ont l’occasion.
+
+Les PJ ont aussi fait la rencontre de contacts puissants
+et inhabituels à la réception du duc Piddock : des représentants de l’Alliance rebelle et de l’organisation criminelle du Soleil Noir. S’ils n’ont pas forcément réalisé
+l’importance de ces individus, peut-être ont-ils réussi à
+impressionner un futur allié. Ces gens sont toujours en
+quête de contrebandiers et de filous capables de rendre
+des services discrets. Ils voudront peut-être reprendre
+contact pour de futures missions et aventures. À l’inverse, si les PJ se sont montrés grossiers ou hostiles durant la réception, ces gens les verront peut-être comme
+des ennemis ou des individus dangereux. Ils se feront
+alors un plaisir de contrarier leurs projets ou même de
+les tuer s’ils en ont l’occasion.
+
+% End document
+\end{document}

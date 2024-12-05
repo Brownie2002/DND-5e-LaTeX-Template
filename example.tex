@@ -2,7 +2,7 @@
 % rather than alternate every other.
 %
 % Note that the article class does not have chapters.
-\documentclass[letterpaper,10pt,twoside,twocolumn,openany]{book}
+\documentclass[a4paper,10pt,twoside,twocolumn,openany]{book}
 
 % Use babel or polyglossia to automatically redefine macros for terms
 % Armor Class, Level, etc...
@@ -13,17 +13,16 @@
 %2. To load a language with polyglossia:
 %	\usepackage{polyglossia}
 %	\setdefaultlanguage{<lang>}
-\usepackage[english]{babel}
+\usepackage[french]{babel}
 %usepackage[italian]{babel}
 % For further options (multilanguage documents, hypenations, language environments...)
 % please refer to babel/polyglossia's documentation.
 
 \usepackage[utf8]{inputenc}
-\usepackage{hang}
 \usepackage{lipsum}
 \usepackage{listings}
-
-\usepackage{dnd}
+\usepackage{swe}
+\usepackage{pdfpages}
 
 \lstset{%
   basicstyle=\ttfamily,
@@ -33,13 +32,15 @@
 % Start document
 \begin{document}
 
+\includepdf[pages=-]{img/Front.pdf}
+
 % Your content goes here
 
 % Comment this out if you're using the article class.
 \chapter{Chapter 1: The Dark \LaTeX}
 
 \section{Main Section}
-\lipsum[2] % filler text
+\lipsum[2-3] % filler text
 
 \begin{quotebox}
 	As you approach this template you get a sense that the blood and tears of many generations went into its making. A warm feeling welcomes you as you type your first words.
@@ -57,9 +58,11 @@
 
 \lipsum[3]
 
-\begin{paperbox}[float=!t]{Behold, the Paperbox!}
-  The \lstinline!paperbox! is used as a sidebar. It does not break over columns and is best used with a figure environment to float it to one corner of the page where the surrounding text can then flow around it.
-\end{paperbox}
+\begin{figure}[!t]
+	\begin{paperbox}{Behold, the Paperbox!}
+		The \lstinline!paperbox! is used as a sidebar. It does not break over columns and is best used with a figure environment to float it to one corner of the page where the surrounding text can then flow around it.
+	\end{paperbox}
+\end{figure}
 
 % For more columns, you can say \begin{dndtable}[your options here].
 % For instance, if you wanted three columns, you could say
@@ -79,25 +82,18 @@
   \begin{hangingpar}
     \textit{Small metasyntactic variable (goblinoid), neutral evil}
   \end{hangingpar}
-	\dndline%
-	\basics[%
-	armorclass = 12,
-	hitpoints  = \dice{3d8 + 3},
-	speed      = 50 ft
-	]
-	\dndline%
-	\stats[
-    STR = \stat{12}, % This stat command will autocomplete the modifier for you
-    DEX = \stat{7}
-	]
-	\dndline%
+	\hline%
+
+	\hline%
+	\stats[	]
+	\hline%
 	\details[%
 	% If you want to use commas in these sections, enclose the
 	% description in braces.
 	% I'm so sorry.
 	languages = {Common Lisp, Erlang},
 	]
-	\dndline%
+	\hline \\[1mm]
 	\begin{monsteraction}[Monster-super-powers]
 		This Monster has some serious superpowers!
 	\end{monsteraction}
@@ -109,6 +105,32 @@
 	\begin{monsteraction}[More actions]
     See, here he goes again! Yet more text.
 	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{THWHEEK}
+% Sous-titre
+  \begin{hangingpar}
+    \textit{ESPION KUBAZ}
+  \end{hangingpar}
+  \hline%
+
+  \stats[VIG=2,AGI=3,INT=3,RUS=4,VOL=2,PRE=2]
+  \hline%
+
+  \basics[encaissement=4,blessure=12]
+
+  \hline%
+
+\begin{monsteraction}[Compétences]
+ test
+\end{monsteraction}
+
+  \begin{monsteraction}[Équipement]
+    pistolet blaster lourd (Distance [armes légères] ; dégâts 7 ; critique 3 ; portée
+moyenne ; réglage étourdissant), armure laminée
+(encaissement +2), électrojumelles.
+  \end{monsteraction}
+
 \end{monsterbox}
 
 \section{Spells}

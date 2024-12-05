@@ -1,0 +1,314 @@
+% Changing book to article will make the footers match on each page,
+% rather than alternate every other.
+%
+% Note that the article class does not have chapters.
+\documentclass[a4paper,10pt,twoside,twocolumn,openany]{book}
+
+% Use babel or polyglossia to automatically redefine macros for terms
+% Armor Class, Level, etc...
+% Default output is in English; captions are located in lib/dndstring-captions.sty.
+% If no captions exist for a language, English will be used.
+%1. To load a language with babel:
+%	\usepackage[<lang>]{babel}
+%2. To load a language with polyglossia:
+%	\usepackage{polyglossia}
+%	\setdefaultlanguage{<lang>}
+\usepackage[french]{babel}
+%usepackage[italian]{babel}
+% For further options (multilanguage documents, hypenations, language environments...)
+% please refer to babel/polyglossia's documentation.
+
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{swe}
+\usepackage{pdfpages}
+
+\lstset{%
+  basicstyle=\ttfamily,
+  language=[LaTeX]{TeX},
+}
+
+\justifying
+
+% Start document
+\begin{document}
+
+\chapter{Livraison de routine}
+
+Le groupe est en route pour livrer un chargement de matériel de réparation de vaporateurs sur
+Tatooine pour un ami de Coruscant. C’est une livraison de routine qu’ils ont acceptée plus par
+amitié que pour l’intérêt financier. Il n’y a pas de pression sur le délai de livraison.
+
+Valeur du chargement : 10 000 Crédits/Rareté : 8 sur Tatooine / Valeur de la mission : 3000
+Crédits
+
+Le temps de parcours vers Tatooine est de 1 semaine.
+
+\section{Sirenia}
+
+Après 2 jours de voyage, le système de sécurité de l'hyperdrive déclenche l'alerte. Il vient de
+capter un signal de détresse en continu. Le signal est émis par un perceur de blocus Corellien
+CR90.
+
+Prime de sauvetage/épave : 3000 Crédits.
+
+Lors de l’arrivée sur zone, le croiseur est quasiment détruit mais il s’est défendu avec brio, ne
+laissant qu’un seul agresseur en vie. Il s’agit d’un chasseur Y-Wing utilisé par des pirates qui
+brouillent les émissions. Ce n’est que le passage des joueurs à très courte portée qui leur a
+permis de détecter le SOS. Ils ne peuvent pas relayer le signal de détresse pour l’instant. Le
+chasseur est en cours d’arrimage avec le CR 90 pour s’emparer de la petite. Lorsqu’il détecte
+les joueurs, le vaisseau les attaque.
+
+\begin{commentbox}{Combat spatial}
+Chasseur Y / 1 pilote Sullusteen.
+\end{commentbox}
+
+Seule survivante à bord après l'attaque des pirates : Sirenia. Humaine de 12 ans fille d'Urul IV
+sénateur de la planète Rishi, en poste à Coruscant. C'est une petite peste arrogante.
+Le vaisseau a été arraisonné après une panne sur son trajet de Rishi vers Coruscant​. ​En fait
+c’est un sabotage qui a désactivé l'hyperpropulsion. Le vaisseau est détruit mais de la vie est
+détectable dans un des pods de secours.
+
+Une fois sauvée Sirenia explique que son père payera une récompense pour le retour de sa fille
+saine et sauve. Difficile car c'est une casse pied de première ;-)
+Elle est assez insistante pour aller directement sur Coruscant, retrouver son père. Si les joueurs
+décident tout de même de passer par Tatooine, la récompense offerte ne sera pas aussi
+conséquente.
+
+\section{Urul}
+
+Urul IV est heureux de revoir sa fille saine et sauve. Il offre un accès plus ou moins limité à son
+armurerie en fonction de la célérité des joueurs pour ramener sa fille ainsi que la récompense
+prévue (3000 crédits pour la localisation de l’épave)
+
+\begin{itemize}
+\item 1 Canon accélérateur (+1 Dégats, + ■ en entretien, Empl 2, Mods Dégats /Précis/ Perforant)
+\item 2 Armes sur mesure (Bonne qualité)
+\item 1 Crosse équilibrée (Précis +1, Empl 2, Mods Précis +1/Enc -1)
+\item 1 Lame crantée (Sanguinaire +1 , Empl 1)
+\item 1 Vibro épée
+\item 1 Générateur de bouclier amélioré (+1 sur 1 emplacement de bouclier, Empl 2)
+\end{itemize}
+
+
+De plus le père vous demande de transporter sa fille sur la planète Corellia. Il propose 6000
+crédits à la livraison. Elle doit y épouser un des fils de la famille régnante, les Iblis. Cette union
+doit assurer la paix entre les deux planètes qui sont en conflits larvés depuis plusieurs
+générations.
+
+Le problème est que cette union ne plaît ni à la pègre locale, ni à l'Empire qui profitent du conflit
+pour mener des opérations masquées depuis ce système. Ce sont eux qui ont fomenté l'attaque
+initiale.
+
+Quand les joueurs arrivent sur place, un guet-apens à lieu sur le quai de débarquement. Cet
+enlèvement est orchestré par le ministre des affaires étrangère de la planète, et plus
+particulièrement par son garde du corps, Aris Nulok. Si les joueurs ne sont pas très discrets (ils
+n’ont pas de raison de l’être et Sirenia ne fait rien pour !) sur leur cargaison ils sont directement
+envoyés vers une zone d’atterrissage à l’écart du spatioport. L’attaque à lieu sur la plateforme.
+On ne cherche pas à les tuer mais seulement les capturer. Il n’y a pas de combat possible si les
+joueurs n’ont pas senti venir le coup. Les adversaires sont en position et sont tellement
+nombreux qu'il n’y a pas vraiment de possibilité d’agir.
+
+\begin{commentbox}{Combat}
+10 gardes avec le Ministre + 10 gardes dans sur les toits et planqués autour / Aris Nulok
+\end{commentbox}
+
+\section{Narik Bils}
+
+Les personnages sont faits prisonniers et emmenés sur une petite lune déserte de la planète
+Drall (même système) qui dispose d'une base secrète. On ne les considère pas comme
+dangereux. On compte les tuer en même temps que la petite pour faire croire qu’ils sont
+responsable de son meurtre. Système pénitentiaire relativement léger mais forte présence
+militaire. Le transport se fait via un Firespray, pas d’escorte. On les emmène directement en
+cellule.
+
+\begin{commentbox}{plan du vaisseau}
+\emph{« Qui paye ses dettes s’enrichit » }​p19
+\end{commentbox}
+
+Les prisonniers sont par 2 dans les cellules. Ils rencontrent un agent de l'alliance Narik Bils dans
+la geôle. Il a entendu ce que les impériaux prévoient : On va les placer tous à bord du Firespray
+et les s’écraser pour faire croire à un accident pendant leur voyage.
+
+Leurs effets personnels sont placés dans le bureau du sergent, chef de la base (9) qui est là lors
+de l’attaque. Les autres troupes se trouvent dans le hangar (13) à proximité des 2 vaisseaux
+(Plat. B), et dans le Réfectoire (4). L’armurerie (15) contient les armes équivalentes à un squad
+de 5+1 sergent.
+
+Une attaque de l'alliance va avoir lieu qui va les aider à sortir de là. 2 chasseurs B-wing et 1
+X-wing font une passe unique en lançant des torpilles à protons qui endommagent les bâtiments
+et les communications. L'agent les pousse à libérer Sirenia qui y est elle aussi. Dans le hangar
+se trouve toujours le Firespray ainsi qu’un chasseur TIE en état.
+
+\begin{commentbox}{Combat terrestre}
+2x5 Stormtroopers et 3 Sergents Stormtrooper
+\end{commentbox}
+
+Une base jumelle à celle-ci se trouve sur l’autre hémisphère. Elle contient 3 TIE d’alerte qui se
+lancent à la poursuite du groupe.
+
+
+\begin{commentbox}{Combat Spatial}
+1 Firespray et 1 TIE contre 3 TIE
+\end{commentbox}
+
+Une fois le combat terminé, le groupe se dirige de nouveaux vers Corellia. Leur première visite
+les incite à plus de prudence en cherchant un spatioport éloigné de la capitale. Serenia et Narik
+connaissent assez bien la région et ont choisi d’atterrir dans une zone agricole assez peu
+peuplée.
+
+\begin{quotebox}
+
+\emph{« Une livraison de routine !! Tu parles! »}
+Il s'en était fallu de peu que l'évasion de la garnison M42 sur la petite lune de Drall ne tourne au
+massacre.
+
+Oola 'Dira avait été grièvement blessée lors de l'affrontement contre 2 escouades de Stormtroopers et
+plusieurs membres du groupe avaient aussi été salement touchés.
+
+Le raid et les combats n'avaient pas duré plus de 5 minutes mais ils avaient l'impression que cela
+faisaient des heures qu'ils arpentaient les couloirs en plastacier.
+
+Qu'il semblait loin le jour où ils avaient rencontré Urul IV le père de Sirenia et accepté de conduire
+celle-ci à son futur époux sur Corellia.
+
+La petite était toujours dans un coma aritificiel sans doute provoqué par les drogues que lui avaient
+administré le commandant de la base. Les efforts de Wootang n'avaient pas encore permis de la
+ranimer.
+
+Fort heureusement, l'attaque des vaisseaux de l'alliance n'avait pas endommagé le hangar du cargo qui
+les avaient probablement amenés ici. Même le chasseur TIE d'escorte semblait prêt au décollage. Nyir
+n’avait encore jamais piloté une telle bête de course, mais un frisson parcouru sa fourrure en pensant à
+ce qu'elle pourrait faire avec un tel chasseur.
+
+" Rosco. Oui Rosco! C'est lui la solution pour ramener Sirenia. La route vers Coronet sera longue mais
+ça va marcher. Ca doit marcher!" se dit Narik en posant la main sur le Firespray à quai.
+\end{quotebox}
+
+
+\section{Corellia/Coronet}
+
+La zone située au Sud du continent de Coronet est une zone rurale très peu peuplée avec
+seulement des pistes reliants des hameaux d’agriculteur, à 2 jours de la capitale. Narik et
+Sirenia sont d'accord pour se poser dans cette région.
+
+Lors de l'approche finale, le système de sabotage mis en place va prendre effet. Jet de pilotage
+difficile pour se crasher dans l'océan tout proche. Le chasseur TIE n'a pas été piégé.
+Narik connaît un vieux paysan dans cette zone. C’est un vieux besalisk du nom de Rosco qui a
+passé toute sa vie ici. Il a aussi quelques talents en mécanique.
+
+Il possède une vieille bicoque avec une grange. Celle ci contient un speeder lourd et un swoop.
+Il est possible de monter un Blaster lourd sur le camion au prix d'un test mécanique moyen.
+Il leur donne un itinéraire et un contact qui est le mécanicien du palais. Il le sait fidèle aux Iblis
+car il a été élevé par la même nourrice que le père.
+
+Les joueurs vont devoir faire au moins une pause sur le trajet. La cantina de la ville de Cholo
+permet de faire cette pause. Une recherche active est lancée contre eux, cette fois-ci par la
+mafia locale, Aris devant rester à Coronet. Des petites frappes de clans loubards sont
+prévenues de leur possible arrivée.
+
+Une rixe va se déclencher dans la cantina quand les loubards présents vont les reconnaître.
+Leurs têtes sont mises à prix par Aris. Il est demandé de les ramener morts ou vifs.
+
+\begin{commentbox}{Escarmouche sur le trajet}
+Attaque de 5 voyous et 1 rapace sur swoop
+\end{commentbox}
+
+Lors de l'arrivée au palais ils retrouvent le comité d'accueil, avec le Ministre des affaires
+étrangères et son garde à leur tête. Ils tentent de négocier en proposant 20 000 Crédits aux
+joueurs pour leur livrer la fille. En cas de refus, cette fois-ci la finesse n’est plus de mise et il
+s’agit d’un combat à mort. La fuite des personnages de la prison et les escarmouches sur le
+trajet permettant de les faire passer pour des activistes complotant contre les Iblis.
+
+Le ministre est un humain grand et maigre aux cheveux noirs. il dirige une milice personnelle
+grâce aux fonds que lui confère sa position. c'est lors d'une visite à Coruscant qu'il a rencontré
+des émissaires de l'empire. il est grassement payé pour faire de certaines des planètes du
+système de Corellia des bases arrières pour certaines de leurs incursions.
+
+Le mariage de la petite va lui laisser moins de marge pour pouvoir établir des bases car le jeune
+prince veut faire de ces lunes des relais commerciaux.
+
+\begin{commentbox}{Combat final}
+2x2 Officier Sécurité + 2x5 Agents de sécurité + Ministre qui fuit dès les
+premiers tirs + Aris qui fuit si le combat tourne en sa défaveur.
+
+Narik s’éclipse lui aussi dès le combat terminé, étant en délicatesse avec les autorités locales.
+
+Un grand nombre de garde arrive avec Daren Iblis le futur époux de Sirenia dès la fin des
+hostilités.
+\end{commentbox}
+
+Il est très heureux de voir sa promise enfin arrivée. Il conduit tout le groupe au palais pour
+rencontrer ses parents. Corben le père et Ibelia la mère.
+
+Le ministre est en disgrâce et Aris s’est enfuit. Il a tout perdu de sa situation très enviable : Il
+manipulait le ministre en sous-main et la pègre lui en veut d’avoir foiré son coup. Il reviendra
+forcément se venger contre le groupe dans le futur.
+
+\section{\'Epilogue}
+\subsection{Expérience}
+
+\begin{itemize}
+    \item 5 XP Sauvetage
+    \item 5 XP si Sirenia est ramené avant de livrer les vaporateurs
+    \item 10 XP pour s'échapper de la prison
+    \item 10 XP pour retour final
+\end{itemize}
+
+\subsection{Réputation}
+
+La pègre locale a beaucoup perdu dans cette affaire et elle a donc une dent sérieuse contre le
+groupe. Elle a beaucoup investit dans la corruption du ministre et sur Aris. De plus Aris est
+maintenant à considérer comme une Némésis pour les joueurs.
+
+\subsection{Résompenses}
+
+\begin{itemize}
+    \item 3000 Crédits pour le sauvetage – Rien si passage par Tatooine avant
+    \item 6000 Cr pour le transport vers Corelia
+    \item 12000 pour récompense finale.
+\end{itemize}
+
+\begin{quotebox}
+
+ \emph{
+Dossier classifié 6522 - Extrait de la retranscription de l'interrogatoire de l'ex-ministre Mok Surelia par le super intendant Darak.}
+
+(...)
+\begin{dialogue}
+
+--- Qu'avez vous fait lorsque le gouverneur vous a averti de la venue de la jeune Princesse Sirenia, malgré l'attaque qu'elle avait subit sur son vaisseau ?- J'ai repris contact avec le chef de la garnison pour qu'il m'aide à l'empécher d'arriver.
+--- Par empécher d'arriver vous voulez dire la tuer ?
+--- Non, non, je ne lui voulais pas de mal ! Je voulais juste qu'elle ..... n'arrive pas.
+--- Hmmmm! Continuez.
+--- Nous leur avons tendu un piège sur l'astroport pour les capturer avec une équipe de gardes de l'astroport. Ah, Ah! Ils ne se sont pas méfier. Nous les avons neutralisés et envoyés directement sur la lune de Drall où nous avons une garnison.
+--- Où vous aviez !
+--- Comment ?
+--- Il semble qu'une attaque ait eu lieu et que la garnison ait été décimée par les personnes qu'Urul IV avait engagé pour escorter la Princesse.
+--- C'est donc ainsi qu'ils se sont enfuis. On m'avait pourtant dit que c'était une bande de petites frappes sans expérience. Je pense que nous les avons sous estimé.
+--- Qu'avez vous fait ensuite ?
+--- Nous ne savions pas où ils avaient atterri mais nous supposions qu'ils allaient revenir sur la capitale pour ramener la gamine. Aaaaaaaargh .....
+--- La Princesse vous ai je déja dit. La Princesse. Vous avez bien compris ?
+--- Oui!
+--- Ne vous inquiétez pas, ils vous reste encore 4 doigts utilisables. Qu'avez vous décidez alors ?
+--- On a lancé une prime sur eux, disant que le groupe avait enlevé la gam...Princesse. On a su qu'ils avaient été repérés au nord de Cholo par une bande de swoopers. Malheureusement ceux ci n'ont pas pu les intercepter. Nous avons aussi fait écouter toutes les conversations entrantes sur le palais en espérant qu'ils prennent contact avec quelqu'un. Et c'est ce qu'ils ont fait. Nous avons donc su à quel moment et où les attendre.
+--- La Princesse et son escorte ont dit que vous étiez accompagner d'un Nautolan lors de votre rencontre. Qui est il ?
+--- Je..je...Je ne sais pas. Aaaaaaaargh!
+--- Tss. Tss Tss. Plus que trois, Mok Plus que trois.
+--- Non je vous en supplie. Si je parle de lui ce ne sont pas que mes doigts que je vais perdre. Vous ne savez pas ce dont il est capable. Aaaaaaaaargh ! Mais allez y pauvre fou ! Brisez moi les doigts, arrachez moi les yeux, faites moi ce que vous voulez mais je ne vous dirais rien. Il viendra vous tuer. Vous ne serez pas quand, ni comment, ni où, mais il vous aura. Vous et cette petit bande! Vous et cette petite put -----
+\end{dialogue}
+
+(Interrogatoire interrompu par la mort du suspect suite à une erreur de voltage dans le champ de
+contention - Possible sabotage - Fin de retranscription)
+
+Le chasseur de prime eut un petit sourire en rangeant son matériel d'écoute et la console qui lui avait
+permis de pirater les contrôles du système de contention. Il avait espéré en apprendre plus sur la bande
+de racaille qui l'avait battu dans l'entrepot. Tant pis, il aura sa revanche et cette fois c'est eux qui
+mordront la poussière.
+\end{quotebox}
+
+\clearevenpage
+\cleardoublepage
+
+\end{document}

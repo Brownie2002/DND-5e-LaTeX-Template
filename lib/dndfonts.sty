@@ -1,9 +1,22 @@
-\RequirePackage{bookman}
+\RequirePackage{titlesec}
+
+% For the fonts
+%\RequirePackage{bookman}
+\RequirePackage{tgadventor}
+
 \RequirePackage[T1]{fontenc}
 
-\renewcommand{\sfdefault}{lmss}
+%\renewcommand{\sfdefault}{lmss}
 
-\newcommand{\dnd@TitleFont}{\normalfont\scshape}
+% Modify sections
+\titleformat*{\section}{\LARGE\bfseries}
+\titleformat*{\subsection}{\Large\bfseries}
+
+
+% Need Sans Serif
+\renewcommand*\familydefault{\sfdefault}
+
+\newcommand{\dnd@TitleFont}{\normalfont\scshape\bfseries}
 
 \newcommand{\dnd@TableTitleFont}{\fontfamily{fosj}\selectfont\bfseries\scshape}
 \newcommand{\dnd@TableBodyFont}{\sffamily}
@@ -15,5 +28,5 @@
 \newcommand{\dnd@StatBlockSubtitleFont}{\fontfamily{fosj}\selectfont\scshape}
 \newcommand{\dnd@StatBlockBodyFont}{\sffamily}
 
-\newcommand{\dnd@FooterFont}{\normalfont\scshape}
-\newcommand{\dnd@PageNumberFont}{\normalfont}
+\newcommand{\dnd@FooterFont}{\normalfont\scshape\bfseries}
+\newcommand{\dnd@PageNumberFont}{\normalfont\bfseries}

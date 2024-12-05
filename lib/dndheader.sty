@@ -17,35 +17,53 @@
 
 \fancyhf{} % clear all headers and footers
 
-\fancyhead{
+% Manage the backgroung
+
+% Even page configuration
+% The background
+\fancyhead[E]{
 	\iftoggle{bool-bg}{
 		\begin{tikzpicture}[remember picture,overlay]
-			\node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{img/paper}};
+			\node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{img/Even_Page}};
 		\end{tikzpicture}
 	}{}
 }
 
+% The page number
 \fancyfoot[LE]{
 	\iftoggle{bool-footer-scroll}{
 		\begin{tikzpicture}[remember picture,overlay]
-			\node[xscale=-1,inner sep=0pt,anchor=south,nearly opaque] at (current page.south) {\includegraphics[width=\paperwidth,height=43pt]{img/footerscroll}};
-			\node[xshift=20pt,yshift=30pt] at (current page.south west) {\dnd@PageNumberFont\textcolor{pagegold}{\thepage}};
-			\node[anchor=south west,xshift=\marginparwidth+\marginparpush,yshift=27pt] at (current page.south west) {\dnd@FooterFont{\textcolor{pagegold}{\nouppercase\leftmark}}};
+%			\node[xscale=-1,inner sep=0pt,anchor=south,nearly opaque] at (current page.south) {\includegraphics[width=\paperwidth,height=43pt]{img/footerscroll}};
+			\node[xshift=105pt,yshift=40pt] at (current page.south west) {\dnd@PageNumberFont\textcolor{white}{\thepage}};
+			\node[anchor=south west,xshift=\marginparwidth+\marginparpush+75pt,yshift=35pt] at (current page.south west) {\dnd@FooterFont{\textcolor{black}{\nouppercase\leftmark}}};
 		\end{tikzpicture}
 	}{
 		\begin{tikzpicture}[remember picture,overlay]
-      \node[anchor=south west,xshift=\marginparwidth-\marginparpush,yshift=\nobgfooterheight+2pt] at (current page.south west) {\dnd@PageNumberFont{\thepage}};
+		    % Number
+		    \node[anchor=south west,xshift=\marginparwidth-\marginparpush,yshift=\nobgfooterheight+2pt] at (current page.south west) {\dnd@PageNumberFont{\thepage}};
+			% Section title position
 			\node[anchor=south west,xshift=\marginparwidth+\marginparpush,yshift=\nobgfooterheight] at (current page.south west) {\leftmark};
 		\end{tikzpicture}
 	}
 }
 
+% Odd page configuration
+\fancyhead[O]{
+	\iftoggle{bool-bg}{
+		\begin{tikzpicture}[remember picture,overlay]
+			\node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{img/Odd_Page}};
+		\end{tikzpicture}
+	}{}
+}
+
 \fancyfoot[RO]{
 	\iftoggle{bool-footer-scroll}{
 		\begin{tikzpicture}[remember picture,overlay]
-			\node[inner sep=0pt,anchor=south,nearly opaque] at (current page.south) {\includegraphics[width=\paperwidth,height=43pt]{img/footerscroll}};
-			\node[xshift=-20pt,yshift=30pt] at (current page.south east) {\dnd@PageNumberFont\textcolor{pagegold}{\thepage}};
-			\node[anchor=south east,xshift=-\marginparwidth-\marginparpush,yshift=27pt] at (current page.south east) {\dnd@FooterFont{\textcolor{pagegold}{\nouppercase\leftmark}}};
+%			\node[inner sep=0pt,anchor=south,nearly opaque] at (current page.south) {\includegraphics[width=\paperwidth,height=43pt]{img/footerscroll}};
+            % Position of the number
+			\node[xshift=-108pt,yshift=40pt] at (current page.south east) {\dnd@PageNumberFont\textcolor{white}{\thepage}};
+			% Position of the section name
+			\node[anchor=south east,xshift=-\marginparwidth-\marginparpush-75pt,yshift=35pt] at (current page.south east) {\dnd@FooterFont{\textcolor{black}{\nouppercase\leftmark}}};
 		\end{tikzpicture}
 	}{
 		\begin{tikzpicture}[remember picture,overlay]
